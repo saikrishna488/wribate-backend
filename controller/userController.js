@@ -16,9 +16,20 @@ import xlsx from "xlsx"
 
 const getOTP = catchAsync(async (req, res, next) => {
  const { body: { email } } = req
+ const otp = 1234
  if (!email) return ErrorResponse(res, `Please enter vaild email`)
- await utils.contactUs(email)
+ await utils.contactUs(email, otp)
+ await userModel.User.updateOne({ email: email },  // Find user by email
+  { $set: { otp: otp } })
  successMessage(res, `OTP sent sucessfully`)
+})
+
+const verifyOTP = catchAsync(async (req, res, next) => {
+ const { body: { email, otp } } = req
+ const user = await userModel.User.findOne({ email: email })
+ if (!user) return ErrorResponse(res, `Please select valid email`)
+ if (user.otp !== otp) return ErrorResponse(res, `Please enter valid OTP`)
+ successMessage(res, `OTP verified sucessfully`)
 })
 
 const signUpUser = catchAsync(async (req, res, next) => {
@@ -367,5 +378,5 @@ const createBatchWribate = catchAsync(async (req, res) => {
 });
 
 
-export default { signUpUser, loginUser, getProfile, getOTP, fileUpload, updateProfile, getCategories, createWribate, addArguments, getWribateByCategory, getWribateByID, addComment, addVotes, getMyWribates, createBatchWribate }
+export default { signUpUser, loginUser, getProfile, getOTP, fileUpload, updateProfile, getCategories, createWribate, addArguments, getWribateByCategory, getWribateByID, addComment, addVotes, getMyWribates, createBatchWribate, verifyOTP }
 

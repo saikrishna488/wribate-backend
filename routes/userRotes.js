@@ -11,6 +11,8 @@ router.post('/signUp', user.signUpUser)
 
 router.post('/sendOTP', user.getOTP)
 
+router.post('/vertfyOTP', user.verifyOTP)
+
 router.post('/login', user.loginUser)
 
 router.use(auth.authenticateUser)
