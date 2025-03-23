@@ -1,0 +1,5 @@
+export const successResponse = (res, data, statusCode) => res.status(statusCode || 200).json({ status: 1, data: data })
+export const ErrorResponse = (res, message, statusCode) => res.status(statusCode || 400).json({ status: 0, message: message })
+export const successMessage = (res, message, statusCode) => res.status(statusCode || 200).json({ status: 1, message: message })
+export const TokenError = (res, message, isTokenExpired, statusCode) => res.status(statusCode || 401).json({ status: 1, message: message, isTokenExpired: isTokenExpired })
+export const UserValidation = (res, message, isRegistered, statusCode) => res.status(statusCode || 200).json({ status: 1, message: message, isRegistered: isRegistered }) 
