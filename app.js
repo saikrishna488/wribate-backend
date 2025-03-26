@@ -12,6 +12,7 @@ import AppErrors from "./utils/appErrors.js"
 import globalErrorHandler from "./controller/errorController.js"
 import userRoutes from "./routes/userRotes.js"
 import adminRoutes from "./routes/adminRoutes.js"
+import cors from "cors"
 
 
 
@@ -22,6 +23,7 @@ console.log('ENV :', process.env.NODE_ENV);
 /* security headers */
 
 app.use(helmet());
+app.use(cors({ origin: "*" }))
 
 /* body parser read the data from the body to req.body */
 
