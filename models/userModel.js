@@ -25,7 +25,6 @@ const userSchema = new mongoose.Schema({
 
 }, { timestamps: true })
 
-const User = mongoose.model('User', userSchema);
 
 const wribateSchema = new mongoose.Schema({
  title: {
@@ -85,6 +84,11 @@ const wribateSchema = new mongoose.Schema({
   default: 'Free'
  },
 
+ wribateType: {
+  type: String,
+  enum: ['single', 'batch'],
+  default: 'single'
+ },
  prizeAmount: {
   type: Number,
   required: false
@@ -94,10 +98,9 @@ const wribateSchema = new mongoose.Schema({
  arguments: [{ type: mongoose.Schema.Types.ObjectId, ref: "Argument" }],
  votes: [{ type: mongoose.Schema.Types.ObjectId, ref: "Vote" }],
  comments: [{ type: mongoose.Schema.Types.ObjectId, ref: "Comment" }],
- user: [{ type: mongoose.Schema.Types.ObjectId, ref: "User" }],
+ students: [{ type: mongoose.Schema.Types.ObjectId, ref: "Student" }]
 }, { timestamps: true });
 
-const Wribate = mongoose.model('Wribate', wribateSchema);
 
 
 const argumentSchema = new mongoose.Schema(
@@ -111,8 +114,6 @@ const argumentSchema = new mongoose.Schema(
  { timestamps: true }
 );
 
-const Argument = mongoose.model("Argument", argumentSchema);
-
 
 const voteSchema = new mongoose.Schema(
  {
@@ -123,7 +124,6 @@ const voteSchema = new mongoose.Schema(
  { timestamps: true }
 );
 
-const Vote = mongoose.model("Vote", voteSchema);
 
 const commentSchema = new mongoose.Schema(
  {
@@ -135,7 +135,18 @@ const commentSchema = new mongoose.Schema(
  { timestamps: true }
 );
 
+const studentSchema = new mongoose.Schema({
+ studentName: { type: String },
+ studentEmail: { type: String, },
+ institution: { type: String }
+}, { timestamps: true });
+
+const Student = mongoose.model("Student", studentSchema);
 const Comment = mongoose.model("Comment", commentSchema);
+const Vote = mongoose.model("Vote", voteSchema);
+const Argument = mongoose.model("Argument", argumentSchema);
+const Wribate = mongoose.model('Wribate', wribateSchema);
+const User = mongoose.model('User', userSchema);
 
 
-export default { User, Wribate, Argument, Vote, Comment }
+export default { User, Wribate, Argument, Vote, Comment, Student }

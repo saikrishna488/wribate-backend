@@ -39,6 +39,8 @@ router.post("/vote/:wribateId", user.addVotes)
 
 router.get("/myWribates", user.getMyWribates)
 
+router.delete("/deleteWribate", user.deleteWribate)
+
 router.post("/createBatchWribate", upload.single("file"), user.createBatchWribate)
 
 export default router

@@ -11,6 +11,7 @@ import fs from "fs"
 import Categories from "../models/adminModel.js";
 import moment from "moment";
 import xlsx from "xlsx"
+import handleFactory from "../controller/handleFactory.js";
 
 
 
@@ -183,7 +184,8 @@ const createWribate = catchAsync(async (req, res, next) => {
   type: body.type,
   prizeAmount: body.prizeAmount,
   rounds: rounds,
-  createdBy: _id
+  createdBy: _id,
+  wribateType: "single"
  }
 
  const newWribate = await userModel.Wribate.create(wribateData);
@@ -346,8 +348,15 @@ const addVotes = catchAsync(async (req, res, next) => {
 });
 
 const getMyWribates = catchAsync(async (req, res, next) => {
- const { user: { _id } } = req
- const wribates = await userModel.Wribate.find({ createdBy: _id })
+ const { user: { _id, email } } = req
+
+ const wribates = await userModel.Wribate.find({
+  $or: [
+   { createdBy: userId }, // Matches createdBy
+   { students: email } // Matches email in students array
+  ]
+ }).lean();
+ //const wribates = await userModel.Wribate.find({ createdBy: _id })
  if (wribates.length === 0) {
   return res.status(404).json({ status: "error", message: "No wribates found for this user" });
  }
@@ -363,20 +372,88 @@ const getMyWribates = catchAsync(async (req, res, next) => {
 })
 
 const createBatchWribate = catchAsync(async (req, res) => {
-
+ const { user: { _id } } = req
+ const body = req.body
  const workbook = xlsx.read(req.file.buffer, { type: "buffer" });
  const sheetName = workbook.SheetNames[0];
  const jsonData = xlsx.utils.sheet_to_json(workbook.Sheets[sheetName]);
+ const students = jsonData
 
- console.log(jsonData)
+ const transformedData = students.map(student => ({
+  studentName: student["Student Name"],
+  studentEmail: student["Email"],
+  institution: body.institution,
+ }));
 
- // Insert data into MongoDB
- //await DataModel.insertMany(jsonData);
+ const insertedStudents = await userModel.Student.insertMany(transformedData);
+ const ids = insertedStudents.map(student => student.studentEmail)
+ const reversed = [...students].reverse();
+
+ console.log('ids', ids)
+
+ for (let i = 0; i < students.length / 2; i++) {
+
+  const totalDuration = students[i]["Duration in Days"]
+  const startDate = students[i]["Start Date"]
+
+  const roundDurations = [
+   Math.floor(totalDuration / 3), // First part
+   Math.floor(totalDuration / 3), // Second part
+   totalDuration - (2 * Math.floor(totalDuration / 3)) // Remaining days for last part
+  ];
+
+  let currentStartDate = moment(startDate);
+  const rounds = roundDurations.map((days, index) => {
+   const round = {
+    roundNumber: index + 1,
+    startDateTime: currentStartDate.toDate(),
+    durationDays: days
+   };
+   currentStartDate.add(days, 'days'); // Move to the next round start date
+   return round;
+  });
+
+
+  const wribateData = {
+   title: students[i]["Category"],
+   coverImage: students[i]["Cover Image"],
+   startDate: students[i]["Start Date"],
+   durationDays: students[i]["Duration in Days"],
+   leadFor: students[i]["Student Name"],
+   leadAgainst: reversed[i]["Student Name"],
+   students: ids,
+   supportingFor: "NA",
+   supportingAgainst: "NA",
+   judges: body.judge,
+   category: students[i]["Category"],
+   institution: body.institution,
+   scope: "Open",
+   type: "Free",
+   prizeAmount: 0,
+   rounds: rounds,
+   createdBy: _id,
+   wribateType: "batch"
+  }
+
+  const newWribate = await userModel.Wribate.create(wribateData);
+ }
 
  res.json({ message: "File uploaded and data saved successfully!", data: jsonData });
 
+ students.forEach(async (student) => {
+  const studentName = student["Student Name"]
+  const studentEmail = student["Email"]
+  await handleFactory.sendInvitationMail(studentName, studentEmail)
+ })
+
 });
 
+const deleteWribate = catchAsync(async (req, res, next) => {
+ const result = await userModel.Wribate.deleteMany({}); // Deletes all documents in the collection
+ console.log(`${result.deletedCount} Wribates deleted successfully`);
+ successMessage(res, `deleted successfully`)
+})
 
-export default { signUpUser, loginUser, getProfile, getOTP, fileUpload, updateProfile, getCategories, createWribate, addArguments, getWribateByCategory, getWribateByID, addComment, addVotes, getMyWribates, createBatchWribate, verifyOTP }
+
+export default { signUpUser, loginUser, getProfile, getOTP, fileUpload, updateProfile, getCategories, createWribate, addArguments, getWribateByCategory, getWribateByID, addComment, addVotes, getMyWribates, createBatchWribate, verifyOTP, deleteWribate }
 
