@@ -19,6 +19,8 @@ router.get("/getWribateByCategory/:category", user.getWribateByCategory)
 
 router.get("/getWribateById/:id", user.getWribateByID)
 
+router.get('/getCategories', user.getCategories)
+
 router.use(auth.authenticateUser)
 
 router.get('/getProfile', user.getProfile)
@@ -26,8 +28,6 @@ router.get('/getProfile', user.getProfile)
 router.post('/uploadImage', upload.single('image'), user.fileUpload)
 
 router.patch('/updateProfile/:id', user.updateProfile)
-
-router.get('/getCategories', user.getCategories)
 
 router.post('/createWribate', user.createWribate)
 
