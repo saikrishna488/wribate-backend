@@ -212,19 +212,15 @@ const getWribateByID = catchAsync(async (req, res) => {
 
  const { params: { id } } = req;
 
- // Fetch all wribates that match the given category
- /* const wribate = await userModel.Wribate.findById(id)
-  .populate("comments") // Fetch related comments
-  .populate("votes") // Fetch related votes
-  .populate("arguments"); // Fetch related arguments */
-
  const wribate = await userModel.Wribate.findById(id)
   .populate({
    path: "comments",
    populate: { path: "userId", select: "name email" } // Populate user details in comments
   })
-  .populate("votes")
+  .populate({ path: "votes", populate: { path: "userId", select: "name email" } })
   .populate("arguments");
+
+ console.log('wribate', wribate)
 
  if (Object.keys(wribate).length === 0) {
   return res.status(404).json({ status: "error", message: "No wribates found for this category" });
@@ -357,7 +353,7 @@ const addVotes = catchAsync(async (req, res, next) => {
 
  const newVote = new userModel.Vote({ wribateId, userId: _id, vote });
  await newVote.save();
-
+ await userModel.Wribate.findByIdAndUpdate(wribateId, { $push: { votes: newVote._id } });
  res.status(201).json({ status: "success", message: "Vote recorded", data: newVote });
 
 });

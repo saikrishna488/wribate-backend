@@ -146,7 +146,7 @@ const argumentSchema = new mongoose.Schema(
 const voteSchema = new mongoose.Schema(
  {
   wribateId: { type: mongoose.Schema.Types.ObjectId, ref: "Wribate", required: true },
-  userId: { type: mongoose.Schema.Types.ObjectId, ref: "User", required: true, unique: true },
+  userId: { type: mongoose.Schema.Types.ObjectId, ref: "User", required: true, },
   vote: { type: String, enum: ["For", "Against"], required: true }
  },
  { timestamps: true }
