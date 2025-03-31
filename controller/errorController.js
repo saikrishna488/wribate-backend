@@ -67,11 +67,11 @@ const globalErrorHandler = (err, req, res, next) => {
     sendErrorDev(err, res);
   } else if (process.env.NODE_ENV === 'production') {
     let error = { ...err };
-    /*  if (err.name === 'CastError') error = handleCastError(err);
-     if (err.code === 11000) error = handleDuplicateField(err);
-     if (err.name === 'ValidationError') error = handleValidatorError(err);
-     if (err.name === 'JsonWebTokenError') error = handleJWTError();
-     if (err.name === 'TokenExpiredError') error = handleJWTExpire(); */
+    if (err.name === 'CastError') error = handleCastError(err);
+    if (err.code === 11000) error = handleDuplicateField(err);
+    if (err.name === 'ValidationError') error = handleValidatorError(err);
+    if (err.name === 'JsonWebTokenError') error = handleJWTError();
+    if (err.name === 'TokenExpiredError') error = handleJWTExpire();
     sendErrorPro(error, res);
   }
 };

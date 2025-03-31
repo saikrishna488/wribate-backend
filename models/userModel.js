@@ -8,6 +8,16 @@ const userSchema = new mongoose.Schema({
   required: [true, ' A User Must Required A Name!'],
   trim: true,
  },
+ dob: {
+  type: Date,
+  required: [true, ' A User Must Required A dob!'],
+ },
+
+ country: {
+  type: String,
+  required: [true, ' A User Must Required A country!'],
+  trim: true,
+ },
  userName: {
   type: String,
   required: [true, ' A User Must Required A userName!'],

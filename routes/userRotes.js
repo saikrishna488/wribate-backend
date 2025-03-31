@@ -17,6 +17,8 @@ router.post('/login', user.loginUser)
 
 router.get("/getWribateByCategory/:category", user.getWribateByCategory)
 
+router.get("/getWribateById/:id", user.getWribateByID)
+
 router.use(auth.authenticateUser)
 
 router.get('/getProfile', user.getProfile)
@@ -30,8 +32,6 @@ router.get('/getCategories', user.getCategories)
 router.post('/createWribate', user.createWribate)
 
 router.post("/arguments/:wribateId", user.addArguments)
-
-router.get("/getWribateById/:id", user.getWribateByID)
 
 router.post("/comment/:wribateId", user.addComment)
 
