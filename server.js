@@ -1,8 +1,11 @@
 
 import mongoose from 'mongoose';
+import http from "http";
 import dotenv from "dotenv"
 import log from "./logs/logger.js"
 import app from "./app.js"
+import { initializeSocket } from "./socket/socket.js";
+
 
 dotenv.config();
 
@@ -10,7 +13,7 @@ dotenv.config();
 
 process.on('uncaughtException', (err) => {
  console.log('unhandled Exception appShutting down...😈');
- console.log(err.name, err.message);
+ console.log(err.name, err.message, err);
  process.exit(1);
 });
 
@@ -25,8 +28,13 @@ mongoose.connect(DB).then(() => {
 
 /* SERVER */
 
+
+const server = http.createServer(app);
+// Initialize Socket.io
+initializeSocket(server);
+
 const port = 8000;
-const server = app.listen(port, () => {
+server.listen(port, () => {
  log.info(`server is running  on the port ${port}...`);
  console.log(`server is running  on the port ${port}...`);
 });
@@ -36,7 +44,7 @@ const server = app.listen(port, () => {
 
 process.on('unhandledRejection', (err) => {
  console.log('UnhandledRejection sutting down!!😈..');
- console.log(err.name, err.message);
+ console.log(err.name, err.message, err);
  server.close(() => {
   process.exit(1);
  });

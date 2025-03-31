@@ -9,27 +9,35 @@ import path from "path"
 import { fileURLToPath } from 'url';
 import fs from "fs"
 import Categories from "../models/adminModel.js";
-import moment from "moment";
 import xlsx from "xlsx"
 import handleFactory from "../controller/handleFactory.js";
+import mongoose from "mongoose";
 
-
+const checkForUserName = catchAsync(async (req, res, next) => {
+ const { body: { userName } } = req
+ const isNameAvailable = await userModel.User.findOne({ userName: userName })
+ console.log('isNameAvailable', isNameAvailable)
+ if (isNameAvailable && Object.keys(isNameAvailable).length > 0) return res.status(400).json({ status: 1, message: "User name already taken" })
+ res.status(200).json({ status: 1, message: "User name available" })
+})
 
 const getOTP = catchAsync(async (req, res, next) => {
  const { body: { email } } = req
  const otp = 1234
  if (!email) return ErrorResponse(res, `Please enter vaild email`)
  await utils.contactUs(email, otp)
- await userModel.User.updateOne({ email: email },  // Find user by email
+ await userModel.TempUser.create({ email: email, otp: otp },  // Find user by email
   { $set: { otp: otp } })
  successMessage(res, `OTP sent sucessfully`)
 })
 
 const verifyOTP = catchAsync(async (req, res, next) => {
  const { body: { email, otp } } = req
- const user = await userModel.User.findOne({ email: email })
+
+ const user = await userModel.TempUser.findOne({ email: email })
  if (!user) return ErrorResponse(res, `Please select valid email`)
- if (user.otp !== otp) return ErrorResponse(res, `Please enter valid OTP`)
+
+ if (user.otp !== otp * 1) return ErrorResponse(res, `Please enter valid OTP`)
  successMessage(res, `OTP verified sucessfully`)
 })
 
@@ -38,7 +46,7 @@ const signUpUser = catchAsync(async (req, res, next) => {
  const salt = await bcrypt.genSalt(10)
  const crypted = await bcrypt.hash(body.password, salt)
  const userData = {
-  name: body.name, email: body.email, password: crypted
+  name: body.name, email: body.email, password: crypted, userName: body.userName
  }
  await userModel.User.create(userData)
  successMessage(res, `sign up completed`)
@@ -150,23 +158,7 @@ const createWribate = catchAsync(async (req, res, next) => {
  const startDate = body.startDate
  const { user: { _id } } = req
 
- const roundDurations = [
-  Math.floor(totalDuration / 3), // First part
-  Math.floor(totalDuration / 3), // Second part
-  totalDuration - (2 * Math.floor(totalDuration / 3)) // Remaining days for last part
- ];
-
- let currentStartDate = moment(startDate);
- const rounds = roundDurations.map((days, index) => {
-  const round = {
-   roundNumber: index + 1,
-   startDateTime: currentStartDate.toDate(),
-   durationDays: days
-  };
-  currentStartDate.add(days, 'days'); // Move to the next round start date
-  return round;
- });
-
+ const rounds = handleFactory.generateRounds(startDate, totalDuration)
 
  const wribateData = {
   title: body.title,
@@ -204,13 +196,13 @@ const getWribateByCategory = catchAsync(async (req, res) => {
   }
 
   // Append baseURL to each coverImage
-  const baseURL = process.env.USER
+  const baseURL = process.env.WRIBATE
   const data = wribates.map(item => ({
    ...item._doc,
    coverImage: baseURL + item.coverImage
   }));
-
-  res.status(200).json({ status: "success", data: data });
+  const data1 = await handleFactory.categorizeWribates(data)
+  res.status(200).json({ status: "success", data: data1 });
  } catch (error) {
   res.status(500).json({ status: "error", message: error.message });
  }
@@ -221,12 +213,20 @@ const getWribateByID = catchAsync(async (req, res) => {
  const { params: { id } } = req;
 
  // Fetch all wribates that match the given category
- const wribate = await userModel.Wribate.findById(id)
+ /* const wribate = await userModel.Wribate.findById(id)
   .populate("comments") // Fetch related comments
   .populate("votes") // Fetch related votes
-  .populate("arguments"); // Fetch related arguments
+  .populate("arguments"); // Fetch related arguments */
 
- if (wribate.length === 0) {
+ const wribate = await userModel.Wribate.findById(id)
+  .populate({
+   path: "comments",
+   populate: { path: "userId", select: "name email" } // Populate user details in comments
+  })
+  .populate("votes")
+  .populate("arguments");
+
+ if (Object.keys(wribate).length === 0) {
   return res.status(404).json({ status: "error", message: "No wribates found for this category" });
  }
 
@@ -245,9 +245,9 @@ const getWribateByID = catchAsync(async (req, res) => {
  let roundCompletion = 0;
 
  for (const round of wribate.rounds) {
-  const roundStart = new Date(round.startDateTime);
+  const roundStart = new Date(round.startDate);
   const roundEnd = new Date(roundStart);
-  roundEnd.setDate(roundStart.getDate() + round.durationDays);
+  roundEnd.setDate(roundStart.getDate() + round.duration);
 
   if (now >= roundStart && now <= roundEnd) {
    currentRound = round.roundNumber;
@@ -258,7 +258,7 @@ const getWribateByID = catchAsync(async (req, res) => {
   }
  }
 
- const baseURL = process.env.USER
+ const baseURL = process.env.WRIBATE
  wribate.coverImage = baseURL + wribate.coverImage
 
  res.status(200).json({
@@ -271,7 +271,7 @@ const getWribateByID = catchAsync(async (req, res) => {
 });
 
 const addArguments = catchAsync(async (req, res, next) => {
- const { params: { wribateId }, user, body: { text } } = req
+ const { params: { wribateId }, user, body: { text, roundNumber } } = req
  const userId = user._id
 
  console.log(user)
@@ -305,23 +305,38 @@ const addArguments = catchAsync(async (req, res, next) => {
 
 
  // Create and save the argument
- const argumentData = { wribateId: wribateId, userId: userId, panelSide: panel, text: text }
- const newArgument = new userModel.Argument(argumentData);
- await newArgument.save();
 
- // Update Wribate to link the argument
- await userModel.Wribate.findByIdAndUpdate(wribateId, { $push: { arguments: newArgument._id } });
+ const existingArgument = await userModel.Argument.findOne({ wribateId, userId, roundNumber });
 
- res.status(201).json({ status: "success", message: "Argument added", data: newArgument, panel: panel });
+ if (existingArgument) {
+  // Append the new text to the existing argument
+
+  const updatedArgument = await userModel.Argument.findOneAndUpdate(
+   { wribateId, userId, roundNumber }, // Find existing argument
+   { $set: { text: text } }, // Replace text instead of appending
+   { new: true, upsert: true } // Return updated doc, create if not exists
+  );
+
+
+ } else {
+  // Create a new argument if not found
+  const newArgument = new userModel.Argument({ wribateId, userId, roundNumber, panelSide: panel, text: text });
+  await newArgument.save();
+  console.log("New argument added successfully.");
+  await userModel.Wribate.findByIdAndUpdate(wribateId, { $push: { arguments: newArgument._id } });
+ }
+
+
+ res.status(201).json({ status: "success", message: "Argument added", });
 
 
 });
 
 const addComment = catchAsync(async (req, res, next) => {
 
- const { body: { text }, params: { wribateId }, user: { _id } } = req;
+ const { body: { text, type }, params: { wribateId }, user: { _id } } = req;
 
- const newComment = new userModel.Comment({ wribateId: wribateId, userId: _id, text: text });
+ const newComment = new userModel.Comment({ type: type, wribateId: wribateId, userId: _id, text: text });
  await newComment.save();
 
  await userModel.Wribate.findByIdAndUpdate(wribateId, { $push: { comments: newComment._id } });
@@ -352,32 +367,38 @@ const getMyWribates = catchAsync(async (req, res, next) => {
 
  const wribates = await userModel.Wribate.find({
   $or: [
-   { createdBy: userId }, // Matches createdBy
-   { students: email } // Matches email in students array
+   { createdBy: new mongoose.Types.ObjectId(_id) }, // Match by ObjectId
+   { students: email } // Match email in students array
   ]
- }).lean();
+ });
  //const wribates = await userModel.Wribate.find({ createdBy: _id })
  if (wribates.length === 0) {
   return res.status(404).json({ status: "error", message: "No wribates found for this user" });
  }
 
  // Append baseURL to each coverImage
- const baseURL = process.env.USER
+ const baseURL = process.env.WRIBATE
  const data = wribates.map(item => ({
   ...item._doc,
   coverImage: baseURL + item.coverImage
  }));
 
- res.status(200).json({ status: "success", data: data });
+ const data1 = await handleFactory.categorizeWribates(data)
+ res.status(200).json({ status: "success", data: data1 });
 })
 
 const createBatchWribate = catchAsync(async (req, res) => {
  const { user: { _id } } = req
  const body = req.body
+ console.log('req.body', req.body, req.file)
+
  const workbook = xlsx.read(req.file.buffer, { type: "buffer" });
  const sheetName = workbook.SheetNames[0];
+ console.log('sheetName', sheetName)
  const jsonData = xlsx.utils.sheet_to_json(workbook.Sheets[sheetName]);
  const students = jsonData
+
+ console.log('students', students)
 
  const transformedData = students.map(student => ({
   studentName: student["Student Name"],
@@ -395,27 +416,10 @@ const createBatchWribate = catchAsync(async (req, res) => {
 
   const totalDuration = students[i]["Duration in Days"]
   const startDate = students[i]["Start Date"]
-
-  const roundDurations = [
-   Math.floor(totalDuration / 3), // First part
-   Math.floor(totalDuration / 3), // Second part
-   totalDuration - (2 * Math.floor(totalDuration / 3)) // Remaining days for last part
-  ];
-
-  let currentStartDate = moment(startDate);
-  const rounds = roundDurations.map((days, index) => {
-   const round = {
-    roundNumber: index + 1,
-    startDateTime: currentStartDate.toDate(),
-    durationDays: days
-   };
-   currentStartDate.add(days, 'days'); // Move to the next round start date
-   return round;
-  });
-
-
+  const rounds = handleFactory.generateRounds(startDate, totalDuration)
+  //console.log('rounds', rounds)
   const wribateData = {
-   title: students[i]["Category"],
+   title: students[i]["Wribate Topic"],
    coverImage: students[i]["Cover Image"],
    startDate: students[i]["Start Date"],
    durationDays: students[i]["Duration in Days"],
@@ -424,7 +428,7 @@ const createBatchWribate = catchAsync(async (req, res) => {
    students: ids,
    supportingFor: "NA",
    supportingAgainst: "NA",
-   judges: body.judge,
+   judges: body.judges,
    category: students[i]["Category"],
    institution: body.institution,
    scope: "Open",
@@ -455,5 +459,5 @@ const deleteWribate = catchAsync(async (req, res, next) => {
 })
 
 
-export default { signUpUser, loginUser, getProfile, getOTP, fileUpload, updateProfile, getCategories, createWribate, addArguments, getWribateByCategory, getWribateByID, addComment, addVotes, getMyWribates, createBatchWribate, verifyOTP, deleteWribate }
+export default { signUpUser, loginUser, getProfile, getOTP, fileUpload, updateProfile, getCategories, createWribate, addArguments, getWribateByCategory, getWribateByID, addComment, addVotes, getMyWribates, createBatchWribate, verifyOTP, deleteWribate, checkForUserName }
 

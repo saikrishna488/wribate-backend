@@ -1,5 +1,6 @@
 
 import nodemailer from "nodemailer"
+import moment from "moment";
 
 const contactUs = async (mail, otp) => {
   const transporter = nodemailer.createTransport({
@@ -45,7 +46,7 @@ const contactUs = async (mail, otp) => {
 
 }
 
-const sendInvitationMail = async (name) => {
+const sendInvitationMail = async (name, mail) => {
   const transporter = nodemailer.createTransport({
     host: 'smtp.gmail.com',
     port: 587,
@@ -148,8 +149,79 @@ const appendUrls = async (user) => {
   return user
 }
 
+const appendUserPic = async (users) => {
+  const baseURL = process.env.USER
+  for (const user of users) {
+    if (user.profilePhoto) user.profilePhoto = `${baseURL}${user.profilePhoto}`
+  }
+
+  return users
+}
+
+function generateRounds(startDate, totalDuration) {
+  let totalHours = totalDuration * 24; // Convert total duration to hours
+  let roundDuration = totalHours / 3; // Divide into 3 equal parts
+
+  let currentStartDate = moment(startDate);
+  const rounds = [];
+
+  for (let i = 0; i < 3; i++) {
+    let round = {
+      roundNumber: i + 1,
+      startDate: currentStartDate.toDate(),
+      endDate: moment(currentStartDate).add(roundDuration, 'hours').subtract(1, 'second').toDate(),
+      duration: `${roundDuration} hours`
+    };
+
+    rounds.push(round);
+    currentStartDate.add(roundDuration, 'hours'); // Move to next round
+  }
+
+  return rounds;
+}
+
+async function categorizeWribates(wribates) {
+
+  const currentDate = moment().toDate(); // Get current date
+  try {
+
+
+    // Categorize wribates
+    const ongoing = [];
+    const completed = [];
+    const freeWribates = [];
+    const sponsoredWribates = [];
+
+    wribates.forEach(wribate => {
+      let startDate = moment(wribate.startDate);
+      let endDate = startDate.clone().add(wribate.durationDays, 'days').toDate();
+
+      // Check if wribate is ongoing or completed
+      if (endDate >= currentDate) {
+        ongoing.push(wribate);
+      } else {
+        completed.push(wribate);
+      }
+
+      // Categorize by type
+      if (wribate.type === "Free") {
+        freeWribates.push(wribate);
+      } else if (wribate.type === "Sponsored") {
+        sponsoredWribates.push(wribate);
+      }
+    });
+
+    return { ongoing, completed, freeWribates, sponsoredWribates };
+  } catch (error) {
+    console.error("Error fetching wribates:", error);
+  }
+}
+
+
+
+
 
 /* 
  */
 
-export default { contactUs, appendUrls, sendInvitationMail }
+export default { contactUs, appendUrls, sendInvitationMail, generateRounds, categorizeWribates, appendUserPic }
