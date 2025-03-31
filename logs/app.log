@@ -2755,3 +2755,1243 @@
 [2025-03-23T18:44:43.745] [INFO] default - server is running  on the port 8000...
 [2025-03-23T18:44:56.456] [INFO] default - server is running  on the port 8000...
 [2025-03-23T18:46:07.692] [INFO] default - server is running  on the port 8000...
+[2025-03-23T18:47:46.407] [INFO] default - /api/user/vertfyOTP
+[2025-03-23T18:49:32.802] [INFO] default - /api/user/sendOTP
+[2025-03-23T18:49:37.047] [INFO] default - /api/user/vertfyOTP
+[2025-03-24T23:09:26.466] [INFO] default - server is running  on the port 8000...
+[2025-03-24T23:09:39.679] [INFO] default - /api/user/createBatchWribate
+[2025-03-24T23:10:06.173] [INFO] default - server is running  on the port 8000...
+[2025-03-24T23:10:12.315] [INFO] default - /api/user/createBatchWribate
+[2025-03-24T23:10:30.749] [INFO] default - server is running  on the port 8000...
+[2025-03-24T23:10:32.943] [INFO] default - /api/user/createBatchWribate
+[2025-03-24T23:11:52.677] [INFO] default - server is running  on the port 8000...
+[2025-03-25T08:49:22.653] [INFO] default - server is running  on the port 8000...
+[2025-03-25T08:49:35.966] [INFO] default - server is running  on the port 8000...
+[2025-03-25T08:50:13.890] [INFO] default - server is running  on the port 8000...
+[2025-03-25T08:50:22.748] [INFO] default - server is running  on the port 8000...
+[2025-03-25T08:51:20.652] [INFO] default - server is running  on the port 8000...
+[2025-03-25T08:55:54.546] [INFO] default - server is running  on the port 8000...
+[2025-03-25T08:56:32.891] [INFO] default - server is running  on the port 8000...
+[2025-03-25T08:56:54.784] [INFO] default - server is running  on the port 8000...
+[2025-03-25T09:00:42.090] [INFO] default - server is running  on the port 8000...
+[2025-03-25T09:02:19.852] [INFO] default - server is running  on the port 8000...
+[2025-03-25T09:02:38.364] [INFO] default - server is running  on the port 8000...
+[2025-03-25T09:02:50.645] [INFO] default - server is running  on the port 8000...
+[2025-03-25T09:03:26.869] [INFO] default - server is running  on the port 8000...
+[2025-03-25T09:05:22.281] [INFO] default - server is running  on the port 8000...
+[2025-03-25T09:05:54.261] [INFO] default - server is running  on the port 8000...
+[2025-03-25T09:07:13.445] [INFO] default - server is running  on the port 8000...
+[2025-03-25T09:12:58.287] [INFO] default - server is running  on the port 8000...
+[2025-03-25T09:13:06.629] [INFO] default - server is running  on the port 8000...
+[2025-03-25T09:13:22.461] [INFO] default - server is running  on the port 8000...
+[2025-03-25T09:13:47.213] [INFO] default - server is running  on the port 8000...
+[2025-03-25T09:13:54.188] [INFO] default - server is running  on the port 8000...
+[2025-03-25T09:14:31.298] [INFO] default - server is running  on the port 8000...
+[2025-03-25T09:14:59.528] [INFO] default - /api/user/deleteWribate
+[2025-03-25T09:15:39.418] [INFO] default - server is running  on the port 8000...
+[2025-03-25T09:15:44.001] [INFO] default - /api/user/deleteWribate
+[2025-03-25T09:16:11.973] [INFO] default - /api/user/createBatchWribate
+[2025-03-25T09:16:32.822] [INFO] default - server is running  on the port 8000...
+[2025-03-25T09:16:43.682] [INFO] default - server is running  on the port 8000...
+[2025-03-25T09:16:53.801] [INFO] default - server is running  on the port 8000...
+[2025-03-25T09:17:01.576] [INFO] default - /api/user/createBatchWribate
+[2025-03-25T09:21:09.657] [INFO] default - server is running  on the port 8000...
+[2025-03-25T09:22:57.454] [INFO] default - server is running  on the port 8000...
+[2025-03-25T09:24:24.707] [INFO] default - server is running  on the port 8000...
+[2025-03-25T09:24:29.866] [INFO] default - server is running  on the port 8000...
+[2025-03-25T09:28:02.784] [INFO] default - server is running  on the port 8000...
+[2025-03-26T10:01:03.619] [INFO] default - server is running  on the port 8000...
+[2025-03-26T10:10:15.488] [INFO] default - server is running  on the port 8000...
+[2025-03-26T23:22:54.216] [INFO] default - server is running  on the port 8000...
+[2025-03-26T23:23:27.174] [INFO] default - server is running  on the port 8000...
+[2025-03-30T01:15:50.847] [INFO] default - server is running  on the port 8000...
+[2025-03-30T01:16:08.760] [INFO] default - /user/sendOTP
+[2025-03-30T01:16:40.375] [INFO] default - server is running  on the port 8000...
+[2025-03-30T01:18:31.909] [INFO] default - server is running  on the port 8000...
+[2025-03-30T01:18:44.421] [INFO] default - /user/sendOTP
+[2025-03-30T01:19:38.119] [INFO] default - /api/user/sendOTP
+[2025-03-30T01:20:08.059] [INFO] default - server is running  on the port 8000...
+[2025-03-30T01:20:14.141] [INFO] default - server is running  on the port 8000...
+[2025-03-30T01:20:59.022] [INFO] default - server is running  on the port 8000...
+[2025-03-30T01:21:13.571] [INFO] default - server is running  on the port 8000...
+[2025-03-30T01:22:18.936] [INFO] default - /api/user/sendOTP
+[2025-03-30T01:22:24.872] [INFO] default - /api/user/vertfyOTP
+[2025-03-30T01:22:54.467] [INFO] default - server is running  on the port 8000...
+[2025-03-30T01:24:32.686] [INFO] default - server is running  on the port 8000...
+[2025-03-30T01:24:54.418] [INFO] default - /api/user/vertfyOTP
+[2025-03-30T01:25:07.421] [INFO] default - server is running  on the port 8000...
+[2025-03-30T01:25:17.157] [INFO] default - /api/user/vertfyOTP
+[2025-03-30T01:25:45.595] [INFO] default - server is running  on the port 8000...
+[2025-03-30T01:25:50.969] [INFO] default - /api/user/vertfyOTP
+[2025-03-30T01:26:03.079] [INFO] default - server is running  on the port 8000...
+[2025-03-30T01:26:07.062] [INFO] default - /api/user/vertfyOTP
+[2025-03-30T01:26:30.261] [INFO] default - server is running  on the port 8000...
+[2025-03-30T01:26:51.004] [INFO] default - /api/user/sendOTP
+[2025-03-30T01:26:54.423] [INFO] default - /api/user/signUp
+[2025-03-30T01:29:45.473] [INFO] default - server is running  on the port 8000...
+[2025-03-30T01:29:55.732] [INFO] default - /api/user/signUp
+[2025-03-30T01:31:02.359] [INFO] default - server is running  on the port 8000...
+[2025-03-30T01:31:10.702] [INFO] default - server is running  on the port 8000...
+[2025-03-30T01:31:26.357] [INFO] default - /api/user/signUp
+[2025-03-30T01:32:59.440] [INFO] default - server is running  on the port 8000...
+[2025-03-30T01:33:10.947] [INFO] default - server is running  on the port 8000...
+[2025-03-30T01:33:31.578] [INFO] default - /api/user/getWribateByCategory/technology
+[2025-03-30T01:33:31.594] [INFO] default - /api/user/getCategories
+[2025-03-30T01:33:34.075] [INFO] default - /api/user/myWribates
+[2025-03-30T01:33:36.005] [INFO] default - server is running  on the port 8000...
+[2025-03-30T01:33:50.241] [INFO] default - /api/user/myWribates
+[2025-03-30T01:34:41.769] [INFO] default - server is running  on the port 8000...
+[2025-03-30T01:34:50.711] [INFO] default - /api/user/myWribates
+[2025-03-30T01:39:45.006] [INFO] default - server is running  on the port 8000...
+[2025-03-30T01:39:57.830] [INFO] default - /api/user/myWribates
+[2025-03-30T01:40:43.236] [INFO] default - server is running  on the port 8000...
+[2025-03-30T01:40:53.306] [INFO] default - /api/user/myWribates
+[2025-03-30T01:42:14.517] [INFO] default - /api/user/getWribateById/67e6c5bd56de78ae23232514
+[2025-03-30T01:42:14.524] [INFO] default - /api/user/getCategories
+[2025-03-30T01:45:35.153] [INFO] default - /api/user/getWribateByCategory/technology
+[2025-03-30T01:45:58.484] [INFO] default - /api/user/myWribates
+[2025-03-30T09:46:37.037] [INFO] default - server is running  on the port 8000...
+[2025-03-30T09:47:06.903] [INFO] default - server is running  on the port 8000...
+[2025-03-30T09:49:48.427] [INFO] default - server is running  on the port 8000...
+[2025-03-30T09:53:09.624] [INFO] default - server is running  on the port 8000...
+[2025-03-30T09:53:12.273] [INFO] default - /api/user/getCategories
+[2025-03-30T09:53:12.288] [INFO] default - /api/user/getWribateByCategory/technology
+[2025-03-30T09:53:40.928] [INFO] default - /api/user/createBatchWribate
+[2025-03-30T09:53:48.553] [INFO] default - /api/user/createBatchWribate
+[2025-03-30T09:54:36.343] [INFO] default - /api/user/createBatchWribate
+[2025-03-30T09:54:43.707] [INFO] default - server is running  on the port 8000...
+[2025-03-30T09:55:51.815] [INFO] default - /api/user/createBatchWribate
+[2025-03-30T09:58:21.146] [INFO] default - /api/user/createBatchWribate
+[2025-03-30T09:59:32.924] [INFO] default - server is running  on the port 8000...
+[2025-03-30T09:59:40.686] [INFO] default - server is running  on the port 8000...
+[2025-03-30T09:59:49.714] [INFO] default - /api/user/createBatchWribate
+[2025-03-30T10:00:11.710] [INFO] default - /api/user/createBatchWribate
+[2025-03-30T10:01:50.422] [INFO] default - /api/user/createBatchWribate
+[2025-03-30T10:03:36.689] [INFO] default - server is running  on the port 8000...
+[2025-03-30T10:03:39.298] [INFO] default - /api/user/createBatchWribate
+[2025-03-30T10:04:40.543] [INFO] default - server is running  on the port 8000...
+[2025-03-30T10:05:16.167] [INFO] default - /api/user/createBatchWribate
+[2025-03-30T10:05:19.048] [INFO] default - server is running  on the port 8000...
+[2025-03-30T10:06:14.739] [INFO] default - server is running  on the port 8000...
+[2025-03-30T10:06:26.911] [INFO] default - /api/user/createBatchWribate
+[2025-03-30T10:08:05.525] [INFO] default - server is running  on the port 8000...
+[2025-03-30T10:08:09.248] [INFO] default - /api/user/deleteWribate
+[2025-03-30T10:10:04.006] [INFO] default - /api/user/createBatchWribate
+[2025-03-30T10:12:33.319] [INFO] default - /api/user/createBatchWribate
+[2025-03-30T10:13:10.677] [INFO] default - /api/user/createBatchWribate
+[2025-03-30T10:42:21.340] [INFO] default - server is running  on the port 8000...
+[2025-03-30T10:42:37.494] [INFO] default - /api/user/deleteWribate
+[2025-03-30T10:43:30.194] [INFO] default - /api/user/uploadImage?image_type=wribte
+[2025-03-30T10:43:30.293] [INFO] default - /api/user/createWribate
+[2025-03-30T10:43:39.292] [INFO] default - /api/user/getCategories
+[2025-03-30T10:43:39.302] [INFO] default - /api/user/getWribateByCategory/technology
+[2025-03-30T10:44:48.663] [INFO] default - /api/user/uploadImage?image_type=wribte
+[2025-03-30T10:44:48.911] [INFO] default - /api/user/createWribate
+[2025-03-30T10:45:42.322] [INFO] default - /api/user/uploadImage?image_type=wribte
+[2025-03-30T10:45:42.446] [INFO] default - /api/user/createWribate
+[2025-03-30T10:46:00.233] [INFO] default - /api/user/myWribates
+[2025-03-30T10:46:10.405] [INFO] default - /api/user/myWribates
+[2025-03-30T10:46:54.213] [INFO] default - /api/user/myWribates
+[2025-03-30T10:47:00.245] [INFO] default - /api/user/getCategories
+[2025-03-30T10:47:00.251] [INFO] default - /api/user/getWribateById/67e8d2fadd716de26dbc7c6f
+[2025-03-30T10:48:03.454] [INFO] default - /api/user/myWribates
+[2025-03-30T10:49:15.297] [INFO] default - /api/user/getWribateById/67e8d2fadd716de26dbc7c6f
+[2025-03-30T10:49:15.301] [INFO] default - /api/user/getCategories
+[2025-03-30T10:49:52.654] [INFO] default - server is running  on the port 8000...
+[2025-03-30T10:50:06.665] [INFO] default - server is running  on the port 8000...
+[2025-03-30T10:50:20.446] [INFO] default - server is running  on the port 8000...
+[2025-03-30T10:53:21.018] [INFO] default - /api/user/getWribateByCategory/technology
+[2025-03-30T10:54:09.540] [INFO] default - /api/user/deleteWribate
+[2025-03-30T10:54:38.207] [INFO] default - /api/user/uploadImage?image_type=wribte
+[2025-03-30T10:54:38.465] [INFO] default - /api/user/createWribate
+[2025-03-30T10:56:37.092] [INFO] default - /api/user/uploadImage?image_type=wribte
+[2025-03-30T10:56:37.214] [INFO] default - /api/user/createWribate
+[2025-03-30T10:57:57.774] [INFO] default - /api/user/uploadImage?image_type=wribte
+[2025-03-30T10:57:57.863] [INFO] default - /api/user/createWribate
+[2025-03-30T10:58:10.950] [INFO] default - server is running  on the port 8000...
+[2025-03-30T10:58:47.177] [INFO] default - /api/user/uploadImage?image_type=wribte
+[2025-03-30T10:58:47.297] [INFO] default - /api/user/createWribate
+[2025-03-30T11:00:20.853] [INFO] default - server is running  on the port 8000...
+[2025-03-30T11:00:28.064] [INFO] default - /api/user/uploadImage?image_type=wribte
+[2025-03-30T11:00:28.190] [INFO] default - /api/user/createWribate
+[2025-03-30T11:00:59.560] [INFO] default - server is running  on the port 8000...
+[2025-03-30T11:01:04.399] [INFO] default - server is running  on the port 8000...
+[2025-03-30T11:01:30.409] [INFO] default - /api/user/uploadImage?image_type=wribte
+[2025-03-30T11:01:30.542] [INFO] default - /api/user/createWribate
+[2025-03-30T11:03:11.019] [INFO] default - server is running  on the port 8000...
+[2025-03-30T11:03:20.549] [INFO] default - server is running  on the port 8000...
+[2025-03-30T11:03:46.920] [INFO] default - /api/user/uploadImage?image_type=wribte
+[2025-03-30T11:03:46.996] [INFO] default - /api/user/createWribate
+[2025-03-30T11:04:22.995] [INFO] default - /api/user/deleteWribate
+[2025-03-30T11:04:58.570] [INFO] default - /api/user/uploadImage?image_type=wribte
+[2025-03-30T11:04:58.655] [INFO] default - /api/user/createWribate
+[2025-03-30T11:06:02.847] [INFO] default - server is running  on the port 8000...
+[2025-03-30T11:06:12.295] [INFO] default - /api/user/uploadImage?image_type=wribte
+[2025-03-30T11:07:01.138] [INFO] default - /api/user/uploadImage?image_type=wribte
+[2025-03-30T11:07:01.229] [INFO] default - /api/user/createWribate
+[2025-03-30T11:07:19.834] [INFO] default - /api/user/getWribateByCategory/technology
+[2025-03-30T11:07:19.839] [INFO] default - /api/user/getCategories
+[2025-03-30T11:07:36.876] [INFO] default - /api/user/myWribates
+[2025-03-30T11:07:39.527] [INFO] default - /api/user/myWribates
+[2025-03-30T11:09:24.131] [INFO] default - /api/user/myWribates
+[2025-03-30T11:15:39.484] [INFO] default - /api/user/getCategories
+[2025-03-30T11:15:39.491] [INFO] default - /api/user/getWribateByCategory/technology
+[2025-03-30T11:15:42.900] [INFO] default - /api/user/getWribateById/67e8d2fadd716de26dbc7c6f
+[2025-03-30T11:15:47.703] [INFO] default - /api/user/getWribateById/67e8d2fadd716de26dbc7c6f
+[2025-03-30T11:15:47.708] [INFO] default - /api/user/getCategories
+[2025-03-30T11:16:59.801] [INFO] default - /api/user/getCategories
+[2025-03-30T11:16:59.805] [INFO] default - /api/user/getWribateById/67e8d2fadd716de26dbc7c6f
+[2025-03-30T11:18:22.900] [INFO] default - /api/user/getCategories
+[2025-03-30T11:18:22.905] [INFO] default - /api/user/getWribateByCategory/technology
+[2025-03-30T11:18:49.372] [INFO] default - server is running  on the port 8000...
+[2025-03-30T11:19:11.728] [INFO] default - /api/user/getWribateById/67e8d2fadd716de26dbc7c6f
+[2025-03-30T11:20:30.201] [INFO] default - server is running  on the port 8000...
+[2025-03-30T11:20:58.903] [INFO] default - server is running  on the port 8000...
+[2025-03-30T11:22:06.740] [INFO] default - server is running  on the port 8000...
+[2025-03-30T11:22:21.540] [INFO] default - /api/user/getCategories
+[2025-03-30T11:22:21.548] [INFO] default - /api/user/getWribateById/67e8d2fadd716de26dbc7c6f
+[2025-03-30T11:22:34.109] [INFO] default - /api/user/myWribates
+[2025-03-30T11:22:52.053] [INFO] default - /api/user/myWribates
+[2025-03-30T11:23:30.807] [INFO] default - /api/user/getCategories
+[2025-03-30T11:23:30.818] [INFO] default - /api/user/getWribateById/67e8d87d8431aee53496dfac
+[2025-03-30T11:24:04.015] [INFO] default - /api/user/uploadImage?image_type=wribte
+[2025-03-30T11:24:04.225] [INFO] default - /api/user/createWribate
+[2025-03-30T11:24:06.279] [INFO] default - /api/user/getWribateByCategory/technology
+[2025-03-30T11:24:41.994] [INFO] default - /api/user/login
+[2025-03-30T11:24:49.879] [INFO] default - /api/user/myWribates
+[2025-03-30T11:31:28.108] [INFO] default - server is running  on the port 8000...
+[2025-03-30T11:31:49.302] [INFO] default - /api/user/createWribate
+[2025-03-30T11:31:58.649] [INFO] default - /api/user/myWribates
+[2025-03-30T11:32:34.003] [INFO] default - /uploads/users/WhatsApp
+[2025-03-30T11:35:00.593] [INFO] default - /api/user/createWribate
+[2025-03-30T11:35:03.490] [INFO] default - /api/user/myWribates
+[2025-03-30T11:35:42.205] [INFO] default - /api/user/createWribate
+[2025-03-30T11:35:44.988] [INFO] default - /api/user/myWribates
+[2025-03-30T11:39:30.037] [INFO] default - /api/user/myWribates
+[2025-03-30T11:40:40.951] [INFO] default - server is running  on the port 8000...
+[2025-03-30T11:41:54.237] [INFO] default - server is running  on the port 8000...
+[2025-03-30T11:42:24.784] [INFO] default - /api/user/createBatchWribate
+[2025-03-30T11:50:24.730] [INFO] default - server is running  on the port 8000...
+[2025-03-30T11:50:30.998] [INFO] default - server is running  on the port 8000...
+[2025-03-30T11:51:05.355] [INFO] default - /api/user/createBatchWribate
+[2025-03-30T11:52:55.284] [INFO] default - server is running  on the port 8000...
+[2025-03-30T11:53:01.797] [INFO] default - /api/user/createBatchWribate
+[2025-03-30T11:54:15.022] [INFO] default - server is running  on the port 8000...
+[2025-03-30T11:54:31.735] [INFO] default - /api/user/deleteWribate
+[2025-03-30T11:57:13.912] [INFO] default - server is running  on the port 8000...
+[2025-03-30T12:12:37.074] [INFO] default - /api/user/createBatchWribate
+[2025-03-30T12:15:01.402] [INFO] default - server is running  on the port 8000...
+[2025-03-30T12:15:43.010] [INFO] default - /api/user/myWribates
+[2025-03-30T12:15:44.824] [INFO] default - /api/user/myWribates
+[2025-03-30T12:15:55.678] [INFO] default - server is running  on the port 8000...
+[2025-03-30T12:16:07.389] [INFO] default - /api/user/createBatchWribate
+[2025-03-30T12:17:06.358] [INFO] default - /api/user/createBatchWribate
+[2025-03-30T12:18:14.666] [INFO] default - /api/user/myWribates
+[2025-03-30T12:18:20.510] [INFO] default - /api/user/getCategories
+[2025-03-30T12:18:20.543] [INFO] default - /api/user/getWribateById/67e8d87d8431aee53496dfac
+[2025-03-30T12:18:26.018] [INFO] default - /api/user/getCategories
+[2025-03-30T12:18:26.025] [INFO] default - /api/user/getWribateById/67e8d87d8431aee53496dfac
+[2025-03-30T12:18:50.104] [INFO] default - /api/user/createBatchWribate
+[2025-03-30T12:18:56.637] [INFO] default - /api/user/myWribates
+[2025-03-30T12:18:59.631] [INFO] default - /api/user/myWribates
+[2025-03-30T12:19:01.938] [INFO] default - /api/user/getWribateByCategory/technology
+[2025-03-30T12:19:04.518] [INFO] default - /api/user/myWribates
+[2025-03-30T12:19:17.180] [INFO] default - /api/user/myWribates
+[2025-03-30T12:19:25.847] [INFO] default - /api/user/myWribates
+[2025-03-30T12:20:42.005] [INFO] default - /api/user/getCategories
+[2025-03-30T12:20:42.011] [INFO] default - /api/user/getWribateByCategory/technology
+[2025-03-30T12:20:55.229] [INFO] default - /api/user/createBatchWribate
+[2025-03-30T12:21:04.916] [INFO] default - /api/user/createBatchWribate
+[2025-03-30T12:21:14.353] [INFO] default - /api/user/createBatchWribate
+[2025-03-30T12:21:19.929] [INFO] default - /api/user/login
+[2025-03-30T12:21:31.065] [INFO] default - /api/user/login
+[2025-03-30T12:21:52.970] [INFO] default - /api/user/login
+[2025-03-30T12:22:00.756] [INFO] default - /api/user/login
+[2025-03-30T12:22:04.294] [INFO] default - server is running  on the port 8000...
+[2025-03-30T12:22:07.058] [INFO] default - /api/user/createBatchWribate
+[2025-03-30T12:22:09.372] [INFO] default - /api/user/login
+[2025-03-30T12:23:00.353] [INFO] default - /api/user/login
+[2025-03-30T12:23:03.527] [INFO] default - /api/user/getCategories
+[2025-03-30T12:23:03.534] [INFO] default - /api/user/getWribateByCategory/technology
+[2025-03-30T12:23:06.392] [INFO] default - /api/user/myWribates
+[2025-03-30T12:23:34.435] [INFO] default - /api/user/login
+[2025-03-30T12:23:36.485] [INFO] default - /api/user/getCategories
+[2025-03-30T12:23:36.491] [INFO] default - /api/user/getWribateByCategory/technology
+[2025-03-30T12:23:54.291] [INFO] default - /api/user/createBatchWribate
+[2025-03-30T12:24:03.418] [INFO] default - /api/user/uploadImage?image_type=wribte
+[2025-03-30T12:24:03.657] [INFO] default - /api/user/createWribate
+[2025-03-30T12:24:05.879] [INFO] default - /api/user/getWribateByCategory/technology
+[2025-03-30T12:24:08.229] [INFO] default - /api/user/myWribates
+[2025-03-30T12:24:46.958] [INFO] default - server is running  on the port 8000...
+[2025-03-30T12:24:48.282] [INFO] default - /api/user/myWribates
+[2025-03-30T12:24:59.979] [INFO] default - server is running  on the port 8000...
+[2025-03-30T12:25:11.447] [INFO] default - server is running  on the port 8000...
+[2025-03-30T12:25:21.158] [INFO] default - /api/user/getCategories
+[2025-03-30T12:25:21.180] [INFO] default - /api/user/getWribateById/67e8ea8bec5f3f9a3416c140
+[2025-03-30T12:25:24.248] [INFO] default - /api/user/getCategories
+[2025-03-30T12:25:24.255] [INFO] default - /api/user/getWribateById/67e8ea8bec5f3f9a3416c140
+[2025-03-30T12:26:14.821] [INFO] default - server is running  on the port 8000...
+[2025-03-30T12:26:32.135] [INFO] default - server is running  on the port 8000...
+[2025-03-30T12:27:15.785] [INFO] default - server is running  on the port 8000...
+[2025-03-30T12:27:24.884] [INFO] default - /api/user/createBatchWribate
+[2025-03-30T12:28:05.554] [INFO] default - server is running  on the port 8000...
+[2025-03-30T12:28:07.719] [INFO] default - /api/user/createBatchWribate
+[2025-03-30T12:28:45.503] [INFO] default - server is running  on the port 8000...
+[2025-03-30T12:28:49.970] [INFO] default - server is running  on the port 8000...
+[2025-03-30T12:28:52.431] [INFO] default - /api/user/createBatchWribate
+[2025-03-30T12:31:53.348] [INFO] default - /api/user/getCategories
+[2025-03-30T12:31:53.356] [INFO] default - /api/user/getWribateById/67e8ea8bec5f3f9a3416c140
+[2025-03-30T12:33:30.417] [INFO] default - /api/user/createBatchWribate
+[2025-03-30T12:34:07.458] [INFO] default - /api/user/createBatchWribate
+[2025-03-30T12:35:54.099] [INFO] default - /api/user/createBatchWribate
+[2025-03-30T12:36:09.359] [INFO] default - server is running  on the port 8000...
+[2025-03-30T12:36:11.578] [INFO] default - /api/user/createBatchWribate
+[2025-03-30T12:36:11.749] [INFO] default - /api/user/getCategories
+[2025-03-30T12:36:11.758] [INFO] default - /api/user/getWribateById/67e8ea8bec5f3f9a3416c140
+[2025-03-30T12:36:47.323] [INFO] default - server is running  on the port 8000...
+[2025-03-30T12:36:49.276] [INFO] default - /api/user/createBatchWribate
+[2025-03-30T12:37:43.512] [INFO] default - server is running  on the port 8000...
+[2025-03-30T12:37:45.741] [INFO] default - /api/user/createBatchWribate
+[2025-03-30T12:38:09.275] [INFO] default - server is running  on the port 8000...
+[2025-03-30T12:38:20.460] [INFO] default - server is running  on the port 8000...
+[2025-03-30T12:38:30.175] [INFO] default - /api/user/createBatchWribate
+[2025-03-30T12:38:42.492] [INFO] default - server is running  on the port 8000...
+[2025-03-30T12:38:58.746] [INFO] default - /api/user/getCategories
+[2025-03-30T12:38:58.769] [INFO] default - /api/user/getWribateById/67e8ea8bec5f3f9a3416c140
+[2025-03-30T12:39:22.511] [INFO] default - /api/user/deleteWribate
+[2025-03-30T12:39:35.448] [INFO] default - /api/user/createBatchWribate
+[2025-03-30T12:40:28.058] [INFO] default - server is running  on the port 8000...
+[2025-03-30T12:41:12.385] [INFO] default - server is running  on the port 8000...
+[2025-03-30T12:41:18.648] [INFO] default - /api/user/myWribates
+[2025-03-30T12:42:58.048] [INFO] default - server is running  on the port 8000...
+[2025-03-30T12:43:01.566] [INFO] default - /api/user/deleteWribate
+[2025-03-30T12:43:06.188] [INFO] default - /api/user/createBatchWribate
+[2025-03-30T12:47:18.021] [INFO] default - /api/user/myWribates
+[2025-03-30T12:47:19.764] [INFO] default - /api/user/getCategories
+[2025-03-30T12:47:19.770] [INFO] default - /api/user/getWribateById/67e8ea8bec5f3f9a3416c140
+[2025-03-30T12:47:54.797] [INFO] default - /api/user/uploadImage?image_type=wribte
+[2025-03-30T12:47:54.998] [INFO] default - /api/user/createWribate
+[2025-03-30T12:47:57.241] [INFO] default - /api/user/getCategories
+[2025-03-30T12:47:57.247] [INFO] default - /api/user/getWribateByCategory/technology
+[2025-03-30T12:47:59.408] [INFO] default - /api/user/myWribates
+[2025-03-30T12:49:34.536] [INFO] default - /api/user/myWribates
+[2025-03-30T12:49:45.396] [INFO] default - /api/user/getCategories
+[2025-03-30T12:49:45.402] [INFO] default - /api/user/getWribateById/67e8ef02973bc72fdef217d4
+[2025-03-30T12:50:33.949] [INFO] default - server is running  on the port 8000...
+[2025-03-30T12:53:55.622] [INFO] default - /api/user/getCategories
+[2025-03-30T12:53:55.640] [INFO] default - /api/user/getWribateById/67e8ef02973bc72fdef217d4
+[2025-03-30T12:54:15.706] [INFO] default - server is running  on the port 8000...
+[2025-03-30T12:56:03.775] [INFO] default - server is running  on the port 8000...
+[2025-03-30T12:57:53.817] [INFO] default - /api/user/getCategories
+[2025-03-30T12:57:53.830] [INFO] default - /api/user/getWribateById/67e8ef02973bc72fdef217d4
+[2025-03-30T12:57:56.894] [INFO] default - server is running  on the port 8000...
+[2025-03-30T12:58:11.830] [INFO] default - server is running  on the port 8000...
+[2025-03-30T12:58:29.194] [INFO] default - server is running  on the port 8000...
+[2025-03-30T13:00:39.040] [INFO] default - server is running  on the port 8000...
+[2025-03-30T13:02:12.817] [INFO] default - server is running  on the port 8000...
+[2025-03-30T13:02:17.126] [INFO] default - /api/user/myWribates
+[2025-03-30T13:02:51.528] [INFO] default - server is running  on the port 8000...
+[2025-03-30T13:02:59.538] [INFO] default - server is running  on the port 8000...
+[2025-03-30T13:04:35.923] [INFO] default - server is running  on the port 8000...
+[2025-03-30T13:04:38.856] [INFO] default - /api/user/getCategories
+[2025-03-30T13:04:38.871] [INFO] default - /api/user/getWribateById/67e8ef02973bc72fdef217d4
+[2025-03-30T13:05:30.234] [INFO] default - /api/user/checkAvailableUserName
+[2025-03-30T13:06:00.427] [INFO] default - /api/user/checkAvailableUserName
+[2025-03-30T13:06:31.413] [INFO] default - server is running  on the port 8000...
+[2025-03-30T13:06:34.674] [INFO] default - /api/user/checkAvailableUserName
+[2025-03-30T13:06:50.242] [INFO] default - /api/user/getWribateByCategory/technology
+[2025-03-30T13:08:21.028] [INFO] default - server is running  on the port 8000...
+[2025-03-30T13:08:32.007] [INFO] default - /api/user/checkAvailableUserName
+[2025-03-30T13:09:59.163] [INFO] default - /api/user/myWribates
+[2025-03-30T13:21:40.389] [INFO] default - /api/user/getCategories
+[2025-03-30T13:21:40.399] [INFO] default - /api/user/getWribateByCategory/technology
+[2025-03-30T13:22:00.229] [INFO] default - /api/user/myWribates
+[2025-03-30T13:22:18.231] [INFO] default - /api/user/getCategories
+[2025-03-30T13:22:18.237] [INFO] default - /api/user/getWribateById/67e8ef02973bc72fdef217d4
+[2025-03-30T13:29:01.924] [INFO] default - server is running  on the port 8000...
+[2025-03-30T13:29:29.154] [INFO] default - server is running  on the port 8000...
+[2025-03-30T13:29:36.108] [INFO] default - server is running  on the port 8000...
+[2025-03-30T13:32:27.278] [INFO] default - /api/user/myWribates
+[2025-03-30T13:32:45.976] [INFO] default - server is running  on the port 8000...
+[2025-03-30T13:32:48.052] [INFO] default - /api/user/myWribates
+[2025-03-30T13:35:04.761] [INFO] default - /api/user/createBatchWribate
+[2025-03-30T13:44:34.869] [INFO] default - /api/user/getCategories
+[2025-03-30T13:44:34.876] [INFO] default - /api/user/getWribateByCategory/technology
+[2025-03-30T13:47:51.512] [INFO] default - server is running  on the port 8000...
+[2025-03-30T13:48:09.174] [INFO] default - server is running  on the port 8000...
+[2025-03-30T13:50:02.890] [INFO] default - server is running  on the port 8000...
+[2025-03-30T13:50:40.392] [INFO] default - server is running  on the port 8000...
+[2025-03-30T13:51:10.052] [INFO] default - server is running  on the port 8000...
+[2025-03-30T13:51:45.249] [INFO] default - server is running  on the port 8000...
+[2025-03-30T13:54:11.121] [INFO] default - server is running  on the port 8000...
+[2025-03-30T13:54:15.146] [INFO] default - /api/user/myWribates
+[2025-03-30T13:56:26.006] [INFO] default - /api/user/getCategories
+[2025-03-30T13:56:26.017] [INFO] default - /api/user/getWribateByCategory/technology
+[2025-03-30T13:56:28.681] [INFO] default - /api/user/myWribates
+[2025-03-30T13:56:31.645] [INFO] default - /api/user/myWribates
+[2025-03-30T13:57:19.990] [INFO] default - /api/user/getCategories
+[2025-03-30T13:57:19.998] [INFO] default - /api/user/getWribateById/67e8ef02973bc72fdef217d4
+[2025-03-30T13:57:52.551] [INFO] default - /api/user/uploadImage?image_type=wribte
+[2025-03-30T13:57:52.721] [INFO] default - /api/user/createWribate
+[2025-03-30T13:57:56.321] [INFO] default - /api/user/getWribateByCategory/technology
+[2025-03-30T13:58:36.832] [INFO] default - /api/user/myWribates
+[2025-03-30T13:58:37.059] [INFO] default - /api/user/myWribates
+[2025-03-30T14:07:23.220] [INFO] default - /api/user/getCategories
+[2025-03-30T14:07:23.226] [INFO] default - /api/user/getWribateById/67e8ef02973bc72fdef217d4
+[2025-03-30T14:09:57.254] [INFO] default - /api/user/arguments/67e6c5bd56de78ae23232514
+[2025-03-30T14:12:32.224] [INFO] default - /api/user/getCategories
+[2025-03-30T14:12:32.229] [INFO] default - /api/user/getWribateById/67e8ef02973bc72fdef217d4
+[2025-03-30T14:12:43.073] [INFO] default - /api/user/arguments/67e8ef02973bc72fdef217d4
+[2025-03-30T14:13:05.558] [INFO] default - /api/user/getWribateByCategory/technology
+[2025-03-30T14:13:05.563] [INFO] default - /api/user/getCategories
+[2025-03-30T14:13:17.840] [INFO] default - /api/user/login
+[2025-03-30T14:13:19.692] [INFO] default - /api/user/getCategories
+[2025-03-30T14:13:19.697] [INFO] default - /api/user/getWribateByCategory/technology
+[2025-03-30T14:13:32.179] [INFO] default - /api/user/myWribates
+[2025-03-30T14:13:57.790] [INFO] default - /api/user/getWribateById/67e8ef02973bc72fdef217d4
+[2025-03-30T14:14:16.920] [INFO] default - /api/user/arguments/67e8ef02973bc72fdef217d4
+[2025-03-30T14:15:38.649] [INFO] default - /api/user/uploadImage?image_type=wribte
+[2025-03-30T14:15:38.814] [INFO] default - /api/user/createWribate
+[2025-03-30T14:15:55.761] [INFO] default - /api/user/getCategories
+[2025-03-30T14:15:55.768] [INFO] default - /api/user/getWribateByCategory/technology
+[2025-03-30T14:16:10.501] [INFO] default - /api/user/myWribates
+[2025-03-30T14:17:11.334] [INFO] default - /api/user/myWribates
+[2025-03-30T14:17:24.955] [INFO] default - /api/user/getCategories
+[2025-03-30T14:17:24.960] [INFO] default - /api/user/getWribateById/67e90088b358eb3f1aee6482
+[2025-03-30T14:17:35.527] [INFO] default - /api/user/arguments/67e90088b358eb3f1aee6482
+[2025-03-30T14:18:04.372] [INFO] default - /api/user/getCategories
+[2025-03-30T14:18:04.378] [INFO] default - /api/user/getWribateByCategory/technology
+[2025-03-30T14:18:34.248] [INFO] default - /api/user/login
+[2025-03-30T14:18:36.326] [INFO] default - /api/user/getCategories
+[2025-03-30T14:18:36.330] [INFO] default - /api/user/getWribateByCategory/technology
+[2025-03-30T14:18:39.192] [INFO] default - server is running  on the port 8000...
+[2025-03-30T14:19:13.098] [INFO] default - /api/user/uploadImage?image_type=wribte
+[2025-03-30T14:19:13.339] [INFO] default - /api/user/createWribate
+[2025-03-30T14:19:33.867] [INFO] default - /api/user/uploadImage?image_type=wribte
+[2025-03-30T14:19:33.998] [INFO] default - /api/user/createWribate
+[2025-03-30T14:19:51.692] [INFO] default - /api/user/myWribates
+[2025-03-30T14:20:03.241] [INFO] default - server is running  on the port 8000...
+[2025-03-30T14:20:10.926] [INFO] default - server is running  on the port 8000...
+[2025-03-30T14:21:07.159] [INFO] default - /api/user/myWribates
+[2025-03-30T14:21:23.142] [INFO] default - /api/user/getCategories
+[2025-03-30T14:21:23.149] [INFO] default - /api/user/getWribateById/67e9059e72a366df38fc6a7c
+[2025-03-30T14:21:34.574] [INFO] default - /api/user/arguments/67e9059e72a366df38fc6a7c
+[2025-03-30T14:22:02.357] [INFO] default - /api/user/getWribateById/67e9059e72a366df38fc6a7c
+[2025-03-30T14:22:02.363] [INFO] default - /api/user/getCategories
+[2025-03-30T14:31:47.681] [INFO] default - /api/user/myWribates
+[2025-03-30T14:33:38.269] [INFO] default - /api/user/getWribateByCategory/technology
+[2025-03-30T14:33:59.565] [INFO] default - /api/user/myWribates
+[2025-03-30T14:34:28.452] [INFO] default - /api/user/myWribates
+[2025-03-30T14:34:52.246] [INFO] default - /api/user/getCategories
+[2025-03-30T14:34:52.252] [INFO] default - /api/user/getWribateByCategory/technology
+[2025-03-30T14:36:36.431] [INFO] default - /api/user/getCategories
+[2025-03-30T14:39:06.567] [INFO] default - /api/user/getCategories
+[2025-03-30T14:39:34.444] [INFO] default - /api/user/getWribateByCategory/technology
+[2025-03-30T14:41:15.190] [INFO] default - /api/user/getCategories
+[2025-03-30T14:41:15.195] [INFO] default - /api/user/getWribateByCategory/technology
+[2025-03-30T14:41:25.545] [INFO] default - /api/user/getWribateByCategory/technology
+[2025-03-30T14:41:25.550] [INFO] default - /api/user/getCategories
+[2025-03-30T14:42:41.165] [INFO] default - server is running  on the port 8000...
+[2025-03-30T14:43:42.835] [INFO] default - server is running  on the port 8000...
+[2025-03-30T14:43:53.637] [INFO] default - server is running  on the port 8000...
+[2025-03-30T14:44:49.478] [INFO] default - server is running  on the port 8000...
+[2025-03-30T14:45:12.857] [INFO] default - server is running  on the port 8000...
+[2025-03-30T14:45:32.740] [INFO] default - server is running  on the port 8000...
+[2025-03-30T14:45:57.725] [INFO] default - server is running  on the port 8000...
+[2025-03-30T14:46:41.006] [INFO] default - server is running  on the port 8000...
+[2025-03-30T14:48:44.501] [INFO] default - /api/user/getWribateByCategory/technology
+[2025-03-30T14:48:44.512] [INFO] default - /api/user/getCategories
+[2025-03-30T14:48:50.906] [INFO] default - /api/user/getWribateByCategory/technology
+[2025-03-30T14:48:50.912] [INFO] default - /api/user/getCategories
+[2025-03-30T14:49:23.671] [INFO] default - server is running  on the port 8000...
+[2025-03-30T14:50:15.933] [INFO] default - server is running  on the port 8000...
+[2025-03-30T14:50:48.888] [INFO] default - server is running  on the port 8000...
+[2025-03-30T14:51:00.106] [INFO] default - server is running  on the port 8000...
+[2025-03-30T14:52:52.522] [INFO] default - server is running  on the port 8000...
+[2025-03-30T14:53:02.959] [INFO] default - server is running  on the port 8000...
+[2025-03-30T14:54:02.423] [INFO] default - server is running  on the port 8000...
+[2025-03-30T14:54:28.256] [INFO] default - server is running  on the port 8000...
+[2025-03-30T14:55:41.489] [INFO] default - server is running  on the port 8000...
+[2025-03-30T14:57:35.591] [INFO] default - /api/user/getCategories
+[2025-03-30T14:58:33.651] [INFO] default - /api/user/getCategories
+[2025-03-30T15:00:09.191] [INFO] default - /api/user/getCategories
+[2025-03-30T15:00:21.393] [INFO] default - /api/user/getCategories
+[2025-03-30T15:00:41.030] [INFO] default - /api/user/getCategories
+[2025-03-30T15:01:13.004] [INFO] default - /api/user/getCategories
+[2025-03-30T15:01:29.088] [INFO] default - /api/user/getCategories
+[2025-03-30T15:02:12.369] [INFO] default - /api/user/getCategories
+[2025-03-30T15:02:39.151] [INFO] default - /api/user/getCategories
+[2025-03-30T15:03:06.972] [INFO] default - /api/user/getCategories
+[2025-03-30T15:03:16.681] [INFO] default - /api/user/getCategories
+[2025-03-30T15:04:02.583] [INFO] default - /api/user/getCategories
+[2025-03-30T15:04:06.658] [INFO] default - /api/user/signUp
+[2025-03-30T15:04:11.365] [INFO] default - /api/user/getCategories
+[2025-03-30T15:04:20.044] [INFO] default - /api/user/getCategories
+[2025-03-30T15:04:35.568] [INFO] default - /api/user/signUp
+[2025-03-30T15:04:58.544] [INFO] default - /api/user/signUp
+[2025-03-30T15:05:22.642] [INFO] default - /api/user/getCategories
+[2025-03-30T15:06:34.511] [INFO] default - server is running  on the port 8000...
+[2025-03-30T15:06:38.687] [INFO] default - /api/user/signUp
+[2025-03-30T15:07:26.437] [INFO] default - server is running  on the port 8000...
+[2025-03-30T15:07:41.816] [INFO] default - /api/user/getCategories
+[2025-03-30T15:08:08.448] [INFO] default - /api/user/getCategories
+[2025-03-30T15:08:12.205] [INFO] default - /api/user/getCategories
+[2025-03-30T15:08:12.373] [INFO] default - /api/user/getCategories
+[2025-03-30T15:08:53.604] [INFO] default - /api/admin/updateUserRole
+[2025-03-30T15:09:07.816] [INFO] default - /api/user/getCategories
+[2025-03-30T15:09:07.902] [INFO] default - /api/user/getCategories
+[2025-03-30T15:09:52.512] [INFO] default - server is running  on the port 8000...
+[2025-03-30T15:10:05.894] [INFO] default - /api/user/getCategories
+[2025-03-30T15:10:06.002] [INFO] default - /api/user/getCategories
+[2025-03-30T15:10:47.268] [INFO] default - server is running  on the port 8000...
+[2025-03-30T15:11:03.460] [INFO] default - /api/user/getWribateByCategory/67df09887ca089b31a7bddda
+[2025-03-30T15:11:14.892] [INFO] default - /api/user/getCategories
+[2025-03-30T15:11:15.024] [INFO] default - /api/user/getWribateByCategory/67df09887ca089b31a7bddda
+[2025-03-30T15:11:41.515] [INFO] default - /api/user/getWribateByCategory/67df09887ca089b31a7bddda
+[2025-03-30T15:11:42.438] [INFO] default - /api/user/getWribateByCategory/67df09887ca089b31a7bddda
+[2025-03-30T15:11:51.456] [INFO] default - /api/user/getCategories
+[2025-03-30T15:11:51.551] [INFO] default - /api/user/getWribateByCategory/67df09887ca089b31a7bddda
+[2025-03-30T15:12:28.463] [INFO] default - /api/user/getWribateByCategory/67df09887ca089b31a7bddda
+[2025-03-30T15:12:31.801] [INFO] default - /api/user/getCategories
+[2025-03-30T15:12:31.891] [INFO] default - /api/user/getWribateByCategory/67df09887ca089b31a7bddda
+[2025-03-30T15:13:10.512] [INFO] default - /api/user/getWribateByCategory/67df09887ca089b31a7bddda
+[2025-03-30T15:13:14.044] [INFO] default - /api/user/getCategories
+[2025-03-30T15:13:14.132] [INFO] default - /api/user/getWribateByCategory/67df09887ca089b31a7bddda
+[2025-03-30T15:13:47.478] [INFO] default - /api/user/getWribateByCategory/67df09887ca089b31a7bddda
+[2025-03-30T15:13:47.483] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T15:13:51.165] [INFO] default - /api/user/getCategories
+[2025-03-30T15:13:51.256] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T15:14:51.265] [INFO] default - /api/admin/getUsers
+[2025-03-30T15:15:00.455] [INFO] default - /api/admin/getUsers
+[2025-03-30T15:16:03.512] [INFO] default - /api/user/getCategories
+[2025-03-30T15:16:03.615] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T15:16:44.287] [INFO] default - /api/user/uploadImage?image_type=wribte
+[2025-03-30T15:16:44.407] [INFO] default - /api/user/createWribate
+[2025-03-30T15:16:46.124] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T15:16:56.110] [INFO] default - server is running  on the port 8000...
+[2025-03-30T15:17:17.914] [INFO] default - server is running  on the port 8000...
+[2025-03-30T15:17:37.486] [INFO] default - server is running  on the port 8000...
+[2025-03-30T15:18:30.026] [INFO] default - server is running  on the port 8000...
+[2025-03-30T15:19:18.955] [INFO] default - /api/user/myWribates
+[2025-03-30T15:19:42.309] [INFO] default - /api/admin/login
+[2025-03-30T15:20:15.819] [INFO] default - server is running  on the port 8000...
+[2025-03-30T15:20:40.950] [INFO] default - server is running  on the port 8000...
+[2025-03-30T15:20:42.760] [INFO] default - /api/admin/login
+[2025-03-30T15:21:41.213] [INFO] default - server is running  on the port 8000...
+[2025-03-30T15:21:41.495] [INFO] default - /api/user/getCategories
+[2025-03-30T15:21:46.745] [INFO] default - /api/admin/login
+[2025-03-30T15:22:47.543] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T15:23:05.894] [INFO] default - /api/user/getCategories
+[2025-03-30T15:23:06.098] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T15:23:21.519] [INFO] default - /api/user/getCategories
+[2025-03-30T15:23:21.631] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T15:24:05.211] [INFO] default - server is running  on the port 8000...
+[2025-03-30T15:25:46.484] [INFO] default - /api/user/myWribates
+[2025-03-30T15:27:25.870] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T15:35:00.321] [INFO] default - /api/user/getCategories
+[2025-03-30T15:35:00.652] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T15:39:46.376] [INFO] default - /api/user/getCategories
+[2025-03-30T15:39:46.469] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T15:48:49.234] [INFO] default - /api/user/getWribateById/67e9059e72a366df38fc6a7c
+[2025-03-30T15:56:14.015] [INFO] default - /api/user/getCategories
+[2025-03-30T15:56:14.102] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T15:56:31.418] [INFO] default - /api/user/getWribateById/67e9059e72a366df38fc6a7c
+[2025-03-30T15:56:42.681] [INFO] default - /api/user/getCategories
+[2025-03-30T15:56:42.789] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T15:57:36.716] [INFO] default - /api/user/getWribateById/67e9059e72a366df38fc6a7c
+[2025-03-30T15:58:18.890] [INFO] default - /api/user/getWribateByCategory/Technology
+[2025-03-30T15:58:24.301] [INFO] default - /api/user/getCategories
+[2025-03-30T15:58:24.386] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T15:58:28.387] [INFO] default - /api/user/getWribateByCategory/Technology
+[2025-03-30T15:59:21.955] [INFO] default - server is running  on the port 8000...
+[2025-03-30T15:59:22.524] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T15:59:22.538] [INFO] default - /api/user/getWribateByCategory/Technology
+[2025-03-30T15:59:23.514] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T15:59:27.779] [INFO] default - /api/user/getCategories
+[2025-03-30T15:59:27.866] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T15:59:29.696] [INFO] default - /api/user/getWribateByCategory/Technology
+[2025-03-30T15:59:32.702] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T15:59:34.019] [INFO] default - /api/user/getWribateByCategory/Technology
+[2025-03-30T15:59:36.437] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T15:59:37.809] [INFO] default - /api/user/getWribateByCategory/Technology
+[2025-03-30T15:59:39.230] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T15:59:40.936] [INFO] default - /api/user/getWribateByCategory/Technology
+[2025-03-30T15:59:46.532] [INFO] default - /api/user/getWribateByCategory/Technology
+[2025-03-30T15:59:46.536] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T15:59:48.126] [INFO] default - server is running  on the port 8000...
+[2025-03-30T15:59:48.490] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T16:00:20.728] [INFO] default - server is running  on the port 8000...
+[2025-03-30T16:00:21.307] [INFO] default - /api/user/getCategories
+[2025-03-30T16:00:21.504] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T16:00:28.800] [INFO] default - /api/user/getWribateByCategory/Technology
+[2025-03-30T16:00:34.851] [INFO] default - /api/user/getWribateById/67e9059e72a366df38fc6a7c
+[2025-03-30T16:00:45.380] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T16:03:40.494] [INFO] default - /api/user/getWribateByCategory/Technology
+[2025-03-30T16:03:42.286] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T16:08:15.528] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T16:10:10.761] [INFO] default - /api/user/getCategories
+[2025-03-30T16:10:10.853] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T16:11:29.515] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T16:12:51.521] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T16:12:52.473] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T16:12:53.493] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T16:13:26.485] [INFO] default - /api/user/getCategories
+[2025-03-30T16:13:26.571] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T16:14:46.529] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T16:14:47.497] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T16:14:53.636] [INFO] default - server is running  on the port 8000...
+[2025-03-30T16:14:54.279] [INFO] default - /api/user/getCategories
+[2025-03-30T16:14:54.396] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T16:16:06.546] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T16:16:33.426] [INFO] default - server is running  on the port 8000...
+[2025-03-30T16:16:51.006] [INFO] default - /api/user/getCategories
+[2025-03-30T16:16:51.132] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T16:18:16.327] [INFO] default - /api/user/getCategories
+[2025-03-30T16:18:16.420] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T16:19:38.023] [INFO] default - server is running  on the port 8000...
+[2025-03-30T16:20:54.359] [INFO] default - server is running  on the port 8000...
+[2025-03-30T16:21:42.822] [INFO] default - server is running  on the port 8000...
+[2025-03-30T16:22:31.910] [INFO] default - server is running  on the port 8000...
+[2025-03-30T16:23:01.812] [INFO] default - /api/user/getCategories
+[2025-03-30T16:23:01.923] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T16:23:23.748] [INFO] default - server is running  on the port 8000...
+[2025-03-30T16:24:05.556] [INFO] default - server is running  on the port 8000...
+[2025-03-30T16:29:38.372] [INFO] default - server is running  on the port 8000...
+[2025-03-30T16:32:16.230] [INFO] default - /api/user/getCategories
+[2025-03-30T16:32:16.343] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T16:32:17.782] [INFO] default - /api/user/getWribateById/67e9059e72a366df38fc6a7c
+[2025-03-30T16:38:11.438] [INFO] default - server is running  on the port 8000...
+[2025-03-30T16:39:39.821] [INFO] default - server is running  on the port 8000...
+[2025-03-30T16:42:07.541] [INFO] default - /api/user/getWribateById/67e9059e72a366df38fc6a7c
+[2025-03-30T16:44:35.289] [INFO] default - server is running  on the port 8000...
+[2025-03-30T16:45:09.546] [INFO] default - server is running  on the port 8000...
+[2025-03-30T16:49:35.047] [INFO] default - /api/user/getWribateById/67e9059e72a366df38fc6a7c
+[2025-03-30T16:51:03.067] [INFO] default - /api/user/getWribateById/67e9059e72a366df38fc6a7c
+[2025-03-30T16:52:09.709] [INFO] default - /api/user/getWribateById/67e9059e72a366df38fc6a7c
+[2025-03-30T16:57:18.883] [INFO] default - /api/user/getWribateById/67e9059e72a366df38fc6a7c
+[2025-03-30T16:59:10.728] [INFO] default - /api/user/getWribateById/67e9059e72a366df38fc6a7c
+[2025-03-30T17:00:15.703] [INFO] default - /api/user/arguments/67e9059e72a366df38fc6a7c
+[2025-03-30T17:00:21.151] [INFO] default - /api/user/getWribateById/67e9059e72a366df38fc6a7c
+[2025-03-30T17:02:38.226] [INFO] default - /api/user/getWribateById/67e9059e72a366df38fc6a7c
+[2025-03-30T17:04:15.611] [INFO] default - /api/user/getWribateById/67e9059e72a366df38fc6a7c
+[2025-03-30T17:05:08.351] [INFO] default - /api/user/getCategories
+[2025-03-30T17:05:08.450] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T17:07:06.458] [INFO] default - /api/user/getCategories
+[2025-03-30T17:09:01.722] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T17:13:03.180] [INFO] default - server is running  on the port 8000...
+[2025-03-30T18:18:08.802] [INFO] default - server is running  on the port 8000...
+[2025-03-30T18:19:09.313] [INFO] default - /api/user/getCategories
+[2025-03-30T18:19:09.429] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T18:19:14.914] [INFO] default - /api/user/getWribateById/67e9059e72a366df38fc6a7c
+[2025-03-30T18:19:45.365] [INFO] default - /api/user/comment/67e6c5bd56de78ae23232514
+[2025-03-30T18:19:49.737] [INFO] default - /api/user/comment/67e6c5bd56de78ae23232514
+[2025-03-30T18:19:59.693] [INFO] default - /api/user/comment/67e6c5bd56de78ae23232514
+[2025-03-30T18:23:09.149] [INFO] default - /api/user/getCategories
+[2025-03-30T18:23:09.288] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T18:24:34.521] [INFO] default - /api/user/getCategories
+[2025-03-30T18:24:34.609] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T18:27:51.185] [INFO] default - server is running  on the port 8000...
+[2025-03-30T18:28:36.290] [INFO] default - server is running  on the port 8000...
+[2025-03-30T18:30:25.050] [INFO] default - /api/user/getProfile
+[2025-03-30T18:30:45.739] [INFO] default - /api/user/getWribateById/67e913047bf311747588244a
+[2025-03-30T18:32:38.357] [INFO] default - /api/user/getCategories
+[2025-03-30T18:32:38.468] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T18:32:57.951] [INFO] default - /api/user/getCategories
+[2025-03-30T18:32:58.067] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T18:34:12.770] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T18:34:15.156] [INFO] default - /api/user/getCategories
+[2025-03-30T18:34:15.242] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T18:35:03.383] [INFO] default - /api/user/getProfile
+[2025-03-30T18:35:03.388] [INFO] default - /api/user/getWribateById/67e913047bf311747588244a
+[2025-03-30T18:35:08.774] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T18:35:12.818] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T18:35:27.449] [INFO] default - /api/user/getCategories
+[2025-03-30T18:35:27.547] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T18:35:46.514] [INFO] default - /api/user/myWribates
+[2025-03-30T18:36:03.705] [INFO] default - server is running  on the port 8000...
+[2025-03-30T18:36:04.563] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T18:36:04.578] [INFO] default - /api/user/getWribateById/67e913047bf311747588244a
+[2025-03-30T18:36:04.583] [INFO] default - /api/user/getProfile
+[2025-03-30T18:36:20.963] [INFO] default - /api/user/getProfile
+[2025-03-30T18:36:20.971] [INFO] default - /api/user/getWribateById/67e913047bf311747588244a
+[2025-03-30T18:36:27.824] [INFO] default - /api/user/getProfile
+[2025-03-30T18:36:27.829] [INFO] default - /api/user/getWribateById/67e913047bf311747588244a
+[2025-03-30T18:38:01.148] [INFO] default - /api/user/getCategories
+[2025-03-30T18:38:01.269] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T18:38:03.993] [INFO] default - /api/user/getCategories
+[2025-03-30T18:38:04.078] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T18:38:52.965] [INFO] default - /api/user/getCategories
+[2025-03-30T18:38:53.058] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T18:39:15.802] [INFO] default - /api/user/getCategories
+[2025-03-30T18:39:15.901] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T18:42:05.357] [INFO] default - server is running  on the port 8000...
+[2025-03-30T18:42:46.709] [INFO] default - /api/user/getCategories
+[2025-03-30T18:42:46.847] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T18:42:48.896] [INFO] default - /api/user/getProfile
+[2025-03-30T18:42:48.904] [INFO] default - /api/user/getWribateById/67e913047bf311747588244a
+[2025-03-30T18:43:35.581] [INFO] default - /api/user/getProfile
+[2025-03-30T18:43:35.588] [INFO] default - /api/user/getWribateById/67e913047bf311747588244a
+[2025-03-30T18:48:33.423] [INFO] default - /api/user/getProfile
+[2025-03-30T18:48:33.426] [INFO] default - /api/user/getWribateById/67e913047bf311747588244a
+[2025-03-30T18:48:42.122] [INFO] default - /api/user/getProfile
+[2025-03-30T18:48:42.133] [INFO] default - /api/user/getWribateById/67e913047bf311747588244a
+[2025-03-30T18:49:33.888] [INFO] default - /api/user/getWribateById/67e913047bf311747588244a
+[2025-03-30T18:49:33.895] [INFO] default - /api/user/getProfile
+[2025-03-30T18:49:35.448] [INFO] default - /api/user/getCategories
+[2025-03-30T18:49:35.536] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T18:49:45.054] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T18:50:07.429] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T18:50:10.755] [INFO] default - /api/user/getCategories
+[2025-03-30T18:50:10.831] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T18:50:12.878] [INFO] default - /api/user/getProfile
+[2025-03-30T18:50:12.883] [INFO] default - /api/user/getWribateById/67e913047bf311747588244a
+[2025-03-30T18:50:18.348] [INFO] default - server is running  on the port 8000...
+[2025-03-30T18:50:18.430] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T18:50:56.742] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T18:51:00.312] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T18:51:19.222] [INFO] default - /api/user/getCategories
+[2025-03-30T18:51:19.565] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T18:51:22.239] [INFO] default - /api/user/getProfile
+[2025-03-30T18:51:22.245] [INFO] default - /api/user/getWribateById/67e913047bf311747588244a
+[2025-03-30T18:51:25.165] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T18:51:28.852] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T18:51:35.456] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T18:52:07.261] [INFO] default - /api/user/uploadImage?image_type=wribte
+[2025-03-30T18:52:07.404] [INFO] default - /api/user/createWribate
+[2025-03-30T18:52:09.138] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T18:52:11.610] [INFO] default - /api/user/myWribates
+[2025-03-30T18:52:14.045] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T18:52:16.713] [INFO] default - /api/user/getWribateById/67e9457f26b543e66be58927
+[2025-03-30T18:53:19.051] [INFO] default - /api/user/uploadImage?image_type=wribte
+[2025-03-30T18:53:19.237] [INFO] default - /api/user/createWribate
+[2025-03-30T18:53:21.070] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T18:53:30.353] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T18:53:33.508] [INFO] default - /api/user/getWribateById/67e913047bf311747588244a
+[2025-03-30T18:53:35.427] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T18:53:44.782] [INFO] default - /api/user/getProfile
+[2025-03-30T18:53:44.788] [INFO] default - /api/user/getWribateById/67e9457f26b543e66be58927
+[2025-03-30T18:55:14.286] [INFO] default - /api/user/login
+[2025-03-30T18:55:16.230] [INFO] default - /api/user/getCategories
+[2025-03-30T18:55:16.347] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T18:55:21.755] [INFO] default - /api/user/myWribates
+[2025-03-30T18:55:24.937] [INFO] default - /api/user/myWribates
+[2025-03-30T18:55:24.942] [INFO] default - /api/user/getCategories
+[2025-03-30T18:55:28.897] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T18:55:30.557] [INFO] default - /api/user/getProfile
+[2025-03-30T18:55:30.562] [INFO] default - /api/user/getWribateById/67e913047bf311747588244a
+[2025-03-30T18:55:34.044] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T18:55:37.725] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T18:55:44.900] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T18:55:50.544] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T18:55:52.783] [INFO] default - /api/user/getWribateById/67e9457f26b543e66be58927
+[2025-03-30T18:56:10.557] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T18:56:26.334] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T18:56:34.399] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T18:58:28.943] [INFO] default - /api/user/getCategories
+[2025-03-30T18:58:29.030] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T18:58:46.787] [INFO] default - /api/user/getProfile
+[2025-03-30T18:58:46.799] [INFO] default - /api/user/getWribateById/67e913047bf311747588244a
+[2025-03-30T18:59:07.229] [INFO] default - /api/user/deleteWribate
+[2025-03-30T18:59:13.418] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T18:59:16.753] [INFO] default - /api/user/getCategories
+[2025-03-30T18:59:16.884] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T19:00:00.353] [INFO] default - /api/user/uploadImage?image_type=wribte
+[2025-03-30T19:00:00.609] [INFO] default - /api/user/createWribate
+[2025-03-30T19:00:02.787] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T19:00:07.733] [INFO] default - /api/user/getCategories
+[2025-03-30T19:00:07.830] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T19:00:11.683] [INFO] default - /api/user/getProfile
+[2025-03-30T19:00:11.688] [INFO] default - /api/user/getWribateById/67e9475826b543e66be58a61
+[2025-03-30T19:00:58.656] [INFO] default - /api/user/uploadImage?image_type=wribte
+[2025-03-30T19:00:58.962] [INFO] default - /api/user/createWribate
+[2025-03-30T19:01:00.908] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T19:01:07.467] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T19:01:08.771] [INFO] default - /api/user/getWribateById/67e9479326b543e66be58a7b
+[2025-03-30T19:01:19.836] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T19:03:35.737] [INFO] default - /api/user/getCategories
+[2025-03-30T19:03:57.992] [INFO] default - /api/user/uploadImage?image_type=wribte
+[2025-03-30T19:03:58.118] [INFO] default - /api/user/createWribate
+[2025-03-30T19:04:00.334] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T19:04:03.081] [INFO] default - /api/user/getProfile
+[2025-03-30T19:04:03.085] [INFO] default - /api/user/getWribateById/67e9484626b543e66be58aa1
+[2025-03-30T19:04:13.234] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T19:04:16.294] [INFO] default - /api/user/getWribateById/67e9475826b543e66be58a61
+[2025-03-30T19:04:19.782] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T19:04:21.058] [INFO] default - /api/user/getWribateById/67e9479326b543e66be58a7b
+[2025-03-30T19:04:23.860] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T19:04:28.625] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T19:06:13.239] [INFO] default - /api/user/getCategories
+[2025-03-30T19:06:13.371] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T19:06:32.047] [INFO] default - /api/user/getProfile
+[2025-03-30T19:06:32.052] [INFO] default - /api/user/getWribateById/67e9475826b543e66be58a61
+[2025-03-30T19:06:34.853] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T19:06:38.004] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T19:06:39.854] [INFO] default - /api/user/getWribateById/67e9479326b543e66be58a7b
+[2025-03-30T19:07:36.349] [INFO] default - /api/user/getProfile
+[2025-03-30T19:07:36.353] [INFO] default - /api/user/getWribateById/67e9479326b543e66be58a7b
+[2025-03-30T19:08:54.737] [INFO] default - /api/user/getCategories
+[2025-03-30T19:08:54.829] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T19:08:56.973] [INFO] default - /api/user/getWribateById/67e9475826b543e66be58a61
+[2025-03-30T19:09:27.412] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T19:09:30.153] [INFO] default - /api/user/getWribateById/67e9484626b543e66be58aa1
+[2025-03-30T19:09:32.277] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T19:09:56.676] [INFO] default - /api/user/arguments/67e9479326b543e66be58a7b
+[2025-03-30T19:10:01.689] [INFO] default - /api/user/getProfile
+[2025-03-30T19:10:01.694] [INFO] default - /api/user/getWribateById/67e9479326b543e66be58a7b
+[2025-03-30T19:10:27.196] [INFO] default - /api/user/getCategories
+[2025-03-30T19:10:27.296] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T19:10:40.079] [INFO] default - /api/user/getWribateById/67e9475826b543e66be58a61
+[2025-03-30T19:10:42.043] [INFO] default - /api/user/getProfile
+[2025-03-30T19:10:42.046] [INFO] default - /api/user/getWribateById/67e9475826b543e66be58a61
+[2025-03-30T19:10:43.281] [INFO] default - /api/user/getCategories
+[2025-03-30T19:10:48.200] [INFO] default - /api/user/getCategories
+[2025-03-30T19:11:05.792] [INFO] default - /api/user/getCategories
+[2025-03-30T19:11:36.625] [INFO] default - /api/user/login
+[2025-03-30T19:12:17.574] [INFO] default - /api/user/signUp
+[2025-03-30T19:12:36.012] [INFO] default - /api/user/signUp
+[2025-03-30T19:13:43.294] [INFO] default - /api/user/login
+[2025-03-30T19:13:46.677] [INFO] default - /api/user/getCategories
+[2025-03-30T19:13:46.778] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T19:13:51.119] [INFO] default - /api/user/getProfile
+[2025-03-30T19:13:51.125] [INFO] default - /api/user/getWribateById/67e9479326b543e66be58a7b
+[2025-03-30T19:14:23.648] [INFO] default - /api/user/login
+[2025-03-30T19:14:46.269] [INFO] default - /api/user/login
+[2025-03-30T19:14:55.149] [INFO] default - /api/user/login
+[2025-03-30T19:15:07.876] [INFO] default - /api/user/login
+[2025-03-30T19:16:25.297] [INFO] default - /api/user/login
+[2025-03-30T19:17:19.358] [INFO] default - /api/user/sendOTP
+[2025-03-30T19:17:22.636] [INFO] default - /api/user/vertfyOTP
+[2025-03-30T19:18:23.443] [INFO] default - /api/user/deleteWribate
+[2025-03-30T19:19:42.236] [INFO] default - /api/user/sendOTP
+[2025-03-30T19:19:48.763] [INFO] default - /api/user/vertfyOTP
+[2025-03-30T19:19:57.439] [INFO] default - /api/user/signUp
+[2025-03-30T19:21:22.537] [INFO] default - server is running  on the port 8000...
+[2025-03-30T19:21:39.815] [INFO] default - /api/user/sendOTP
+[2025-03-30T19:21:45.943] [INFO] default - /api/user/vertfyOTP
+[2025-03-30T19:21:56.568] [INFO] default - /api/user/signUp
+[2025-03-30T19:22:17.451] [INFO] default - /api/user/login
+[2025-03-30T19:22:19.491] [INFO] default - /api/user/getCategories
+[2025-03-30T19:22:19.591] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T19:22:23.993] [INFO] default - /api/user/getCategories
+[2025-03-30T19:22:24.083] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T19:23:39.155] [INFO] default - /api/user/login
+[2025-03-30T19:23:40.684] [INFO] default - /api/user/getCategories
+[2025-03-30T19:23:40.816] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T19:23:45.391] [INFO] default - /api/user/getCategories
+[2025-03-30T19:23:45.507] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T19:23:52.026] [INFO] default - /api/user/getWribateByCategory/Technology
+[2025-03-30T19:24:21.943] [INFO] default - /api/user/getCategories
+[2025-03-30T19:24:22.038] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T19:24:50.600] [INFO] default - /api/user/login
+[2025-03-30T19:24:52.582] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T19:24:57.085] [INFO] default - /api/user/getCategories
+[2025-03-30T19:24:57.173] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T19:25:28.867] [INFO] default - /api/user/login
+[2025-03-30T19:25:32.639] [INFO] default - server is running  on the port 8000...
+[2025-03-30T19:25:42.051] [INFO] default - /api/user/login
+[2025-03-30T19:25:56.580] [INFO] default - server is running  on the port 8000...
+[2025-03-30T19:26:35.495] [INFO] default - /api/user/login
+[2025-03-30T19:27:13.146] [INFO] default - /api/user/login
+[2025-03-30T19:27:15.302] [INFO] default - /api/user/getCategories
+[2025-03-30T19:27:15.417] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T19:27:18.590] [INFO] default - /api/user/getCategories
+[2025-03-30T19:27:18.688] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T19:27:40.223] [INFO] default - /api/user/uploadImage?image_type=wribte
+[2025-03-30T19:27:40.357] [INFO] default - /api/user/createWribate
+[2025-03-30T19:27:46.778] [INFO] default - /api/user/uploadImage?image_type=wribte
+[2025-03-30T19:27:46.938] [INFO] default - /api/user/createWribate
+[2025-03-30T19:27:48.806] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T19:27:52.413] [INFO] default - /api/user/getProfile
+[2025-03-30T19:27:52.419] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T19:28:22.549] [INFO] default - server is running  on the port 8000...
+[2025-03-30T19:29:37.098] [INFO] default - server is running  on the port 8000...
+[2025-03-30T19:32:47.685] [INFO] default - /api/user/getCategories
+[2025-03-30T19:34:17.632] [INFO] default - server is running  on the port 8000...
+[2025-03-30T19:34:59.027] [INFO] default - server is running  on the port 8000...
+[2025-03-30T19:35:40.707] [INFO] default - server is running  on the port 8000...
+[2025-03-30T19:37:27.485] [INFO] default - server is running  on the port 8000...
+[2025-03-30T19:38:22.054] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T19:38:30.891] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T19:38:44.587] [INFO] default - /api/user/login
+[2025-03-30T19:38:46.749] [INFO] default - /api/user/getCategories
+[2025-03-30T19:38:46.847] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T19:39:15.686] [INFO] default - /api/user/getProfile
+[2025-03-30T19:39:15.693] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T19:39:24.846] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T19:39:24.852] [INFO] default - /api/user/getProfile
+[2025-03-30T19:39:29.614] [INFO] default - /api/user/getCategories
+[2025-03-30T19:39:29.751] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T19:39:36.181] [INFO] default - server is running  on the port 8000...
+[2025-03-30T19:39:36.425] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T19:39:42.582] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T19:40:42.979] [INFO] default - /api/user/getProfile
+[2025-03-30T19:40:42.987] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T19:40:46.003] [INFO] default - /api/user/getCategories
+[2025-03-30T19:40:54.064] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T19:41:05.972] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T19:41:16.016] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T19:41:51.060] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T19:41:51.067] [INFO] default - /api/user/getProfile
+[2025-03-30T19:42:23.762] [INFO] default - /api/user/arguments/67e94ddaa65dbf45f131c151
+[2025-03-30T19:42:27.146] [INFO] default - server is running  on the port 8000...
+[2025-03-30T19:42:27.756] [INFO] default - /api/user/getProfile
+[2025-03-30T19:42:27.771] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T19:43:17.909] [INFO] default - server is running  on the port 8000...
+[2025-03-30T19:44:10.625] [INFO] default - server is running  on the port 8000...
+[2025-03-30T19:45:16.979] [INFO] default - server is running  on the port 8000...
+[2025-03-30T19:50:38.688] [INFO] default - /api/user/getProfile
+[2025-03-30T19:50:38.717] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T19:51:49.712] [INFO] default - /api/user/getProfile
+[2025-03-30T19:51:49.719] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T19:51:56.371] [INFO] default - /api/user/getProfile
+[2025-03-30T19:51:56.376] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T19:52:26.068] [INFO] default - /api/user/getProfile
+[2025-03-30T19:52:26.074] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T19:52:59.303] [INFO] default - server is running  on the port 8000...
+[2025-03-30T19:53:51.693] [INFO] default - server is running  on the port 8000...
+[2025-03-30T19:54:44.062] [INFO] default - server is running  on the port 8000...
+[2025-03-30T19:56:30.695] [INFO] default - server is running  on the port 8000...
+[2025-03-30T19:56:36.690] [INFO] default - server is running  on the port 8000...
+[2025-03-30T19:57:10.960] [INFO] default - server is running  on the port 8000...
+[2025-03-30T19:59:47.988] [INFO] default - /api/user/getProfile
+[2025-03-30T19:59:48.003] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T20:00:43.121] [INFO] default - /api/user/getProfile
+[2025-03-30T20:00:43.128] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T20:00:55.711] [INFO] default - /api/user/getProfile
+[2025-03-30T20:00:55.717] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T20:01:48.378] [INFO] default - /api/user/getProfile
+[2025-03-30T20:01:48.383] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T20:02:53.276] [INFO] default - /api/user/getProfile
+[2025-03-30T20:02:53.282] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T20:03:36.399] [INFO] default - /api/user/getProfile
+[2025-03-30T20:03:36.405] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T20:04:00.978] [INFO] default - server is running  on the port 8000...
+[2025-03-30T20:04:06.372] [INFO] default - server is running  on the port 8000...
+[2025-03-30T20:04:24.174] [INFO] default - server is running  on the port 8000...
+[2025-03-30T20:05:21.119] [INFO] default - server is running  on the port 8000...
+[2025-03-30T20:07:13.167] [INFO] default - server is running  on the port 8000...
+[2025-03-30T20:07:52.348] [INFO] default - server is running  on the port 8000...
+[2025-03-30T20:08:33.376] [INFO] default - server is running  on the port 8000...
+[2025-03-30T20:09:06.102] [INFO] default - server is running  on the port 8000...
+[2025-03-30T20:10:00.844] [INFO] default - server is running  on the port 8000...
+[2025-03-30T20:10:56.563] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T20:10:56.574] [INFO] default - /api/user/getProfile
+[2025-03-30T20:10:59.097] [INFO] default - server is running  on the port 8000...
+[2025-03-30T20:11:04.940] [INFO] default - /api/user/arguments/67e94ddaa65dbf45f131c151
+[2025-03-30T20:11:09.614] [INFO] default - /api/user/getProfile
+[2025-03-30T20:11:09.622] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T20:12:02.924] [INFO] default - server is running  on the port 8000...
+[2025-03-30T20:12:59.867] [INFO] default - /api/user/getProfile
+[2025-03-30T20:12:59.893] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T20:13:41.836] [INFO] default - /api/user/arguments/67e94ddaa65dbf45f131c151
+[2025-03-30T20:13:44.684] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T20:13:44.997] [INFO] default - /api/user/getProfile
+[2025-03-30T20:19:26.982] [INFO] default - /api/user/getCategories
+[2025-03-30T20:19:27.089] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T20:19:30.444] [INFO] default - /api/user/getWribateByCategory/Technology
+[2025-03-30T20:19:33.534] [INFO] default - /api/user/getCategories
+[2025-03-30T20:19:33.630] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T20:19:41.754] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T20:21:34.345] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T20:21:34.352] [INFO] default - /api/user/getProfile
+[2025-03-30T20:28:34.714] [INFO] default - server is running  on the port 8000...
+[2025-03-30T20:28:45.649] [INFO] default - /api/user/getCategories
+[2025-03-30T20:28:45.791] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T20:28:51.409] [INFO] default - /api/user/getProfile
+[2025-03-30T20:28:51.416] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T20:29:14.200] [INFO] default - /api/user/arguments/67e94ddaa65dbf45f131c151
+[2025-03-30T20:30:14.839] [INFO] default - server is running  on the port 8000...
+[2025-03-30T20:30:19.477] [INFO] default - /api/user/arguments/67e94ddaa65dbf45f131c151
+[2025-03-30T20:31:44.263] [INFO] default - server is running  on the port 8000...
+[2025-03-30T20:32:13.116] [INFO] default - /api/user/getProfile
+[2025-03-30T20:32:13.133] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T20:32:33.423] [INFO] default - /api/user/getCategories
+[2025-03-30T20:32:33.427] [INFO] default - /api/user/myWribates
+[2025-03-30T20:32:50.273] [INFO] default - server is running  on the port 8000...
+[2025-03-30T20:32:56.483] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T20:33:04.141] [INFO] default - /api/user/arguments/67e94ddaa65dbf45f131c151
+[2025-03-30T20:43:21.012] [INFO] default - /api/user/arguments/67e94ddaa65dbf45f131c151
+[2025-03-30T20:43:23.713] [INFO] default - /api/user/getProfile
+[2025-03-30T20:43:23.723] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T20:44:30.971] [INFO] default - server is running  on the port 8000...
+[2025-03-30T20:44:45.408] [INFO] default - /api/user/arguments/67e94ddaa65dbf45f131c151
+[2025-03-30T20:44:50.638] [INFO] default - /api/user/getProfile
+[2025-03-30T20:44:50.643] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T20:44:57.781] [INFO] default - /api/user/arguments/67e94ddaa65dbf45f131c151
+[2025-03-30T20:46:04.021] [INFO] default - /api/user/getCategories
+[2025-03-30T20:46:04.118] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T20:46:07.623] [INFO] default - /api/user/myWribates
+[2025-03-30T20:46:11.279] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T20:46:15.879] [INFO] default - /api/user/myWribates
+[2025-03-30T20:46:45.459] [INFO] default - server is running  on the port 8000...
+[2025-03-30T20:46:50.941] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T20:47:05.628] [INFO] default - server is running  on the port 8000...
+[2025-03-30T20:47:16.746] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T20:47:19.769] [INFO] default - /api/user/getProfile
+[2025-03-30T20:47:19.778] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T20:47:24.672] [INFO] default - /api/user/arguments/67e94ddaa65dbf45f131c151
+[2025-03-30T20:47:30.245] [INFO] default - /api/user/getProfile
+[2025-03-30T20:47:30.250] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T20:48:01.185] [INFO] default - server is running  on the port 8000...
+[2025-03-30T20:48:05.907] [INFO] default - /api/user/comment/67e94ddaa65dbf45f131c151
+[2025-03-30T20:48:08.448] [INFO] default - /api/user/arguments/67e94ddaa65dbf45f131c151
+[2025-03-30T20:48:34.500] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T20:48:34.507] [INFO] default - /api/user/getProfile
+[2025-03-30T20:49:46.349] [INFO] default - /api/user/getProfile
+[2025-03-30T20:49:46.354] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T20:49:49.539] [INFO] default - /api/user/arguments/67e94ddaa65dbf45f131c151
+[2025-03-30T20:50:22.397] [INFO] default - /api/user/getProfile
+[2025-03-30T20:50:22.403] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T20:50:26.889] [INFO] default - /api/user/arguments/67e94ddaa65dbf45f131c151
+[2025-03-30T20:50:52.096] [INFO] default - /api/user/getProfile
+[2025-03-30T20:50:52.101] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T20:50:54.406] [INFO] default - /api/user/arguments/67e94ddaa65dbf45f131c151
+[2025-03-30T20:51:19.528] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T20:51:19.824] [INFO] default - /api/user/getProfile
+[2025-03-30T20:51:23.410] [INFO] default - /api/user/arguments/67e94ddaa65dbf45f131c151
+[2025-03-30T20:51:23.571] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T20:52:01.086] [INFO] default - /api/user/getProfile
+[2025-03-30T20:52:01.090] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T20:53:11.764] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T20:53:17.289] [INFO] default - /api/user/getProfile
+[2025-03-30T20:53:17.293] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T20:53:21.169] [INFO] default - /api/user/arguments/67e94ddaa65dbf45f131c151
+[2025-03-30T20:53:21.374] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T20:53:27.519] [INFO] default - /api/user/getProfile
+[2025-03-30T20:53:27.626] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T20:53:30.902] [INFO] default - /api/user/arguments/67e94ddaa65dbf45f131c151
+[2025-03-30T20:53:31.070] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T20:53:33.342] [INFO] default - /api/user/arguments/67e94ddaa65dbf45f131c151
+[2025-03-30T20:53:33.528] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T20:53:37.561] [INFO] default - /api/user/arguments/67e94ddaa65dbf45f131c151
+[2025-03-30T20:53:37.735] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T20:53:41.684] [INFO] default - /api/user/arguments/67e94ddaa65dbf45f131c151
+[2025-03-30T20:53:41.845] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T20:53:45.101] [INFO] default - /api/user/arguments/67e94ddaa65dbf45f131c151
+[2025-03-30T20:53:45.252] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T20:53:55.898] [INFO] default - /api/user/arguments/67e94ddaa65dbf45f131c151
+[2025-03-30T20:53:56.049] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T20:54:04.974] [INFO] default - /api/user/arguments/67e94ddaa65dbf45f131c151
+[2025-03-30T20:54:05.146] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T20:54:20.060] [INFO] default - /api/user/arguments/67e94ddaa65dbf45f131c151
+[2025-03-30T20:54:20.221] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T20:54:30.050] [INFO] default - /api/user/arguments/67e94ddaa65dbf45f131c151
+[2025-03-30T20:54:30.222] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T20:54:49.088] [INFO] default - /api/user/arguments/67e94ddaa65dbf45f131c151
+[2025-03-30T20:54:49.258] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T20:55:02.966] [INFO] default - /api/user/arguments/67e94ddaa65dbf45f131c151
+[2025-03-30T20:55:03.120] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T20:57:17.416] [INFO] default - /api/user/getProfile
+[2025-03-30T20:57:17.421] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T20:57:29.807] [INFO] default - /api/user/getProfile
+[2025-03-30T20:57:29.812] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T20:58:29.627] [INFO] default - /api/user/getProfile
+[2025-03-30T20:58:29.632] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T21:00:12.123] [INFO] default - /api/user/getProfile
+[2025-03-30T21:00:12.128] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T21:00:41.435] [INFO] default - /api/user/getProfile
+[2025-03-30T21:00:41.441] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T21:03:22.574] [INFO] default - /api/user/login
+[2025-03-30T21:03:25.982] [INFO] default - /api/user/getCategories
+[2025-03-30T21:03:26.072] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T21:03:55.494] [INFO] default - /api/user/login
+[2025-03-30T21:03:57.193] [INFO] default - /api/user/getCategories
+[2025-03-30T21:03:57.285] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T21:04:01.912] [INFO] default - /api/user/getProfile
+[2025-03-30T21:04:01.918] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T21:04:08.646] [INFO] default - /api/user/getProfile
+[2025-03-30T21:04:08.651] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T21:04:21.874] [INFO] default - /api/user/arguments/67e94ddaa65dbf45f131c151
+[2025-03-30T21:04:28.439] [INFO] default - /api/user/getProfile
+[2025-03-30T21:04:28.447] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T21:04:30.493] [INFO] default - /api/user/arguments/67e94ddaa65dbf45f131c151
+[2025-03-30T21:04:33.758] [INFO] default - /api/user/getProfile
+[2025-03-30T21:04:33.762] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T21:04:41.235] [INFO] default - /api/user/arguments/67e94ddaa65dbf45f131c151
+[2025-03-30T21:06:32.747] [INFO] default - server is running  on the port 8000...
+[2025-03-30T21:06:45.346] [INFO] default - /api/user/arguments/67e94ddaa65dbf45f131c151
+[2025-03-30T21:06:46.193] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T21:06:52.076] [INFO] default - /api/user/getProfile
+[2025-03-30T21:06:52.087] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T21:07:15.980] [INFO] default - /api/user/arguments/67e94ddaa65dbf45f131c151
+[2025-03-30T21:07:16.124] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T21:07:22.208] [INFO] default - /api/user/getProfile
+[2025-03-30T21:07:22.213] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T21:09:27.879] [INFO] default - /api/user/arguments/67e94ddaa65dbf45f131c151
+[2025-03-30T21:09:28.084] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T21:09:43.484] [INFO] default - /api/user/getProfile
+[2025-03-30T21:09:43.491] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T21:12:22.873] [INFO] default - /api/user/arguments/67e94ddaa65dbf45f131c151
+[2025-03-30T21:12:23.021] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T21:12:31.025] [INFO] default - /api/user/getProfile
+[2025-03-30T21:12:31.036] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T21:12:55.333] [INFO] default - /api/user/arguments/67e94ddaa65dbf45f131c151
+[2025-03-30T21:12:55.567] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T21:12:58.540] [INFO] default - /api/user/getProfile
+[2025-03-30T21:12:58.544] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T21:13:18.073] [INFO] default - /api/user/arguments/67e94ddaa65dbf45f131c151
+[2025-03-30T21:13:18.253] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T21:13:54.889] [INFO] default - /api/user/getProfile
+[2025-03-30T21:13:54.893] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T21:16:14.688] [INFO] default - /api/user/arguments/67e94ddaa65dbf45f131c151
+[2025-03-30T21:16:14.836] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T21:17:51.027] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T21:17:51.312] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T21:17:51.594] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T21:17:51.729] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T21:18:51.050] [INFO] default - server is running  on the port 8000...
+[2025-03-30T21:19:01.674] [INFO] default - server is running  on the port 8000...
+[2025-03-30T21:20:24.189] [INFO] default - /api/user/getProfile
+[2025-03-30T21:20:24.196] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T21:25:32.731] [INFO] default - /api/user/getCategories
+[2025-03-30T21:25:32.735] [INFO] default - /api/user/myWribates
+[2025-03-30T21:27:55.737] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T21:27:56.730] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T21:31:23.727] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T21:35:06.847] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T21:35:22.432] [INFO] default - /api/user/getCategories
+[2025-03-30T21:35:22.516] [INFO] default - /api/user/getWribateByCategory/Science
+[2025-03-30T21:35:24.253] [INFO] default - /api/user/getProfile
+[2025-03-30T21:35:24.260] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T21:39:01.587] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T21:39:01.819] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T21:39:02.782] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T22:14:16.608] [INFO] default - /api/user/getProfile
+[2025-03-30T22:14:16.612] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T22:20:50.240] [INFO] default - /api/admin/addCategory
+[2025-03-30T22:22:01.095] [INFO] default - server is running  on the port 8000...
+[2025-03-30T22:23:07.834] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T22:24:21.078] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T22:24:36.809] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T22:24:37.765] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T22:24:39.295] [INFO] default - server is running  on the port 8000...
+[2025-03-30T22:24:50.088] [INFO] default - server is running  on the port 8000...
+[2025-03-30T22:25:02.067] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T22:25:36.876] [INFO] default - server is running  on the port 8000...
+[2025-03-30T22:25:38.758] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T22:25:39.867] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T22:25:42.836] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T22:26:04.972] [INFO] default - /api/user/comment/67e94ddaa65dbf45f131c151
+[2025-03-30T22:26:19.638] [INFO] default - /api/admin/getCategories
+[2025-03-30T22:26:38.874] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T22:26:39.755] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T22:26:46.447] [INFO] default - /api/user/getProfile
+[2025-03-30T22:26:46.455] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T22:27:03.924] [INFO] default - /api/user/comment/67e94ddaa65dbf45f131c151
+[2025-03-30T22:27:51.265] [INFO] default - /api/user/getProfile
+[2025-03-30T22:27:51.273] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T22:33:25.031] [INFO] default - server is running  on the port 8000...
+[2025-03-30T22:33:30.226] [INFO] default - /api/user/getProfile
+[2025-03-30T22:33:30.238] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T22:34:13.227] [INFO] default - server is running  on the port 8000...
+[2025-03-30T22:36:02.814] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T22:49:21.997] [INFO] default - /api/user/comment/67e94ddaa65dbf45f131c151
+[2025-03-30T22:49:25.321] [INFO] default - /api/user/getProfile
+[2025-03-30T22:49:25.328] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T22:49:32.908] [INFO] default - /api/user/comment/67e94ddaa65dbf45f131c151
+[2025-03-30T22:49:51.132] [INFO] default - /api/user/getProfile
+[2025-03-30T22:49:51.140] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T22:50:33.216] [INFO] default - /api/user/comment/67e94ddaa65dbf45f131c151
+[2025-03-30T22:51:20.040] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T22:51:20.207] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T22:51:20.397] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T22:51:20.827] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T22:51:35.829] [INFO] default - /api/user/comment/67e94ddaa65dbf45f131c151
+[2025-03-30T22:51:35.972] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T22:51:58.332] [INFO] default - /api/user/comment/67e94ddaa65dbf45f131c151
+[2025-03-30T22:51:58.478] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T22:52:54.959] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T22:52:55.268] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T22:52:55.780] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T22:53:21.706] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T22:53:21.801] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T22:53:21.910] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T22:53:22.777] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T22:53:33.944] [INFO] default - /api/user/comment/67e94ddaa65dbf45f131c151
+[2025-03-30T22:53:34.071] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T22:53:41.106] [INFO] default - /api/user/getProfile
+[2025-03-30T22:53:41.112] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T22:55:33.264] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T22:55:34.946] [INFO] default - /api/user/getProfile
+[2025-03-30T22:55:34.949] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T22:56:02.704] [INFO] default - /api/user/comment/67e94ddaa65dbf45f131c151
+[2025-03-30T22:56:02.842] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T22:58:24.804] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T22:58:25.124] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T22:58:25.768] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T22:58:26.068] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T22:58:41.771] [INFO] default - /api/user/getProfile
+[2025-03-30T22:58:41.777] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T22:59:09.786] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T22:59:10.084] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T22:59:30.877] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T22:59:31.032] [INFO] default - /api/user/comment/67e94ddaa65dbf45f131c151
+[2025-03-30T22:59:31.297] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T22:59:32.826] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T22:59:32.828] [INFO] default - /api/user/getProfile
+[2025-03-30T22:59:46.893] [INFO] default - /api/user/comment/67e94ddaa65dbf45f131c151
+[2025-03-30T22:59:47.049] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T22:59:50.270] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T22:59:50.279] [INFO] default - /api/user/getProfile
+[2025-03-30T23:00:12.030] [INFO] default - /api/user/comment/67e94ddaa65dbf45f131c151
+[2025-03-30T23:00:12.175] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T23:00:47.313] [INFO] default - /api/user/comment/67e94ddaa65dbf45f131c151
+[2025-03-30T23:00:47.460] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T23:04:38.850] [INFO] default - /api/user/getProfile
+[2025-03-30T23:04:38.856] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T23:04:47.644] [INFO] default - /api/user/comment/67e94ddaa65dbf45f131c151
+[2025-03-30T23:04:47.794] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T23:04:56.449] [INFO] default - /api/user/comment/67e94ddaa65dbf45f131c151
+[2025-03-30T23:04:56.594] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T23:05:01.884] [INFO] default - /api/user/comment/67e94ddaa65dbf45f131c151
+[2025-03-30T23:05:02.028] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T23:07:11.359] [INFO] default - /api/user/getProfile
+[2025-03-30T23:07:11.364] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T23:07:21.075] [INFO] default - /api/user/comment/67e94ddaa65dbf45f131c151
+[2025-03-30T23:07:21.211] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T23:07:48.557] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T23:07:48.831] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T23:08:01.543] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T23:08:01.762] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T23:08:02.056] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T23:08:02.826] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T23:08:33.944] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T23:08:34.815] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T23:08:54.783] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T23:08:56.177] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T23:09:05.461] [INFO] default - /api/user/comment/67e94ddaa65dbf45f131c151
+[2025-03-30T23:09:05.609] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T23:09:10.509] [INFO] default - /api/user/comment/67e94ddaa65dbf45f131c151
+[2025-03-30T23:09:10.787] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T23:09:16.113] [INFO] default - /api/user/getProfile
+[2025-03-30T23:09:16.119] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T23:09:23.446] [INFO] default - /api/user/comment/67e94ddaa65dbf45f131c151
+[2025-03-30T23:09:23.596] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T23:09:31.700] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T23:09:31.800] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T23:09:32.081] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T23:09:32.828] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T23:10:34.146] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T23:10:34.898] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T23:10:35.063] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T23:11:09.541] [INFO] default - /api/user/getProfile
+[2025-03-30T23:11:09.581] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T23:11:10.296] [INFO] default - /api/user/getProfile
+[2025-03-30T23:11:10.298] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T23:11:21.326] [INFO] default - /api/user/comment/67e94ddaa65dbf45f131c151
+[2025-03-30T23:11:21.643] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T23:11:54.621] [INFO] default - /api/user/getProfile
+[2025-03-30T23:11:54.627] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T23:12:03.970] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T23:12:04.192] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T23:12:04.380] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T23:12:04.660] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T23:12:06.434] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T23:12:28.378] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T23:12:28.870] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T23:12:36.759] [INFO] default - /api/user/getProfile
+[2025-03-30T23:12:36.765] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T23:12:45.506] [INFO] default - /api/user/comment/67e94ddaa65dbf45f131c151
+[2025-03-30T23:12:45.661] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151
+[2025-03-30T23:12:58.867] [INFO] default - /api/user/getProfile
+[2025-03-30T23:12:58.872] [INFO] default - /api/user/getWribateById/67e94ddaa65dbf45f131c151

@@ -8,6 +8,12 @@ const userSchema = new mongoose.Schema({
   required: [true, ' A User Must Required A Name!'],
   trim: true,
  },
+ userName: {
+  type: String,
+  required: [true, ' A User Must Required A userName!'],
+  trim: true,
+  unique: true,
+ },
  email: {
   type: String,
   required: [true, ' A User Must Required A email!'],
@@ -22,6 +28,12 @@ const userSchema = new mongoose.Schema({
  profilePhoto: dataTypes.String,
 
  otp: dataTypes.Number,
+
+ userRole: {
+  type: String,
+  enum: ['user', 'admin', 'agent'],
+  default: 'user'
+ },
 
 }, { timestamps: true })
 
@@ -59,8 +71,9 @@ const wribateSchema = new mongoose.Schema({
  rounds: [
   {
    roundNumber: { type: Number, required: true },
-   startDateTime: { type: Date, required: true },
-   durationDays: { type: Number, required: true }
+   startDate: { type: Date, required: true },
+   endDate: { type: Date, required: true },
+   duration: { type: String, required: true }
   }
  ],
 
@@ -94,13 +107,18 @@ const wribateSchema = new mongoose.Schema({
   required: false
 
  },
+ userRole: {
+  type: Number,
+  required: false
+
+ },
+ students: [{ type: String, required: true }],
  // Linked Collections
  arguments: [{ type: mongoose.Schema.Types.ObjectId, ref: "Argument" }],
  votes: [{ type: mongoose.Schema.Types.ObjectId, ref: "Vote" }],
  comments: [{ type: mongoose.Schema.Types.ObjectId, ref: "Comment" }],
- students: [{ type: mongoose.Schema.Types.ObjectId, ref: "Student" }]
-}, { timestamps: true });
 
+}, { timestamps: true });
 
 
 const argumentSchema = new mongoose.Schema(
@@ -108,12 +126,12 @@ const argumentSchema = new mongoose.Schema(
   wribateId: { type: mongoose.Schema.Types.ObjectId, ref: "Wribate", required: true },
   userId: { type: mongoose.Schema.Types.ObjectId, ref: "User", required: true },
   panelSide: { type: String, enum: ["For", "Against"], required: true },
+  roundNumber: { type: Number, required: true },
   text: { type: String, required: true },
   timestamp: { type: Date, default: Date.now }
  },
  { timestamps: true }
 );
-
 
 const voteSchema = new mongoose.Schema(
  {
@@ -124,14 +142,19 @@ const voteSchema = new mongoose.Schema(
  { timestamps: true }
 );
 
-
 const commentSchema = new mongoose.Schema(
  {
   wribateId: { type: mongoose.Schema.Types.ObjectId, ref: "Wribate", required: true },
-  userId: { type: mongoose.Schema.Types.ObjectId, ref: "", required: true },
+  userId: { type: mongoose.Schema.Types.ObjectId, ref: "User", required: true },
   text: { type: String, required: true },
-  timestamp: { type: Date, default: Date.now }
+  timestamp: { type: Date, default: Date.now },
+  type: {
+   type: String,
+   enum: ['For', 'Against'],
+   default: 'For'
+  },
  },
+
  { timestamps: true }
 );
 
@@ -141,6 +164,21 @@ const studentSchema = new mongoose.Schema({
  institution: { type: String }
 }, { timestamps: true });
 
+
+const tempUser = new mongoose.Schema({
+ email: { type: String },
+ otp: { type: Number, },
+}, { timestamps: true });
+
+const messageSchema = new mongoose.Schema({
+ sender: { type: mongoose.Schema.Types.ObjectId, ref: "User", required: true },
+ receiver: { type: mongoose.Schema.Types.ObjectId, ref: "User", required: true },
+ message: { type: String, required: true },
+ timestamp: { type: Date, default: Date.now },
+});
+
+const Message = mongoose.model("Message", messageSchema);
+const TempUser = mongoose.model("TempUser", tempUser);
 const Student = mongoose.model("Student", studentSchema);
 const Comment = mongoose.model("Comment", commentSchema);
 const Vote = mongoose.model("Vote", voteSchema);
@@ -149,4 +187,4 @@ const Wribate = mongoose.model('Wribate', wribateSchema);
 const User = mongoose.model('User', userSchema);
 
 
-export default { User, Wribate, Argument, Vote, Comment, Student }
+export default { User, Wribate, Argument, Vote, Comment, Student, TempUser, Message }

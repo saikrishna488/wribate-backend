@@ -15,6 +15,8 @@ router.post('/vertfyOTP', user.verifyOTP)
 
 router.post('/login', user.loginUser)
 
+router.get("/getWribateByCategory/:category", user.getWribateByCategory)
+
 router.use(auth.authenticateUser)
 
 router.get('/getProfile', user.getProfile)
@@ -29,8 +31,6 @@ router.post('/createWribate', user.createWribate)
 
 router.post("/arguments/:wribateId", user.addArguments)
 
-router.get("/getWribateByCategory/:category", user.getWribateByCategory)
-
 router.get("/getWribateById/:id", user.getWribateByID)
 
 router.post("/comment/:wribateId", user.addComment)
@@ -42,5 +42,7 @@ router.get("/myWribates", user.getMyWribates)
 router.delete("/deleteWribate", user.deleteWribate)
 
 router.post("/createBatchWribate", upload.single("file"), user.createBatchWribate)
+
+router.post("/checkAvailableUserName", user.checkForUserName)
 
 export default router
