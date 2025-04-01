@@ -46,7 +46,7 @@ const signUpUser = catchAsync(async (req, res, next) => {
  const salt = await bcrypt.genSalt(10)
  const crypted = await bcrypt.hash(body.password, salt)
  const userData = {
-  name: body.name, email: body.email, password: crypted, userName: body.userName
+  name: body.name, email: body.email, password: crypted, userName: body.userName, dob: body.dob, country: body.country
  }
  await userModel.User.create(userData)
  successMessage(res, `sign up completed`)
