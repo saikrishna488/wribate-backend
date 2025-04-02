@@ -258,6 +258,25 @@ function countVotesByRound(rounds, votes) {
       againstVotes: againstCount
     };
   });
+
+  // Add round 13 for votes after the last round
+  let lastRoundEnd = new Date(rounds[rounds.length - 1].endDate);
+  let forCount13 = 0;
+  let againstCount13 = 0;
+
+  votes.forEach(vote => {
+    const voteTime = new Date(vote.timestamp);
+    if (voteTime > lastRoundEnd) {
+      if (vote.type === "for") forCount13++;
+      if (vote.type === "against") againstCount13++;
+    }
+  });
+
+  roundVotes.push({
+    roundNumber: 13,
+    forVotes: forCount13,
+    againstVotes: againstCount13
+  });
   return roundVotes;
 }
 
