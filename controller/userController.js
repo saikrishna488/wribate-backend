@@ -456,7 +456,7 @@ const deleteWribate = catchAsync(async (req, res, next) => {
 
 const getVotes = catchAsync(async (req, res, next) => {
  const { body: { id } } = req
- const wribate = await userModel.Comment.findById(id)
+ const wribate = await userModel.Wribate.findById(id)
  const rounds = handleFactory.divideIntoParts(wribate.startDate, wribate.durationDays);
  const votes = await userModel.Vote.find({ wribateId: id }).lean();
  const roundVoteCounts = await handleFactory.countVotesByRound(rounds, votes);
