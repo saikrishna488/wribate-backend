@@ -245,10 +245,11 @@ function countVotesByRound(rounds, votes) {
     const roundEnd = new Date(round.endDate);
 
     votes.forEach(vote => {
-      const voteTime = new Date(vote.timestamp);
+      console.log('vote', vote)
+      const voteTime = new Date(vote.createdAt);
       if (voteTime >= roundStart && voteTime <= roundEnd) {
-        if (vote.vote === "for") forCount++;
-        if (vote.vote === "against") againstCount++;
+        if (vote.vote === "For") forCount++;
+        if (vote.vote === "Against") againstCount++;
       }
     });
 
@@ -265,10 +266,10 @@ function countVotesByRound(rounds, votes) {
   let againstCount13 = 0;
 
   votes.forEach(vote => {
-    const voteTime = new Date(vote.timestamp);
+    const voteTime = new Date(vote.createdAt);
     if (voteTime > lastRoundEnd) {
-      if (vote.type === "for") forCount13++;
-      if (vote.type === "against") againstCount13++;
+      if (vote.vote === "For") forCount13++;
+      if (vote.vote === "Against") againstCount13++;
     }
   });
 
