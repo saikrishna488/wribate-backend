@@ -1,21 +1,37 @@
 import userModel from "../models/userModel.js";
-import { getIo } from "../socket.js";
 
-export const sendMessage = async (req, res) => {
- const { senderId, receiverId, message } = req.body;
-
+// Function to save a new message
+export const saveMessage = async (sender, receiver, message) => {
  try {
-  const newMessage = new userModel.Message({ sender: senderId, receiver: receiverId, message });
+  console.log('sender, receiver, message', sender, receiver, message)
+  const newMessage = new userModel.Message({
+   sender,
+   receiver,
+   message,
+   timestamp: new Date()
+  });
   await newMessage.save();
-
-  // Emit message to receiver
-  const io = getIo();
-  io.to(receiverId).emit("receiveMessage", newMessage);
-
-  res.status(201).json(newMessage);
+  return newMessage;
  } catch (error) {
-  res.status(500).json({ error: error.message });
+  console.error("Error saving message:", error);
+  throw error;
  }
 };
 
-export default { sendMessage }
+// Function to fetch chat history between two users
+export const getMessages = async (userId, otherUserId) => {
+ try {
+  const messages = await userModel.Message.find({
+   $or: [
+    { sender: userId, receiver: otherUserId },
+    { sender: otherUserId, receiver: userId }
+   ]
+  }).sort({ timestamp: 1 });
+  console.log('messages', messages)
+  return messages;
+ } catch (error) {
+  console.error("Error fetching messages:", error);
+  throw error;
+ }
+};
+

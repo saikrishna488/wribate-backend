@@ -1,4 +1,6 @@
 import { Server } from "socket.io";
+import auth from "../controller/authController.js"
+import { saveMessage, getMessages } from "../controller/messageController.js"
 
 let io;
 const onlineUsers = new Map();
@@ -6,31 +8,34 @@ const onlineUsers = new Map();
 export const initializeSocket = (server) => {
  io = new Server(server, { cors: { origin: "*" } });
 
+ io.use(auth.authenticateSocket)
+
  io.on("connection", (socket) => {
 
-  console.log("A user connected:", socket.id);
+  console.log("A user connected:", socket.id, socket.user);
+  onlineUsers.set(socket.user.id, socket.id);
 
-
-  // Store user ID when they join
-  socket.on("join", (userId) => {
-   console.log('userId', userId)
-   onlineUsers.set(userId.userId, socket.id);
-   console.log(`User ${userId.userId} is online`);
-
-   console.log('onlineUsers', onlineUsers.get(userId))
-  });
 
   // Private messaging
   socket.on("sendMessage", async (data) => {
-   const { senderId, receiverId, message } = data;
+   const { sender, receiver, message } = data;
    console.log('data', data)
-   // Send message to receiver if online
-   console.log('onlineUsers', onlineUsers);
-
-   const receiverSocketId = onlineUsers.get(receiverId);
+   console.log('socket.user', socket.user)
+   await saveMessage(socket.user.id, receiver, message)
+   const receiverSocketId = onlineUsers.get(receiver);
    console.log('receiverSocketId', receiverSocketId)
    if (receiverSocketId) {
     io.to(receiverSocketId).emit("receiveMessage", data);
+   }
+  });
+
+  // Fetch chat history
+  socket.on("getMessages", async ({ receiver }) => {
+   try {
+    const messages = await getMessages(socket.user.id, receiver);
+    socket.emit("chatHistory", messages);
+   } catch (error) {
+    console.error("Error fetching messages:", error);
    }
   });
 
