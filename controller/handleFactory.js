@@ -217,8 +217,52 @@ async function categorizeWribates(wribates) {
   }
 }
 
+function divideIntoParts(startDate, totalDurationHours, parts = 12) {
+  const startTime = new Date(startDate);
+  const totalDurationMs = totalDurationHours * 60 * 60 * 1000;
+  const partDurationMs = totalDurationMs / parts;
+
+  let timeSlots = [];
+  for (let i = 0; i < parts; i++) {
+    let partStart = new Date(startTime.getTime() + i * partDurationMs);
+    let partEnd = new Date(startTime.getTime() + (i + 1) * partDurationMs);
+
+    timeSlots.push({
+      partNumber: i + 1,
+      startDate: partStart.toISOString(),
+      endDate: partEnd.toISOString()
+    });
+  }
+
+  return timeSlots;
+}
+
+function countVotesByRound(rounds, votes) {
+  let roundVotes = rounds.map(round => {
+    let forCount = 0;
+    let againstCount = 0;
+    const roundStart = new Date(round.startDate);
+    const roundEnd = new Date(round.endDate);
+
+    votes.forEach(vote => {
+      const voteTime = new Date(vote.timestamp);
+      if (voteTime >= roundStart && voteTime <= roundEnd) {
+        if (vote.vote === "for") forCount++;
+        if (vote.vote === "against") againstCount++;
+      }
+    });
+
+    return {
+      roundNumber: round.partNumber,
+      forVotes: forCount,
+      againstVotes: againstCount
+    };
+  });
+  return roundVotes;
+}
+
 
 /* 
  */
 
-export default { contactUs, appendUrls, sendInvitationMail, generateRounds, categorizeWribates, appendUserPic }
+export default { contactUs, appendUrls, sendInvitationMail, generateRounds, categorizeWribates, appendUserPic, divideIntoParts, countVotesByRound }

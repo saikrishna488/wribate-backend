@@ -45,4 +45,7 @@ router.post("/createBatchWribate", upload.single("file"), user.createBatchWribat
 
 router.post("/checkAvailableUserName", user.checkForUserName)
 
+router.get("/getVotes/:id", user.getVotes)
+
+router.get('/getUsers', user.getUser)
 export default router

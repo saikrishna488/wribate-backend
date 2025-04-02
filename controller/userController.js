@@ -454,6 +454,23 @@ const deleteWribate = catchAsync(async (req, res, next) => {
  successMessage(res, `deleted successfully`)
 })
 
+const getVotes = catchAsync(async (req, res, next) => {
+ const { body: { id } } = req
+ const wribate = await userModel.Comment.findById(id)
+ const rounds = divideIntoParts(wribate.startDate, wribate.durationDays);
+ const votes = await userModel.Vote.find({ wribateId: id }).lean();
+ const roundVoteCounts = countVotesByRound(rounds, votes);
+ res.status(200).json({ status: 1, roundVoteCounts: roundVoteCounts })
+})
 
-export default { signUpUser, loginUser, getProfile, getOTP, fileUpload, updateProfile, getCategories, createWribate, addArguments, getWribateByCategory, getWribateByID, addComment, addVotes, getMyWribates, createBatchWribate, verifyOTP, deleteWribate, checkForUserName }
+const getUser = catchAsync(async (req, res, next) => {
+ const users = await userModel.User.find()
+ const data = await handleFactory.appendUserPic(users)
+ res.status(200).json({ status: 1, users: data })
+})
+
+
+
+
+export default { signUpUser, loginUser, getProfile, getOTP, fileUpload, updateProfile, getCategories, createWribate, addArguments, getUser, getWribateByCategory, getWribateByID, addComment, addVotes, getMyWribates, createBatchWribate, verifyOTP, deleteWribate, checkForUserName, getVotes }
 
