@@ -18,10 +18,10 @@ export const initializeSocket = (server) => {
 
   // Private messaging
   socket.on("sendMessage", async (data) => {
-   const { sender, receiver, message } = data;
+    const { sender, receiver, message,wribateId,wribateTitle } = data;
    console.log('data', data)
    console.log('socket.user', socket.user)
-   await saveMessage(socket.user.id, receiver, message)
+   await saveMessage(socket.user.id, receiver, message,wribateId,wribateTitle)
    const receiverSocketId = onlineUsers.get(receiver);
    console.log('receiverSocketId', receiverSocketId)
    if (receiverSocketId) {
