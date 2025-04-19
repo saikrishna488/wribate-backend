@@ -11,6 +11,12 @@ router.post('/addCategory', admin.addcategory)
 
 router.get('/getCategories', admin.getCategories)
 
+router.patch('/updateCategories/:id', admin.updateCategory)
+
+router.delete('/deleteCategories/:id', admin.deleteCategory)
+
 router.post('/updateUserRole', admin.updateUserRoles)
+
+router.patch('/updateUserStatus', admin.updateUserStatus)
 
 export default router

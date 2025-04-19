@@ -7,6 +7,7 @@ import bcrypt from "bcrypt"
 import auth from "./authController.js"
 
 
+
 const loginAdmin = catchAsync(async (req, res, next) => {
  const { body: { email, password } } = req
  if (!email || !password) return ErrorResponse(res, 'Please enter valid email or Password')
@@ -52,4 +53,61 @@ const getCategories = catchAsync(async (req, res, next) => {
  res.status(200).json({ status: 0, catgories: catgories })
 })
 
-export default { addcategory, getUser, updateUserRoles, loginAdmin, getCategories }
+const updateCategory = catchAsync(async (req, res, next) => {
+    const { id } = req.params;
+    const body = req.body;
+  
+    const updatedCategory = await Categories.findByIdAndUpdate(
+      id,
+      { categoryName: body.categoryName },
+      { new: true, runValidators: true }
+    );
+  
+    if (!updatedCategory) {
+      return next(new Error("Category not found"));
+    }
+  
+    successMessage(res, "Category updated successfully", updatedCategory);
+  });
+
+  const deleteCategory = catchAsync(async (req, res, next) => {
+    const { id } = req.params;
+  
+    const deletedCategory = await Categories.findByIdAndDelete(id);
+  
+    if (!deletedCategory) {
+      return next(new Error("Category not found"));
+    }
+  
+    successMessage(res, "Category deleted successfully");
+  });
+
+  const updateUserStatus = catchAsync(async (req, res, next) => {
+    const { id } = req.params;
+    const { status } = req.body; // 1 - active, 2 - inactive, 3 - deleted
+let message
+    if(status==1){
+        message=  "active"
+    }else if(status==2){
+         message=  "inactive"
+    }else{
+        message="deleted"
+    }
+  
+    const user = await userModel.User.findByIdAndUpdate(
+      id,
+      { status },
+      { new: true, runValidators: true }
+    );
+  
+    if (!user) {
+      return next(new Error("User not found"));
+    }
+  
+    successMessage(res, `User status updated to ${message}`, user);
+  });
+  
+  
+  
+
+export default { addcategory, getUser, updateUserRoles, loginAdmin, getCategories,updateCategory ,deleteCategory,updateUserStatus,updateUserStatus}

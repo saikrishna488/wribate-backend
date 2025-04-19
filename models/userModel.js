@@ -39,6 +39,11 @@ const userSchema = new mongoose.Schema({
 
  otp: dataTypes.Number,
 
+ status: {
+    type :Number , // 1 active 2 inactive 3 delete
+    default: 1
+},
+
  userRole: {
   type: String,
   enum: ['user', 'admin', 'agent'],
