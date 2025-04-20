@@ -26,29 +26,35 @@ const authenticateUser = catchAsync(async (req, res, next) => {
 
 
 const authenticateSocket = async (socket, next) => {
+        try{
 
-        const token = socket.handshake.query?.token; // Get token from handshake
-        console.log('token', socket.handshake.query.token)
-       
-        if (!token) {
-         throw new Error("Authentication error: No token provided")
+                const token = socket.handshake.query?.token; // Get token from handshake
+                console.log('token', socket.handshake.query.token)
+               
+                if (!token) {
+                 throw new Error("Authentication error: No token provided")
+                }
+                // Verify JWT
+                const decoded = jwt.verify(token, process.env.JTW_SECRET)
+                if (!decoded) {
+                throw new Error("Authentication error: No token provided")
+                 //res.status(401).json({ status: 0, message: "Authentication error: Invalid token" })
+                }
+               
+                const user = await userModel.User.findById(decoded.id)
+                if (!user)throw new Error("Un-Authorised user")
+                        
+                       // return ErrorResponse(res, "Un-Authorised user")
+               
+                socket.user = decoded; // Attach user data to the socket
+                // Continue with connection
+               
+                next()
+        }catch(err){
+                console.log("err",err)
+
         }
-        // Verify JWT
-        const decoded = jwt.verify(token, process.env.JTW_SECRET)
-        if (!decoded) {
-        throw new Error("Authentication error: No token provided")
-         //res.status(401).json({ status: 0, message: "Authentication error: Invalid token" })
-        }
-       
-        const user = await userModel.User.findById(decoded.id)
-        if (!user)throw new Error("Un-Authorised user")
-                
-               // return ErrorResponse(res, "Un-Authorised user")
-       
-        socket.user = decoded; // Attach user data to the socket
-        // Continue with connection
-       
-        next()
+
   
 }
 
