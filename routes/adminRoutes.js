@@ -15,8 +15,8 @@ router.patch('/updateCategories/:id', admin.updateCategory)
 
 router.delete('/deleteCategories/:id', admin.deleteCategory)
 
-router.post('/updateUserRole/:id', admin.updateUserRoles)
+router.post('/updateUserRole', admin.updateUserRoles)
 
-router.patch('/updateUserStatus', admin.updateUserStatus)
+router.patch('/updateUserStatus/:id', admin.updateUserStatus)
 
 export default router
