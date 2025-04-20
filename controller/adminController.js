@@ -67,7 +67,7 @@ const updateCategory = catchAsync(async (req, res, next) => {
       return next(new Error("Category not found"));
     }
   
-    successMessage(res, "Category updated successfully", updatedCategory);
+    successMessage(res, "Category updated successfully");
   });
 
   const deleteCategory = catchAsync(async (req, res, next) => {
@@ -104,7 +104,7 @@ let message
       return next(new Error("User not found"));
     }
   
-    successMessage(res, `User status updated to ${message}`, user);
+    successMessage(res, `User status updated to ${message}`);
   });
   
   
