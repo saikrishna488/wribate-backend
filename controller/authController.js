@@ -24,7 +24,6 @@ const authenticateUser = catchAsync(async (req, res, next) => {
  next()
 })
 
-
 const authenticateSocket = async (socket, next) => {
         try{
 

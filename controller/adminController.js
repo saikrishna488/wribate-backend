@@ -108,6 +108,5 @@ let message
   });
   
   
-  
 
 export default { addcategory, getUser, updateUserRoles, loginAdmin, getCategories,updateCategory ,deleteCategory,updateUserStatus,updateUserStatus}
