@@ -25,7 +25,7 @@ const authenticateUser = catchAsync(async (req, res, next) => {
 })
 
 
-const authenticateSocket = catchAsync(async (socket, next) => {
+const authenticateSocket = async (socket, next) => {
 
         const token = socket.handshake.query?.token; // Get token from handshake
         console.log('token', socket.handshake.query.token)
@@ -36,17 +36,20 @@ const authenticateSocket = catchAsync(async (socket, next) => {
         // Verify JWT
         const decoded = jwt.verify(token, process.env.JTW_SECRET)
         if (!decoded) {
-         res.status(401).json({ status: 0, message: "Authentication error: Invalid token" })
+        throw new Error("Authentication error: No token provided")
+         //res.status(401).json({ status: 0, message: "Authentication error: Invalid token" })
         }
        
         const user = await userModel.User.findById(decoded.id)
-        if (!user) return ErrorResponse(res, "Un-Authorised user")
+        if (!user)throw new Error("Un-Authorised user")
+                
+               // return ErrorResponse(res, "Un-Authorised user")
        
         socket.user = decoded; // Attach user data to the socket
         // Continue with connection
        
         next()
   
-})
+}
 
 export default { jwtToken, authenticateUser, authenticateSocket }
