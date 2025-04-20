@@ -13,15 +13,15 @@ const webHook = async (inputs) => {
     .update(JSON.stringify(inputs.body))
     .digest("hex");
 
-  logger.debug("sig received :", inputs.headers["x-razorpay-signature"]);
-  logger.debug("sig generated :", expectedSignature);
-  logger.debug(inputs.body, "body");
-  //logger.debug(inputs.body.payload.payment, "payload");
+  console.log("sig received :", inputs.headers["x-razorpay-signature"]);
+  console.log("sig generated :", expectedSignature);
+  console.log(inputs.body, "body");
+  //console.log(inputs.body.payload.payment, "payload");
 
   if (expectedSignature === inputs.headers["x-razorpay-signature"]) {
-    logger.debug("Valid request");
+    console.log("Valid request");
     const Status = inputs.body.event;
-    logger.debug("Status", Status);
+    console.log("Status", Status);
     let paymentDetails;
     let orderDetails;
     let razorpayOrderId;
@@ -36,13 +36,13 @@ const webHook = async (inputs) => {
 
     switch (Status) {
       case "order.paid":
-        logger.debug("enter to case!");
+        console.log("enter to case!");
         const id = inputs.body.payload.payment.entity.notes.transaction_id;
         paymentDetails = inputs.body.payload.payment.entity;
         orderDetails = inputs.body.payload.order.entity;
 
-        logger.debug("Payment Details: ", paymentDetails);
-        logger.debug("Order Details: ", orderDetails);
+        console.log("Payment Details: ", paymentDetails);
+        console.log("Order Details: ", orderDetails);
 
         razorpayOrderId = paymentDetails.order_id;
         transactionId = paymentDetails.id;
@@ -66,7 +66,7 @@ const webHook = async (inputs) => {
        
         break;
       default:
-        logger.debug("PAYOUT STAGE: ", Status);
+        console.log("PAYOUT STAGE: ", Status);
         break;
     }
   }
@@ -74,6 +74,7 @@ const webHook = async (inputs) => {
 
 const razorpay = catchAsync(async (req, res, next) => {
   await webHook(req);
+  console.log(req.body)
   res.status(200).json({ screentatus: "Success" });
 });
 

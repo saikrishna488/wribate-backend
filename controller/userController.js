@@ -509,7 +509,7 @@ const getUser = catchAsync(async (req, res, next) => {
   const razorpayinstance = await handleFactory.razorpayInstance();
   const razorpayOrder = await handleFactory.createorderpayment(orderPayment, razorpayinstance);
 
-  logger.debug("razorpayOrder", razorpayOrder);
+  console.log("razorpayOrder", razorpayOrder);
   const razorpayOrderId = razorpayOrder.id;
 
     // Save to DB
