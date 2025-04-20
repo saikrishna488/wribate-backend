@@ -70,7 +70,7 @@ app.use('/api/user', userRoutes)
 
 app.use('/api/admin', adminRoutes)
 
-app.use('api/webhook',webHookRoutes)
+app.use('/api/webhook',webHookRoutes)
 
 /* unhandled routes */
 
