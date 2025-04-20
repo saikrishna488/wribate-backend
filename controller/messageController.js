@@ -1,13 +1,15 @@
 import userModel from "../models/userModel.js";
 
 // Function to save a new message
-export const saveMessage = async (sender, receiver, message) => {
+export const saveMessage = async (sender, receiver, message,wribateId,wribateTitle) => {
  try {
-  console.log('sender, receiver, message', sender, receiver, message)
+  console.log('sender, receiver, message', sender, receiver, message,wribateId,wribateTitle)
   const newMessage = new userModel.Message({
    sender,
    receiver,
    message,
+   wribateId,
+   wribateTitle,
    timestamp: new Date()
   });
   await newMessage.save();
