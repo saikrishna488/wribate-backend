@@ -1,6 +1,7 @@
 
 import nodemailer from "nodemailer"
 import moment from "moment";
+import Razorpay from "razorpay";
 
 const contactUs = async (mail, otp) => {
   const transporter = nodemailer.createTransport({
@@ -281,8 +282,25 @@ function countVotesByRound(rounds, votes) {
   return roundVotes;
 }
 
+const razorpayInstance = async () => {
+  const instance = new Razorpay({
+    key_id: process.env.KEY_ID,
+    key_secret: process.env.KEY_SECRET
+  });
+  return instance;
+};
+
+const createorderpayment = async (orderPayment, instance) => {
+  return await instance.orders.create(orderPayment);
+};
+
+const getpaymentdetails = async (paymentId, instance) => {
+  return await instance.payments.fetch(paymentId);
+};
 
 /* 
  */
 
-export default { contactUs, appendUrls, sendInvitationMail, generateRounds, categorizeWribates, appendUserPic, divideIntoParts, countVotesByRound }
+export default { contactUs, appendUrls, sendInvitationMail, generateRounds, 
+  categorizeWribates, appendUserPic, divideIntoParts, countVotesByRound ,
+  razorpayInstance,createorderpayment, getpaymentdetails}

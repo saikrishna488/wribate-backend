@@ -12,6 +12,7 @@ import AppErrors from "./utils/appErrors.js"
 import globalErrorHandler from "./controller/errorController.js"
 import userRoutes from "./routes/userRotes.js"
 import adminRoutes from "./routes/adminRoutes.js"
+import webHookRoutes from "./routes/webhook.js"
 import cors from "cors"
 
 
@@ -68,6 +69,8 @@ app.use((req, res, next) => {
 app.use('/api/user', userRoutes)
 
 app.use('/api/admin', adminRoutes)
+
+app.use('api/webhook',webHookRoutes)
 
 /* unhandled routes */
 

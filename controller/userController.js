@@ -1,5 +1,6 @@
 import catchAsync from "../utils/catchAsync.js";
 import userModel from "../models/userModel.js"
+import { v4 as uuidv4 } from 'uuid';
 import { successMessage, ErrorResponse, successResponse } from "../utils/commonResponse.js"
 import bcrypt from "bcryptjs"
 import auth from "../controller/authController.js"
@@ -470,8 +471,62 @@ const getUser = catchAsync(async (req, res, next) => {
  res.status(200).json({ status: 1, users: data })
 })
 
+ const createOrder = catchAsync(async (req, res) => {
+  try {
+    const { userId, amount } = req.body;
+
+    let transactionId;
+    let unique = false;
+    let maxTries = 10;
+
+    while (!unique && maxTries > 0) {
+      const newId = uuidv4();
+
+      // Check if this ID already exists
+      const existing = await userModel.Razorpay.findOne({ transactionId: newId });
+
+      if (!existing) {
+        transactionId = newId;
+        unique = true;
+      } else {
+        maxTries--;
+      }
+    }
+
+    if (!unique) {
+      return res.status(500).json({status: 'error',message: 'Failed to generate a unique transaction ID. Try again.'});
+    }
+
+    const Amount = parseFloat(amount * 100);
+
+  const orderPayment = {
+    amount: Amount,
+    currency: "INR",
+    receipt: transactionId,
+    //payment_capture: 1,
+  };
+
+  const razorpayinstance = await handleFactory.razorpayInstance();
+  const razorpayOrder = await handleFactory.createorderpayment(orderPayment, razorpayinstance);
+
+  logger.debug("razorpayOrder", razorpayOrder);
+  const razorpayOrderId = razorpayOrder.id;
+
+    // Save to DB
+    const transaction = await userModel.Razorpay.create({transactionId,userId,Amount});
+    
+    res.status(201).json({razorpayOrderId:razorpayOrderId,transactionId:transactionId});
+
+  } catch (error) {
+    res.status(500).json({status: 'error',message: error.message });
+  }
+});
 
 
 
-export default { signUpUser, loginUser, getProfile, getOTP, fileUpload, updateProfile, getCategories, createWribate, addArguments, getUser, getWribateByCategory, getWribateByID, addComment, addVotes, getMyWribates, createBatchWribate, verifyOTP, deleteWribate, checkForUserName, getVotes }
+
+export default { signUpUser, loginUser, getProfile, getOTP, fileUpload, updateProfile, 
+    getCategories, createWribate, addArguments, getUser, getWribateByCategory, getWribateByID, 
+    addComment, addVotes, getMyWribates, createBatchWribate, verifyOTP, deleteWribate, 
+    checkForUserName, getVotes ,createOrder}
 

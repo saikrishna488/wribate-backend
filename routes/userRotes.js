@@ -48,4 +48,7 @@ router.post("/checkAvailableUserName", user.checkForUserName)
 router.get("/getVotes/:id", user.getVotes)
 
 router.get('/getUsers', user.getUser)
+
+router.post('/createOrder', user.createOrder)
+
 export default router

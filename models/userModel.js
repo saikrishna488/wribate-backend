@@ -169,7 +169,6 @@ const commentSchema = new mongoose.Schema(
    default: 'For'
   },
  },
-
  { timestamps: true }
 );
 
@@ -185,6 +184,7 @@ const tempUser = new mongoose.Schema({
  otp: { type: Number, },
 }, { timestamps: true });
 
+
 const messageSchema = new mongoose.Schema({
  sender: { type: mongoose.Schema.Types.ObjectId, ref: "User", required: true },
  receiver: { type: mongoose.Schema.Types.ObjectId, ref: "User", required: true },
@@ -194,6 +194,19 @@ const messageSchema = new mongoose.Schema({
  timestamp: { type: Date, default: Date.now },
 });
 
+const razorPaytransactions = new mongoose.Schema({
+    transactionId: { type: String, unique: true, required: true }, 
+    userId: { type: String, },
+    amount: { type: Number },
+    paymentStatus: {
+        type: String,
+        enum: ['pending', 'completed','failed'],
+        default: 'pending'
+       },
+    
+   }, { timestamps: true });
+   
+   
 const Message = mongoose.model("Message", messageSchema);
 const TempUser = mongoose.model("TempUser", tempUser);
 const Student = mongoose.model("Student", studentSchema);
@@ -202,6 +215,7 @@ const Vote = mongoose.model("Vote", voteSchema);
 const Argument = mongoose.model("Argument", argumentSchema);
 const Wribate = mongoose.model('Wribate', wribateSchema);
 const User = mongoose.model('User', userSchema);
+const Razorpay=mongoose.model('Razorpay',razorPaytransactions)
 
 
-export default { User, Wribate, Argument, Vote, Comment, Student, TempUser, Message }
+export default { User, Wribate, Argument, Vote, Comment, Student, TempUser, Message,Razorpay }
