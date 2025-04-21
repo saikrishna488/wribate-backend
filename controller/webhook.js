@@ -63,13 +63,14 @@ const webHook = async (inputs) => {
             { paymentStatus },
             { new: true }
           );
+          const user=await userModel.Razorpay.findOne({where:{transactionId}})
        
           const durationInDays = 365; // or get from plan
           const startDate = new Date();
           const expiryDate = new Date(startDate.getTime() + durationInDays * 24 * 60 * 60 * 1000);
       
           const updatedUser = await userModel.User.findByIdAndUpdate(
-            userId,
+            user.userId,
             {
               subscription: {
                 isActive: true,
