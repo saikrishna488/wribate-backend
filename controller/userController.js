@@ -69,7 +69,7 @@ const loginUser = catchAsync(async (req, res, next) => {
 const getProfile = catchAsync(async (req, res, next) => {
  const { user } = req
  const userDetails = await userModel.User.findById(user._id)
- const data = await utils.appendUrls(userDetails)
+ //const data = await utils.appendUrls(userDetails)
  console.log('data', data)
  successMessage(res, data)
 })
@@ -306,12 +306,12 @@ const getWribateByCategory = catchAsync(async (req, res) => {
   }
 
   // Append baseURL to each coverImage
-  const baseURL = process.env.WRIBATE
-  const data = wribates.map(item => ({
-   ...item._doc,
-   coverImage: baseURL + item.coverImage
-  }));
-  const data1 = await handleFactory.categorizeWribates(data)
+  // const baseURL = process.env.WRIBATE
+  // const data = wribates.map(item => ({
+  //  ...item._doc,
+  //  coverImage: baseURL + item.coverImage
+  // }));
+  const data1 = await handleFactory.categorizeWribates(wribates)
   res.status(200).json({ status: "success", data: data1 });
  } catch (error) {
   res.status(500).json({ status: "error", message: error.message });
@@ -364,8 +364,8 @@ const getWribateByID = catchAsync(async (req, res) => {
   }
  }
 
- const baseURL = process.env.WRIBATE
- wribate.coverImage = baseURL + wribate.coverImage
+//  const baseURL = process.env.WRIBATE
+//  wribate.coverImage = baseURL + wribate.coverImage
 
  res.status(200).json({
   status: "success", data: wribate,
@@ -484,12 +484,12 @@ const getMyWribates = catchAsync(async (req, res, next) => {
 
  // Append baseURL to each coverImage
  const baseURL = process.env.WRIBATE
- const data = wribates.map(item => ({
-  ...item._doc,
-  coverImage: baseURL + item.coverImage
- }));
+//  const data = wribates.map(item => ({
+//   ...item._doc,
+//   coverImage: baseURL + item.coverImage
+//  }));
 
- const data1 = await handleFactory.categorizeWribates(data)
+ const data1 = await handleFactory.categorizeWribates(wribates)
  res.status(200).json({ status: "success", data: data1 });
 })
 
