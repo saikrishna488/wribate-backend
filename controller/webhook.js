@@ -64,6 +64,7 @@ const webHook = async (inputs) => {
             { new: true }
           );
           const user=await userModel.Razorpay.findOne({where:{transactionId}})
+          console.log("user",user)
        
           const durationInDays = 365; // or get from plan
           const startDate = new Date();
