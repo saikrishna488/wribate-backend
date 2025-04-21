@@ -50,6 +50,13 @@ const userSchema = new mongoose.Schema({
   default: 'user'
  },
 
+ subscription: {
+    isActive: { type: Boolean, default: false },
+    startDate: { type: Date },
+    durationInDays: { type: Number, default: 0 },
+    expiryDate: { type: Date }
+  }
+
 }, { timestamps: true })
 
 

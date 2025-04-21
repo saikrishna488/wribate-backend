@@ -74,60 +74,169 @@ const getProfile = catchAsync(async (req, res, next) => {
  successMessage(res, data)
 })
 
+// const fileUpload = catchAsync(async (req, res, next) => {
+//  const file = req.file;
+//  console.log('file', file)
+//  const allowedMimeTypes = ['image/jpeg', 'image/png'];
+//  if (!allowedMimeTypes.includes(file.mimetype)) {
+//   return res.status(400).json({
+//    status: 0,
+//    message: 'Invalid file type. Only .jpeg or .png files are allowed.',
+//   });
+//  }
+
+//  // Extract the image_type from the request (e.g., query, body, or params)
+//  const imageType = req.body.image_type || req.query.image_type || 'default';
+//  const allowedTypes = ['users', 'wribte'];
+
+//  if (!allowedTypes.includes(imageType)) {
+//   return res.status(400).json({
+//    status: 0,
+//    message: 'Invalid image type. Allowed types are categories, subcategories, products, banners, and menus.',
+//   });
+//  }
+
+//  const uniqueFileName = `${file.originalname}`;
+//  const __filename = fileURLToPath(import.meta.url);
+//  const __dirname = path.dirname(__filename);
+
+//  const uploadDir = path.join(__dirname, `uploads/${imageType}`);
+//  console.log('uploadDir', uploadDir)
+//  const uploadPath = path.join(uploadDir, uniqueFileName);
+
+//  if (!fs.existsSync(uploadDir)) {
+//   fs.mkdirSync(uploadDir, { recursive: true });
+//  }
+
+//  try {
+
+//   cloudinary.config({ 
+//     cloud_name: 'dzzgu7qws', 
+//     api_key: '994123695836625', 
+//     api_secret: 'VMhIL9ql4W1dUe0U3i4L-vviU8M' // Click 'View API Keys' above to copy your API secret
+// });
+
+// // Upload an image
+//  const uploadResult = await cloudinary.uploader
+//    .upload(
+//        `${__filename}`, {
+//            public_id: 'shoes',
+//        }
+//    )
+//    .catch((error) => {
+//        console.log(error);
+//    });
+
+// // console.log(uploadResult);
+
+// // Optimize delivery by resizing and applying auto-format and auto-quality
+// const optimizeUrl = cloudinary.url('shoes', {
+//     fetch_format: 'auto',
+//     quality: 'auto'
+// });
+
+// // console.log(optimizeUrl);
+
+// // Transform the image: auto-crop to square aspect_ratio
+// const autoCropUrl = cloudinary.url('shoes', {
+//     crop: 'auto',
+//     gravity: 'auto',
+//     width: 500,
+//     height: 500,
+// });
+
+// console.log(autoCropUrl);   
+//   // await sharp(file.buffer)
+//   //  .resize(800, 800, { fit: 'inside' })
+//   //  .toFormat('jpeg')
+//   //  .jpeg({ quality: 90 })
+//   //  .toFile(uploadPath);
+
+//   res.status(201).json({
+//    status: 1,
+//    message: 'File uploaded and processed successfully.',
+//    fileName: uniqueFileName,
+//   });
+//  } catch (sharpError) {
+//   return res.status(500).json({
+//    status: 0,
+//    message: 'Error processing image.',
+//    error: sharpError.message,
+//   });
+//  }
+// })
+
 const fileUpload = catchAsync(async (req, res, next) => {
- const file = req.file;
- console.log('file', file)
- const allowedMimeTypes = ['image/jpeg', 'image/png'];
- if (!allowedMimeTypes.includes(file.mimetype)) {
-  return res.status(400).json({
-   status: 0,
-   message: 'Invalid file type. Only .jpeg or .png files are allowed.',
+  const file = req.file;
+  console.log('file', file);
+  const allowedMimeTypes = ['image/jpeg', 'image/png'];
+  if (!allowedMimeTypes.includes(file.mimetype)) {
+    return res.status(400).json({
+      status: 0,
+      message: 'Invalid file type. Only .jpeg or .png files are allowed.',
+    });
+  }
+
+  const imageType = req.body.image_type || req.query.image_type || 'default';
+  const allowedTypes = ['users', 'wribte'];
+
+  if (!allowedTypes.includes(imageType)) {
+    return res.status(400).json({
+      status: 0,
+      message: 'Invalid image type. Allowed types are users, wribte.',
+    });
+  }
+
+  const uniqueFileName = `${Date.now()}-${file.originalname}`;
+  const __filename = fileURLToPath(import.meta.url);
+  const __dirname = path.dirname(__filename);
+
+  const uploadDir = path.join(__dirname, `uploads/${imageType}`);
+  if (!fs.existsSync(uploadDir)) {
+    fs.mkdirSync(uploadDir, { recursive: true });
+  }
+
+  const tempFilePath = path.join(uploadDir, uniqueFileName);
+
+  // Save file temporarily on server
+  fs.writeFileSync(tempFilePath, file.buffer);
+
+  cloudinary.config({ 
+    cloud_name: process.env.CLOUDINARY_NAME, 
+    api_key: process.env.CLOUDINARY_API_KEY, 
+    api_secret: process.env.CLOUDINARY_SECRET
   });
- }
 
- // Extract the image_type from the request (e.g., query, body, or params)
- const imageType = req.body.image_type || req.query.image_type || 'default';
- const allowedTypes = ['users', 'wribte'];
+  try {
+    const uploadResult = await cloudinary.uploader.upload(tempFilePath, {
+      public_id: uniqueFileName.split('.')[0],
+      folder: imageType,
+    });
 
- if (!allowedTypes.includes(imageType)) {
-  return res.status(400).json({
-   status: 0,
-   message: 'Invalid image type. Allowed types are categories, subcategories, products, banners, and menus.',
-  });
- }
+    console.log('Cloudinary Upload:', uploadResult.secure_url);
 
- const uniqueFileName = `${file.originalname}`;
- const __filename = fileURLToPath(import.meta.url);
- const __dirname = path.dirname(__filename);
+    // ✅ Delete local temp file
+    fs.unlinkSync(tempFilePath);
+    console.log('Temp file deleted from server:', tempFilePath);
 
- const uploadDir = path.join(__dirname, `uploads/${imageType}`);
- console.log('uploadDir', uploadDir)
- const uploadPath = path.join(uploadDir, uniqueFileName);
+    res.status(201).json({
+      status: 1,
+      message: 'File uploaded successfully.',
+      cloudinaryUrl: uploadResult.secure_url,
+    });
 
- if (!fs.existsSync(uploadDir)) {
-  fs.mkdirSync(uploadDir, { recursive: true });
- }
+  } catch (error) {
+    // Clean up temp file in case of error
+    if (fs.existsSync(tempFilePath)) fs.unlinkSync(tempFilePath);
 
- try {
-  await sharp(file.buffer)
-   .resize(800, 800, { fit: 'inside' })
-   .toFormat('jpeg')
-   .jpeg({ quality: 90 })
-   .toFile(uploadPath);
-
-  res.status(201).json({
-   status: 1,
-   message: 'File uploaded and processed successfully.',
-   fileName: uniqueFileName,
-  });
- } catch (sharpError) {
-  return res.status(500).json({
-   status: 0,
-   message: 'Error processing image.',
-   error: sharpError.message,
-  });
- }
-})
+    console.error('Upload error:', error);
+    return res.status(500).json({
+      status: 0,
+      message: 'Error uploading to Cloudinary.',
+      error: error.message,
+    });
+  }
+});
 
 const updateProfile = catchAsync(async (req, res, next) => {
  const userId = req.params.id;
@@ -472,8 +581,9 @@ const getUser = catchAsync(async (req, res, next) => {
 })
 
  const createOrder = catchAsync(async (req, res) => {
-  try {
-    const { userId, amount } = req.body;
+   const { user } = req
+   const userId=user._id
+    const {  amount } = req.body;
 
     let transactionId;
     let unique = false;
@@ -517,9 +627,7 @@ const getUser = catchAsync(async (req, res, next) => {
     
     res.status(201).json({razorpayOrderId:razorpayOrderId,transactionId:transactionId});
 
-  } catch (error) {
-    res.status(500).json({status: 'error',message: error.message });
-  }
+  
 });
 
 
@@ -529,4 +637,8 @@ export default { signUpUser, loginUser, getProfile, getOTP, fileUpload, updatePr
     getCategories, createWribate, addArguments, getUser, getWribateByCategory, getWribateByID, 
     addComment, addVotes, getMyWribates, createBatchWribate, verifyOTP, deleteWribate, 
     checkForUserName, getVotes ,createOrder}
+
+
+
+    import { v2 as cloudinary } from 'cloudinary';
 

@@ -64,6 +64,23 @@ const webHook = async (inputs) => {
             { new: true }
           );
        
+          const durationInDays = 365; // or get from plan
+          const startDate = new Date();
+          const expiryDate = new Date(startDate.getTime() + durationInDays * 24 * 60 * 60 * 1000);
+      
+          const updatedUser = await userModel.User.findByIdAndUpdate(
+            userId,
+            {
+              subscription: {
+                isActive: true,
+                startDate,
+                durationInDays,
+                expiryDate
+              }
+            },
+            { new: true }
+          );
+
         break;
       default:
         console.log("PAYOUT STAGE: ", Status);
