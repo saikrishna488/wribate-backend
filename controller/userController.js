@@ -70,8 +70,8 @@ const getProfile = catchAsync(async (req, res, next) => {
  const { user } = req
  const userDetails = await userModel.User.findById(user._id)
  //const data = await utils.appendUrls(userDetails)
- console.log('data', data)
- successMessage(res, data)
+ console.log('data', userDetails)
+ successMessage(res, userDetails)
 })
 
 // const fileUpload = catchAsync(async (req, res, next) => {
@@ -629,7 +629,6 @@ const getUser = catchAsync(async (req, res, next) => {
 
   
 });
-
 
 
 
