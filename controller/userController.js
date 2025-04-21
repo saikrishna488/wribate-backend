@@ -13,6 +13,7 @@ import Categories from "../models/adminModel.js";
 import xlsx from "xlsx"
 import handleFactory from "../controller/handleFactory.js";
 import mongoose from "mongoose";
+import { v2 as cloudinary } from 'cloudinary';
 
 const checkForUserName = catchAsync(async (req, res, next) => {
  const { body: { userName } } = req
@@ -631,13 +632,10 @@ const getUser = catchAsync(async (req, res, next) => {
 });
 
 
-
 export default { signUpUser, loginUser, getProfile, getOTP, fileUpload, updateProfile, 
     getCategories, createWribate, addArguments, getUser, getWribateByCategory, getWribateByID, 
     addComment, addVotes, getMyWribates, createBatchWribate, verifyOTP, deleteWribate, 
     checkForUserName, getVotes ,createOrder}
 
 
-
-    import { v2 as cloudinary } from 'cloudinary';
 
