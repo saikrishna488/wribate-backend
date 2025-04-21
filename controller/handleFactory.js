@@ -282,7 +282,7 @@ function countVotesByRound(rounds, votes) {
   return roundVotes;
 }
 
-const razorpayInstance = async () => {y
+const razorpayInstance = async () => {
   const instance = new Razorpay({
     key_id: process.env.KEY_ID,
     key_secret: process.env.KEY_SECRET
