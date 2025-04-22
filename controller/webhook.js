@@ -45,7 +45,7 @@ const webHook = async (inputs) => {
         console.log("Order Details: ", orderDetails);
 
         razorpayOrderId = paymentDetails.order_id;
-        transactionId = paymentDetails.id;
+        transactionId = orderDetails.receipt;
         console.log("transactionId",transactionId)
         phoneNumberWithoutPrefix = paymentDetails.contact.substring(3);
         paymentStatus = paymentDetails.status;
