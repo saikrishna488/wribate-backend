@@ -107,7 +107,7 @@ let message
     successMessage(res, `User status updated to ${message}`);
   });
   
-  const getWribateByCategory = catchAsync(async (req, res) => {
+  const getWribateByCategory = catchAsync(async (req, res,next) => {
     try {
      const { params: { category } } = req;
    
@@ -130,7 +130,7 @@ let message
     }
   });
    
-   const getWribateByID = catchAsync(async (req, res) => {
+   const getWribateByID = catchAsync(async (req, res,next) => {
    
     const { params: { id } } = req;
    
