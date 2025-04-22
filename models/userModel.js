@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
-
 const dataTypes = mongoose.SchemaTypes
+
 
 const userSchema = new mongoose.Schema({
  name: {

@@ -75,98 +75,6 @@ const getProfile = catchAsync(async (req, res, next) => {
  successMessage(res, userDetails)
 })
 
-// const fileUpload = catchAsync(async (req, res, next) => {
-//  const file = req.file;
-//  console.log('file', file)
-//  const allowedMimeTypes = ['image/jpeg', 'image/png'];
-//  if (!allowedMimeTypes.includes(file.mimetype)) {
-//   return res.status(400).json({
-//    status: 0,
-//    message: 'Invalid file type. Only .jpeg or .png files are allowed.',
-//   });
-//  }
-
-//  // Extract the image_type from the request (e.g., query, body, or params)
-//  const imageType = req.body.image_type || req.query.image_type || 'default';
-//  const allowedTypes = ['users', 'wribte'];
-
-//  if (!allowedTypes.includes(imageType)) {
-//   return res.status(400).json({
-//    status: 0,
-//    message: 'Invalid image type. Allowed types are categories, subcategories, products, banners, and menus.',
-//   });
-//  }
-
-//  const uniqueFileName = `${file.originalname}`;
-//  const __filename = fileURLToPath(import.meta.url);
-//  const __dirname = path.dirname(__filename);
-
-//  const uploadDir = path.join(__dirname, `uploads/${imageType}`);
-//  console.log('uploadDir', uploadDir)
-//  const uploadPath = path.join(uploadDir, uniqueFileName);
-
-//  if (!fs.existsSync(uploadDir)) {
-//   fs.mkdirSync(uploadDir, { recursive: true });
-//  }
-
-//  try {
-
-//   cloudinary.config({ 
-//     cloud_name: 'dzzgu7qws', 
-//     api_key: '994123695836625', 
-//     api_secret: 'VMhIL9ql4W1dUe0U3i4L-vviU8M' // Click 'View API Keys' above to copy your API secret
-// });
-
-// // Upload an image
-//  const uploadResult = await cloudinary.uploader
-//    .upload(
-//        `${__filename}`, {
-//            public_id: 'shoes',
-//        }
-//    )
-//    .catch((error) => {
-//        console.log(error);
-//    });
-
-// // console.log(uploadResult);
-
-// // Optimize delivery by resizing and applying auto-format and auto-quality
-// const optimizeUrl = cloudinary.url('shoes', {
-//     fetch_format: 'auto',
-//     quality: 'auto'
-// });
-
-// // console.log(optimizeUrl);
-
-// // Transform the image: auto-crop to square aspect_ratio
-// const autoCropUrl = cloudinary.url('shoes', {
-//     crop: 'auto',
-//     gravity: 'auto',
-//     width: 500,
-//     height: 500,
-// });
-
-// console.log(autoCropUrl);   
-//   // await sharp(file.buffer)
-//   //  .resize(800, 800, { fit: 'inside' })
-//   //  .toFormat('jpeg')
-//   //  .jpeg({ quality: 90 })
-//   //  .toFile(uploadPath);
-
-//   res.status(201).json({
-//    status: 1,
-//    message: 'File uploaded and processed successfully.',
-//    fileName: uniqueFileName,
-//   });
-//  } catch (sharpError) {
-//   return res.status(500).json({
-//    status: 0,
-//    message: 'Error processing image.',
-//    error: sharpError.message,
-//   });
-//  }
-// })
-
 const fileUpload = catchAsync(async (req, res, next) => {
   const file = req.file;
   console.log('file', file);
@@ -630,7 +538,6 @@ const getUser = catchAsync(async (req, res, next) => {
   
 });
 
-// PUT or POST - /api/users/:userId/favorite-categories
 const favouriteCategories=catchAsync(async(req, res,next) => {
   const { userId } = req.params;
   const { categoryIds } = req.body; // Expecting an array of category ObjectIds

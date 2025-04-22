@@ -128,7 +128,7 @@ let message
     } catch (error) {
      res.status(500).json({ status: "error", message: error.message });
     }
-   });
+  });
    
    const getWribateByID = catchAsync(async (req, res) => {
    
@@ -190,4 +190,6 @@ let message
   
 
 export default { addcategory, getUser, updateUserRoles, loginAdmin,getWribateByCategory,
-   getCategories,updateCategory ,deleteCategory,updateUserStatus,updateUserStatus,getWribateByID}
+   getCategories,updateCategory ,deleteCategory,updateUserStatus,
+   updateUserStatus,getWribateByID
+  }
