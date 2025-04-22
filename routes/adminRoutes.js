@@ -23,4 +23,6 @@ router.get('/writesByCategory/:category', admin.getWribateByCategory)
 
 router.get('/writeByid/:id', admin.getWribateByID)
 
+router.get('/dashBoard', admin.dashBoard)
+
 export default router

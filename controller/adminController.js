@@ -187,9 +187,69 @@ let message
     });
    
    });
+
+const dashBoard= catchAsync(async (req, res,next) => {
+    try {
+
+      const { startDate, endDate } = req.query;
+
+    // Prepare date filter (if provided)
+    const dateFilter = {};
+    if (startDate || endDate) {
+      dateFilter.createdAt = {};
+      if (startDate) dateFilter.createdAt.$gte = new Date(startDate);
+      if (endDate) dateFilter.createdAt.$lte = new Date(endDate);
+    }
+
+      // 1. User status counts
+      const userStatusCounts = await userModel.User.aggregate([
+        { $match: { ...dateFilter } },
+        {
+          $group: {
+            _id: '$status',
+            count: { $sum: 1 },
+          },
+        },
+      ]);
+  
+      // 2. Writbate type counts
+      const writbateTypeCounts = await userModel.Wribate.aggregate([
+        { $match: { ...dateFilter } },
+        {
+          $group: {
+            _id: '$type',
+            count: { $sum: 1 },
+          },
+        },
+      ]);
+  
+      // 3. Total completed RazorPay transaction amount
+      const completedTransactions = await userModel.Razorpay.aggregate([
+        { $match: { paymentStatus: 'completed', ...dateFilter } },
+        { $group: { _id: null, totalAmount: { $sum: '$amount' } } },
+      ]);
+      const totalCompletedAmount = completedTransactions[0]?.totalAmount || 0;
+  
+      // Final response
+      res.json({
+        status: 'success',
+        data: {
+          userStatusCounts,
+          writbateTypeCounts,
+          totalCompletedAmount,
+        },
+      });
+  
+    } catch (err) {
+      res.status(500).json({
+        status: 'error',
+        message: err.message,
+      });
+    }
+  });
   
 
 export default { addcategory, getUser, updateUserRoles, loginAdmin,getWribateByCategory,
    getCategories,updateCategory ,deleteCategory,updateUserStatus,
-   updateUserStatus,getWribateByID
+   updateUserStatus,getWribateByID,dashBoard
   }

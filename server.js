@@ -1,10 +1,13 @@
 
 import mongoose from 'mongoose';
+import cron from 'node-cron';
 import http from "http";
 import dotenv from "dotenv"
 import log from "./logs/logger.js"
 import app from "./app.js"
+import userModel from './models/userModel.js';
 import { initializeSocket } from "./socket/socket.js";
+
 
 
 dotenv.config();
@@ -17,6 +20,23 @@ process.on('uncaughtException', (err) => {
  process.exit(1);
 });
 
+
+/* cron job for checking subscription */
+
+
+cron.schedule('0 0 * * *', async () => {
+  const now = new Date();
+
+  const result = await userModel.User.updateMany(
+    {
+      'subscription.isActive': true,
+      'subscription.expiryDate': { $lte: now }
+    },
+    { 'subscription.isActive': false }
+  );
+
+  console.log(`[CRON] Deactivated ${result.modifiedCount} expired subscriptions`);
+});
 
 const DB = process.env.DATABASE;
 
