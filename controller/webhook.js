@@ -46,6 +46,7 @@ const webHook = async (inputs) => {
 
         razorpayOrderId = paymentDetails.order_id;
         transactionId = paymentDetails.id;
+        console.log("transactionId",transactionId)
         phoneNumberWithoutPrefix = paymentDetails.contact.substring(3);
         paymentStatus = paymentDetails.status;
         fee = parseFloat(paymentDetails.fee / 100).toFixed(2);
@@ -64,7 +65,7 @@ const webHook = async (inputs) => {
             { new: true }
           );
           const user=await userModel.Razorpay.findOne({transactionId})
-          console.log("user",user)
+          console.log("user😘😘😘😘😘😘😘😘",user)
        
           const durationInDays = 365; // or get from plan
           const startDate = new Date();

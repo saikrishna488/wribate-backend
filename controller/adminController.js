@@ -107,6 +107,87 @@ let message
     successMessage(res, `User status updated to ${message}`);
   });
   
+  const getWribateByCategory = catchAsync(async (req, res) => {
+    try {
+     const { params: { category } } = req;
+   
+     // Fetch all wribates that match the given category
+     const wribates = await userModel.Wribate.find({ category })
+     if (wribates.length === 0) {
+      return res.status(404).json({ status: "error", message: "No wribates found for this category" });
+     }
+   
+     // Append baseURL to each coverImage
+     // const baseURL = process.env.WRIBATE
+     // const data = wribates.map(item => ({
+     //  ...item._doc,
+     //  coverImage: baseURL + item.coverImage
+     // }));
+     const data1 = await handleFactory.categorizeWribates(wribates)
+     res.status(200).json({ status: "success", data: data1 });
+    } catch (error) {
+     res.status(500).json({ status: "error", message: error.message });
+    }
+   });
+   
+   const getWribateByID = catchAsync(async (req, res) => {
+   
+    const { params: { id } } = req;
+   
+    const wribate = await userModel.Wribate.findById(id)
+     .populate({
+      path: "comments",
+      populate: { path: "userId", select: "name email" } // Populate user details in comments
+     })
+     .populate({ path: "votes", populate: { path: "userId", select: "name email" } })
+     .populate("arguments");
+   
+    console.log('wribate', wribate)
+   
+    if (Object.keys(wribate).length === 0) {
+     return res.status(404).json({ status: "error", message: "No wribates found for this category" });
+    }
+   
+    const now = new Date();
+    const startDate = new Date(wribate.startDate);
+    const endDate = new Date(startDate);
+    endDate.setDate(startDate.getDate() + wribate.durationDays);
+   
+    // **Overall completion percentage**
+    const totalDurationMs = endDate - startDate;
+    const elapsedMs = now - startDate;
+    const overallCompletion = Math.min((elapsedMs / totalDurationMs) * 100, 100);
+   
+    // **Find current round**
+    let currentRound = null;
+    let roundCompletion = 0;
+   
+    for (const round of wribate.rounds) {
+     const roundStart = new Date(round.startDate);
+     const roundEnd = new Date(roundStart);
+     roundEnd.setDate(roundStart.getDate() + round.duration);
+   
+     if (now >= roundStart && now <= roundEnd) {
+      currentRound = round.roundNumber;
+      const roundElapsedMs = now - roundStart;
+      const roundTotalMs = roundEnd - roundStart;
+      roundCompletion = Math.min((roundElapsedMs / roundTotalMs) * 100, 100);
+      break;
+     }
+    }
+   
+   //  const baseURL = process.env.WRIBATE
+   //  wribate.coverImage = baseURL + wribate.coverImage
+   
+    res.status(200).json({
+     status: "success", data: wribate,
+     overallCompletion: overallCompletion.toFixed(2) + "%",
+     currentRound: currentRound || "No active round",
+     roundCompletion: currentRound ? roundCompletion.toFixed(2) + "%" : "N/A"
+    });
+   
+   });
   
 
-export default { addcategory, getUser, updateUserRoles, loginAdmin, getCategories,updateCategory ,deleteCategory,updateUserStatus,updateUserStatus}
+export default { addcategory, getUser, updateUserRoles, loginAdmin,getWribateByCategory,
+   getCategories,updateCategory ,deleteCategory,updateUserStatus,updateUserStatus,getWribateByID}

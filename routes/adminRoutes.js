@@ -19,4 +19,8 @@ router.post('/updateUserRole', admin.updateUserRoles)
 
 router.patch('/updateUserStatus/:id', admin.updateUserStatus)
 
+router.get('/writesByCategory/:id', admin.getWribateByCategory)
+
+router.get('/updateUserStatus/:id', admin.getWribateByID)
+
 export default router

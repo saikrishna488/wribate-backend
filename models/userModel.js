@@ -50,6 +50,11 @@ const userSchema = new mongoose.Schema({
   default: 'user'
  },
 
+ favoriteCategories: [{
+  type: mongoose.Schema.Types.ObjectId,
+  ref: 'categories',
+}],
+
  subscription: {
     isActive: { type: Boolean, default: false },
     startDate: { type: Date },

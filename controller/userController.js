@@ -69,7 +69,7 @@ const loginUser = catchAsync(async (req, res, next) => {
 
 const getProfile = catchAsync(async (req, res, next) => {
  const { user } = req
- const userDetails = await userModel.User.findById(user._id)
+ const userDetails = await userModel.User.findById(user._id).populate('favoriteCategories');
  //const data = await utils.appendUrls(userDetails)
  console.log('data', userDetails)
  successMessage(res, userDetails)
@@ -577,8 +577,7 @@ const getVotes = catchAsync(async (req, res, next) => {
 
 const getUser = catchAsync(async (req, res, next) => {
  const users = await userModel.User.find()
- const data = await handleFactory.appendUserPic(users)
- res.status(200).json({ status: 1, users: data })
+ res.status(200).json({ status: 1, users: users })
 })
 
  const createOrder = catchAsync(async (req, res) => {
@@ -631,11 +630,32 @@ const getUser = catchAsync(async (req, res, next) => {
   
 });
 
+// PUT or POST - /api/users/:userId/favorite-categories
+const favouriteCategories=catchAsync(async(req, res,next) => {
+  const { userId } = req.params;
+  const { categoryIds } = req.body; // Expecting an array of category ObjectIds
+
+  try {
+    const user = await userModel.User.findByIdAndUpdate(
+      userId,
+      { favoriteCategories: categoryIds },
+      { new: true }
+    ).populate('favoriteCategories');
+
+    res.status(200).json({
+      status: 'success',
+      data: user,
+    });
+  } catch (error) {
+    res.status(500).json({ status: 'error', message: error.message });
+  }
+});
+
 
 export default { signUpUser, loginUser, getProfile, getOTP, fileUpload, updateProfile, 
     getCategories, createWribate, addArguments, getUser, getWribateByCategory, getWribateByID, 
     addComment, addVotes, getMyWribates, createBatchWribate, verifyOTP, deleteWribate, 
-    checkForUserName, getVotes ,createOrder}
+    checkForUserName, getVotes ,createOrder,favouriteCategories}
 
 
 

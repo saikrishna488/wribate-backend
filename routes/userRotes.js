@@ -51,4 +51,6 @@ router.get('/getUsers', user.getUser)
 
 router.post('/createOrder', user.createOrder)
 
+router.post('/favouriteCategories', user.favouriteCategories)
+
 export default router
