@@ -27,7 +27,7 @@ const getOTP = catchAsync(async (req, res, next) => {
  const { body: { email } } = req
  const otp = 1234
  if (!email) return ErrorResponse(res, `Please enter vaild email`)
- await utils.contactUs(email, otp)
+ await utils.sendEmail(email, otp)
  await userModel.TempUser.create({ email: email, otp: otp },  // Find user by email
   { $set: { otp: otp } })
  successMessage(res, `OTP sent sucessfully`)
@@ -542,8 +542,6 @@ const favouriteCategories=catchAsync(async(req, res,next) => {
   const { user } = req
    const userId=user._id
   const { categoryIds } = req.body; // Expecting an array of category ObjectIds
-
-  console.log("categoryIds",categoryIds,"user",userId)
 
   try {
     const User = await userModel.User.findByIdAndUpdate(
