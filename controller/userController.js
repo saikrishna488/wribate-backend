@@ -539,11 +539,12 @@ const getUser = catchAsync(async (req, res, next) => {
 });
 
 const favouriteCategories=catchAsync(async(req, res,next) => {
-  const { userId } = req.params;
+  const { user } = req
+   const userId=user._id
   const { categoryIds } = req.body; // Expecting an array of category ObjectIds
 
   try {
-    const user = await userModel.User.findByIdAndUpdate(
+    const User = await userModel.User.findByIdAndUpdate(
       userId,
       { favoriteCategories: categoryIds },
       { new: true }
@@ -551,7 +552,7 @@ const favouriteCategories=catchAsync(async(req, res,next) => {
 
     res.status(200).json({
       status: 'success',
-      data: user,
+      data: User,
     });
   } catch (error) {
     res.status(500).json({ status: 'error', message: error.message });
