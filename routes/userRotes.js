@@ -21,6 +21,8 @@ router.get("/getWribateById/:id", user.getWribateByID)
 
 router.get('/getCategories', user.getCategories)
 
+router.post("/checkAvailableUserName", user.checkForUserName)
+
 router.use(auth.authenticateUser)
 
 router.get('/getProfile', user.getProfile)
@@ -42,8 +44,6 @@ router.get("/myWribates", user.getMyWribates)
 router.delete("/deleteWribate", user.deleteWribate)
 
 router.post("/createBatchWribate", upload.single("file"), user.createBatchWribate)
-
-router.post("/checkAvailableUserName", user.checkForUserName)
 
 router.get("/getVotes/:id", user.getVotes)
 
