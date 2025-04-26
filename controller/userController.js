@@ -543,7 +543,7 @@ const favouriteCategories=catchAsync(async(req, res,next) => {
    const userId=user._id
   const { categoryIds } = req.body; // Expecting an array of category ObjectIds
 
-  console.log(categoryIds,user,userId)
+  console.log("categoryIds",categoryIds,"user",userId)
 
   try {
     const User = await userModel.User.findByIdAndUpdate(
