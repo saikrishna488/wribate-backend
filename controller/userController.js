@@ -17,9 +17,10 @@ import { v2 as cloudinary } from 'cloudinary';
 
 const checkForUserName = catchAsync(async (req, res, next) => {
  const { body: { userName } } = req
+ 
  const isNameAvailable = await userModel.User.findOne({ userName: userName })
- console.log('isNameAvailable', isNameAvailable)
- if (isNameAvailable && Object.keys(isNameAvailable).length > 0) return res.status(400).json({ status: 1, message: "User name already taken" })
+ console.log('isNameAvailable', isNameAvailable,userName)
+ if (isNameAvailable && Object.keys(isNameAvailable).length > 0) return res.status(400).json({ status: 0, message: "User name already taken" })
  res.status(200).json({ status: 1, message: "User name available" })
 })
 
@@ -48,7 +49,7 @@ const signUpUser = catchAsync(async (req, res, next) => {
  const salt = await bcrypt.genSalt(10)
  const crypted = await bcrypt.hash(body.password, salt)
  const userData = {
-  name: body.name, email: body.email, password: crypted, userName: body.userName, dob: body.dob, country: body.country
+  name: body.name, email: body.email, password: crypted, userName: body.userName, dob: body.dob, country: body.country,profilePhoto:"NA"
  }
  await userModel.User.create(userData)
  successMessage(res, `sign up completed`)
