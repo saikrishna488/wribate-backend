@@ -162,9 +162,9 @@ const updateProfile = catchAsync(async (req, res, next) => {
   { new: true, runValidators: true }
  );
 
- if (!updatedUser) return res.status(404).json({ message: 'User not found' });
+ if (!updatedUser) return res.status(404).json({satus:0, message: 'User not found' });
 
- res.status(200).json({ message: 'User updated successfully', user: updatedUser });
+ res.status(200).json({status:1, message: 'User updated successfully', user: updatedUser });
 })
 
 const getCategories = catchAsync(async (req, res, next) => {
