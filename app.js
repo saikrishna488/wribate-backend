@@ -14,6 +14,9 @@ import userRoutes from "./routes/userRotes.js"
 import adminRoutes from "./routes/adminRoutes.js"
 import webHookRoutes from "./routes/webhook.js"
 import cors from "cors"
+import proposeRoute from './routes/proposeRoute.js'
+import cookieParser from 'cookie-parser';
+import blogRoute from './routes/staffRoute.js'
 
 
 
@@ -24,11 +27,15 @@ console.log('ENV :', process.env.NODE_ENV);
 /* security headers */
 
 app.use(helmet());
-app.use(cors({ origin: "*" }))
+app.use(cors({ 
+    origin: "http://localhost:3000",
+    credentials:true
+ }))
 
 /* body parser read the data from the body to req.body */
 
-app.use(express.json({ limit: '10kb' }));
+app.use(express.json({ limit: '50mb' }));
+app.use(cookieParser())
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -72,15 +79,25 @@ app.use('/api/admin', adminRoutes)
 
 app.use('/api/webhook',webHookRoutes)
 
+app.use('/api',proposeRoute);
+
+app.use('/api',blogRoute )
+// app.use('/',)
+
 /* unhandled routes */
 
 app.all('*', (req, res, next) => {
- next(
-  new AppErrors(
-   `Can't find this URL ${req.originalUrl} on this Server!`,
-   400,
-  ),
- );
+//  next(
+//   new AppErrors(
+//    `Can't find this URL ${req.originalUrl} on this Server!`,
+//    400,
+//   ),
+//  );
+
+ return res.json({
+    res:false,
+    msg:"No api found at this url"
+ })
 });
 
 /* global error handlling */

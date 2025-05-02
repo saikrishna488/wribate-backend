@@ -21,94 +21,133 @@ const ses = new SESClient({
   region: region
 })
 
-async function sendEmail(mail, otp) {
-  const params = {
-    Source: process.env.SES_MAIL, // Must be a verified email in SES
-    Destination: {
-      ToAddresses: [mail], // Receiver's email
-    },
-    Message: {
-      Body: {
-        Html: {
-          // HTML Format of the email
-          Charset: "UTF-8",
-          Data: `<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OTP Verification</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            max-width: 600px;
-            margin: 20px auto;
-            background: #ffffff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-        h2 {
-            color: #333;
-        }
-        p {
-            font-size: 16px;
-            color: #555;
-        }
-        .otp {
-            font-size: 24px;
-            font-weight: bold;
-            color: #007bff;
-            padding: 10px;
-            border: 2px dashed #007bff;
-            display: inline-block;
-            margin: 15px 0;
-        }
-        .footer {
-            margin-top: 20px;
-            font-size: 14px;
-            color: #888;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h2>OTP Verification</h2>
-        <p>Your One-Time Password (OTP) for verification is:</p>
-        <div class="otp">${otp}</div>
-        <p>This OTP is valid for 10 minutes. Please do not share it with anyone.</p>
-        <p>If you did not request this, please ignore this email.</p>
-        <div class="footer">
-            <p>Thank you,<br><strong>Uptik</strong></p>
-        </div>
-    </div>
-</body>
-</html>
-`
-        },
+// async function sendEmail(mail, otp) {
+//   console.log(process.env.ACCESS_KEY,process.env.SECRET_KEY,process.env.SES_MAIL,mail,otp)
+//   const params = {
+//     Source: process.env.SES_MAIL, // Must be a verified email in SES
+//     Destination: {
+//       ToAddresses: [mail], // Receiver's email
+//     },
+//     Message: {
+//       Body: {
+//         Html: {
+//           // HTML Format of the email
+//           Charset: "UTF-8",
+//           Data: `<!DOCTYPE html>
+// <html>
+// <head>
+//     <meta charset="UTF-8">
+//     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+//     <title>OTP Verification</title>
+//     <style>
+//         body {
+//             font-family: Arial, sans-serif;
+//             background-color: #f4f4f4;
+//             margin: 0;
+//             padding: 0;
+//         }
+//         .container {
+//             max-width: 600px;
+//             margin: 20px auto;
+//             background: #ffffff;
+//             padding: 20px;
+//             border-radius: 10px;
+//             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+//             text-align: center;
+//         }
+//         h2 {
+//             color: #333;
+//         }
+//         p {
+//             font-size: 16px;
+//             color: #555;
+//         }
+//         .otp {
+//             font-size: 24px;
+//             font-weight: bold;
+//             color: #007bff;
+//             padding: 10px;
+//             border: 2px dashed #007bff;
+//             display: inline-block;
+//             margin: 15px 0;
+//         }
+//         .footer {
+//             margin-top: 20px;
+//             font-size: 14px;
+//             color: #888;
+//         }
+//     </style>
+// </head>
+// <body>
+//     <div class="container">
+//         <h2>OTP Verification</h2>
+//         <p>Your One-Time Password (OTP) for verification is:</p>
+//         <div class="otp">${otp}</div>
+//         <p>This OTP is valid for 10 minutes. Please do not share it with anyone.</p>
+//         <p>If you did not request this, please ignore this email.</p>
+//         <div class="footer">
+//             <p>Thank you,<br><strong>Uptik</strong></p>
+//         </div>
+//     </div>
+// </body>
+// </html>
+// `
+//         },
 
-      },
-      Subject: {
-        Charset: "UTF-8",
-        Data: "Test email"
-      }
+//       },
+//       Subject: {
+//         Charset: "UTF-8",
+//         Data: "Your OTP for Verification - Wribate"
+//       }
+//     },
+//   };
+
+//   try {
+//     const command = new SendEmailCommand(params);
+//     const response = await ses.send(command);
+//     console.log("Email sent successfully!", response);
+//   } catch (error) {
+//     console.error("Error sending email:", error);
+//   }
+// }
+
+async function sendEmail(recipient, otp) {
+  const transporter = nodemailer.createTransport({
+    host: "smtp.hostinger.com",
+    port: 465,
+    secure: true, // true for 465, false for 587
+    auth: {
+      user: "info@wribate.com",
+      pass: process.env.WRIBATE_MAIL_PASS,
     },
+  });
+
+  const mailOptions = {
+    from: '"Wribate" <info@wribate.com>',
+    to: recipient,
+    subject: "Your OTP Code",
+    html: `
+      <div style="font-family: Arial, sans-serif; text-align: center; background-color: #f9f9f9; padding: 30px;">
+        <div style="max-width: 600px; margin: auto; background: white; border-radius: 10px; padding: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+          <h2 style="color: #333;">OTP Verification</h2>
+          <p style="font-size: 16px; color: #555;">Your One-Time Password (OTP) is:</p>
+          <div style="font-size: 24px; font-weight: bold; color: #007bff; margin: 20px 0;">${otp}</div>
+          <p style="color: #888;">This OTP is valid for 10 minutes. Please do not share it with anyone.</p>
+          <hr style="margin: 30px 0;">
+          <p style="font-size: 14px; color: #aaa;">Thank you,<br><strong>Wribate.com</strong></p>
+        </div>
+      </div>
+    `
   };
 
   try {
-    const command = new SendEmailCommand(params);
-    const response = await ses.send(command);
-    console.log("Email sent successfully!", response);
+    const info = await transporter.sendMail(mailOptions);
+    console.log("Email sent:", info.messageId);
   } catch (error) {
-    console.error("Error sending email:", error);
+    console.error("Failed to send email:", error);
   }
 }
+
 
 const contactUs = async (mail, otp) => {
   const transporter = nodemailer.createTransport({

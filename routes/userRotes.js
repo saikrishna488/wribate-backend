@@ -11,9 +11,13 @@ router.post('/signUp', user.signUpUser)
 
 router.post('/sendOTP', user.getOTP)
 
-router.post('/vertfyOTP', user.verifyOTP)
+router.post('/verifyOTP', user.verifyOTP)
 
 router.post('/login', user.loginUser)
+
+router.get('/jwt',user.jwtFunc)
+
+router.get('/logout', user.logout)
 
 router.get("/getWribateByCategory/:category", user.getWribateByCategory)
 
@@ -23,7 +27,7 @@ router.get('/getCategories', user.getCategories)
 
 router.post("/checkAvailableUserName", user.checkForUserName)
 
-router.use(auth.authenticateUser)
+// router.use(auth.authenticateUser)
 
 router.get('/getProfile', user.getProfile)
 
