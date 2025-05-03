@@ -302,10 +302,16 @@ const createWribate = catchAsync(async (req, res, next) => {
   const body = req.body
   const totalDuration = body.durationDays
   const startDate = body.startDate
-  const { user: { _id } } = req
+  const _id = req.body
 
-  const rounds = handleFactory.generateRounds(startDate, totalDuration)
+  const rounds = handleFactory.generateRounds(startDate, totalDuration);
 
+  const leadFor = body.leadFor
+  const leadAgainst = body.leadAgainst;
+
+  let {title,side,email, emailAgainst, duration, id} = req.body
+
+  
   const wribateData = {
     title: body.title,
     coverImage: body.coverImage,
@@ -327,6 +333,14 @@ const createWribate = catchAsync(async (req, res, next) => {
   }
 
   const newWribate = await userModel.Wribate.create(wribateData);
+
+
+  //to for
+  await utils.sendEmailToContestents(title,"For",startDate,leadFor,leadAgainst,totalDuration,newWribate._id)
+
+  //to against
+  await utils.sendEmailToContestents(title,"Against",startDate,leadAgainst,leadFor,totalDuration,newWribate._id)
+
   console.log('newWribate', newWribate)
   successMessage(res, `New Wribate is created.`)
 })

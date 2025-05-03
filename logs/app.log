@@ -4640,3 +4640,265 @@
 [2025-05-03T18:03:12.779] [INFO] default - /api/user/getCategories
 [2025-05-03T18:03:37.008] [INFO] default - /api/user/jwt
 [2025-05-03T18:03:37.063] [INFO] default - /api/user/getCategories
+[2025-05-03T18:38:12.345] [INFO] default - server is running  on the port 8000...
+[2025-05-03T18:38:17.844] [INFO] default - /api/user/jwt
+[2025-05-03T18:38:17.882] [INFO] default - /api/user/getCategories
+[2025-05-03T18:38:18.128] [INFO] default - /api/user/getWribateByCategory/Technology
+[2025-05-03T18:39:01.170] [INFO] default - /api/user/getWribateByCategory/Technology
+[2025-05-03T18:40:22.083] [INFO] default - /api/user/getWribateByCategory/Technology
+[2025-05-03T18:44:37.266] [INFO] default - /api/user/getWribateByCategory/Technology
+[2025-05-03T18:45:06.412] [INFO] default - /api/user/getWribateByCategory/Technology
+[2025-05-03T18:45:08.128] [INFO] default - /api/user/jwt
+[2025-05-03T18:45:08.148] [INFO] default - /api/user/getCategories
+[2025-05-03T18:45:08.332] [INFO] default - /api/user/getWribateByCategory/Technology
+[2025-05-03T18:45:13.158] [INFO] default - /api/user/getWribateByCategory/Defense
+[2025-05-03T18:45:41.738] [INFO] default - /api/user/getWribateByCategory/Technology
+[2025-05-03T18:45:57.455] [INFO] default - /api/user/getWribateByCategory/Movies
+[2025-05-03T18:45:58.668] [INFO] default - /api/user/getWribateByCategory/All
+[2025-05-03T18:46:00.158] [INFO] default - /api/user/getWribateByCategory/Movies
+[2025-05-03T18:46:01.214] [INFO] default - /api/user/getWribateByCategory/Technology
+[2025-05-03T18:46:05.562] [INFO] default - /api/propose
+[2025-05-03T18:46:05.851] [INFO] default - /api/propose
+[2025-05-03T18:47:52.748] [INFO] default - server is running  on the port 8000...
+[2025-05-03T18:49:46.925] [INFO] default - server is running  on the port 8000...
+[2025-05-03T18:52:32.231] [INFO] default - server is running  on the port 8000...
+[2025-05-03T18:57:15.734] [INFO] default - server is running  on the port 8000...
+[2025-05-03T18:58:36.460] [INFO] default - server is running  on the port 8000...
+[2025-05-03T19:00:45.319] [INFO] default - server is running  on the port 8000...
+[2025-05-03T19:01:51.990] [INFO] default - server is running  on the port 8000...
+[2025-05-03T19:03:18.466] [INFO] default - server is running  on the port 8000...
+[2025-05-03T19:07:33.411] [INFO] default - server is running  on the port 8000...
+[2025-05-03T19:11:12.379] [INFO] default - /api/user/uploadImage?image_type=wribte
+[2025-05-03T19:11:16.927] [INFO] default - /api/user/createWribate
+[2025-05-03T19:16:39.645] [INFO] default - server is running  on the port 8000...
+[2025-05-03T19:17:12.219] [INFO] default - /api/user/jwt
+[2025-05-03T19:21:37.301] [INFO] default - /api/user/login
+[2025-05-03T19:21:52.302] [INFO] default - server is running  on the port 8000...
+[2025-05-03T19:22:09.019] [INFO] default - server is running  on the port 8000...
+[2025-05-03T19:22:11.241] [INFO] default - /api/user/login
+[2025-05-03T19:22:11.807] [INFO] default - /api/user/getCategories
+[2025-05-03T19:22:12.082] [INFO] default - /api/user/getWribateByCategory/Technology
+[2025-05-03T19:22:17.960] [INFO] default - /api/user/jwt
+[2025-05-03T19:22:17.984] [INFO] default - /api/user/getCategories
+[2025-05-03T19:22:18.073] [INFO] default - /api/user/getWribateByCategory/Technology
+[2025-05-03T19:22:49.651] [INFO] default - /api/user/jwt
+[2025-05-03T19:22:49.791] [INFO] default - /api/user/getCategories
+[2025-05-03T19:22:51.254] [INFO] default - /api/user/login
+[2025-05-03T19:22:51.541] [INFO] default - /api/user/getWribateByCategory/Technology
+[2025-05-03T19:23:48.660] [INFO] default - /api/user/uploadImage?image_type=wribte
+[2025-05-03T19:23:48.670] [INFO] default - /api/user/uploadImage?image_type=wribte
+[2025-05-03T19:25:03.936] [INFO] default - server is running  on the port 8000...
+[2025-05-03T19:25:21.006] [INFO] default - /api/user/uploadImage?image_type=wribte
+[2025-05-03T19:25:24.496] [INFO] default - /api/user/createWribate
+[2025-05-03T19:25:30.406] [INFO] default - /api/user/getWribateByCategory/Technology
+[2025-05-03T19:27:13.652] [INFO] default - server is running  on the port 8000...
+[2025-05-03T19:27:53.575] [INFO] default - server is running  on the port 8000...
+[2025-05-03T19:27:59.661] [INFO] default - server is running  on the port 8000...
+[2025-05-03T19:31:26.689] [INFO] default - server is running  on the port 8000...
+[2025-05-03T19:32:40.987] [INFO] default - server is running  on the port 8000...
+[2025-05-03T19:33:02.370] [INFO] default - server is running  on the port 8000...
+[2025-05-03T19:34:23.667] [INFO] default - /api/user/jwt
+[2025-05-03T19:34:23.690] [INFO] default - /api/user/getCategories
+[2025-05-03T19:34:23.772] [INFO] default - /api/user/getWribateByCategory/Technology
+[2025-05-03T19:34:58.725] [INFO] default - /api/user/uploadImage?image_type=wribte
+[2025-05-03T19:35:01.776] [INFO] default - /api/user/createWribate
+[2025-05-03T19:35:06.344] [INFO] default - /api/user/getWribateByCategory/Technology
+[2025-05-03T19:42:21.934] [INFO] default - /api/user/jwt
+[2025-05-03T19:42:22.135] [INFO] default - /api/user/getCategories
+[2025-05-03T19:42:38.925] [INFO] default - /api/user/login
+[2025-05-03T19:42:41.975] [INFO] default - /api/user/getWribateByCategory/Technology
+[2025-05-03T20:59:20.278] [INFO] default - server is running  on the port 8000...
+[2025-05-03T21:01:41.969] [INFO] default - server is running  on the port 8000...
+[2025-05-03T21:03:06.097] [INFO] default - server is running  on the port 8000...
+[2025-05-03T21:03:37.582] [INFO] default - server is running  on the port 8000...
+[2025-05-03T21:09:15.559] [INFO] default - /api/user/logout
+[2025-05-03T21:09:22.306] [INFO] default - /api/user/checkAvailableUserName
+[2025-05-03T21:22:20.344] [INFO] default - /api/user/jwt
+[2025-05-03T21:23:19.495] [INFO] default - /api/user/jwt
+[2025-05-03T21:23:21.797] [INFO] default - /api/user/checkAvailableUserName
+[2025-05-03T21:25:33.649] [INFO] default - /api/user/jwt
+[2025-05-03T21:32:40.011] [INFO] default - server is running  on the port 8000...
+[2025-05-03T21:35:50.167] [INFO] default - server is running  on the port 8000...
+[2025-05-03T21:36:33.586] [INFO] default - server is running  on the port 8000...
+[2025-05-03T21:36:43.805] [INFO] default - server is running  on the port 8000...
+[2025-05-03T21:37:11.734] [INFO] default - server is running  on the port 8000...
+[2025-05-03T21:39:00.751] [INFO] default - server is running  on the port 8000...
+[2025-05-03T21:39:22.314] [INFO] default - server is running  on the port 8000...
+[2025-05-03T21:43:43.905] [INFO] default - server is running  on the port 8000...
+[2025-05-03T21:44:39.285] [INFO] default - server is running  on the port 8000...
+[2025-05-03T21:44:55.445] [INFO] default - server is running  on the port 8000...
+[2025-05-03T21:51:02.961] [INFO] default - server is running  on the port 8000...
+[2025-05-03T21:51:42.355] [INFO] default - server is running  on the port 8000...
+[2025-05-03T21:52:17.264] [INFO] default - server is running  on the port 8000...
+[2025-05-03T21:53:58.118] [INFO] default - server is running  on the port 8000...
+[2025-05-03T21:54:20.602] [INFO] default - server is running  on the port 8000...
+[2025-05-03T21:55:54.880] [INFO] default - server is running  on the port 8000...
+[2025-05-03T21:57:01.332] [INFO] default - server is running  on the port 8000...
+[2025-05-03T21:58:20.203] [INFO] default - server is running  on the port 8000...
+[2025-05-03T21:58:39.034] [INFO] default - server is running  on the port 8000...
+[2025-05-03T22:05:27.021] [INFO] default - server is running  on the port 8000...
+[2025-05-03T22:06:17.620] [INFO] default - server is running  on the port 8000...
+[2025-05-03T22:07:37.732] [INFO] default - server is running  on the port 8000...
+[2025-05-03T22:12:26.341] [INFO] default - server is running  on the port 8000...
+[2025-05-03T22:12:35.783] [INFO] default - server is running  on the port 8000...
+[2025-05-03T22:28:12.346] [INFO] default - server is running  on the port 8000...
+[2025-05-03T22:28:24.750] [INFO] default - /api/user/jwt
+[2025-05-03T22:28:43.848] [INFO] default - /api/user/login
+[2025-05-03T22:28:47.752] [INFO] default - /api/user/getCategories
+[2025-05-03T22:28:48.663] [INFO] default - /api/user/getWribateByCategory/Technology
+[2025-05-03T22:28:52.640] [INFO] default - /api/user/jwt
+[2025-05-03T22:28:52.668] [INFO] default - /api/user/getCategories
+[2025-05-03T22:28:52.776] [INFO] default - /api/user/getWribateByCategory/Technology
+[2025-05-03T22:28:54.881] [INFO] default - /api/user/logout
+[2025-05-03T22:29:05.373] [INFO] default - /api/api/firebase
+[2025-05-03T22:29:43.942] [INFO] default - /api/firebase
+[2025-05-03T22:29:47.051] [INFO] default - /api/user/getWribateByCategory/Technology
+[2025-05-03T22:30:01.709] [INFO] default - /api/user/getWribateByCategory/Technology
+[2025-05-03T22:30:03.625] [INFO] default - /api/user/jwt
+[2025-05-03T22:30:03.656] [INFO] default - /api/user/getCategories
+[2025-05-03T22:30:03.731] [INFO] default - /api/user/getWribateByCategory/Technology
+[2025-05-03T22:30:08.107] [INFO] default - /api/user/getWribateByCategory/Movies
+[2025-05-03T22:30:09.118] [INFO] default - /api/user/getWribateByCategory/All
+[2025-05-03T22:30:09.590] [INFO] default - /api/user/getWribateByCategory/Technology
+[2025-05-03T22:30:20.402] [INFO] default - /api/firebase
+[2025-05-03T22:30:20.685] [INFO] default - /api/user/getWribateByCategory/Technology
+[2025-05-03T22:31:39.612] [INFO] default - /api/firebase
+[2025-05-03T22:31:39.838] [INFO] default - /api/user/getWribateByCategory/Technology
+[2025-05-03T22:31:47.299] [INFO] default - /api/user/logout
+[2025-05-03T22:34:16.057] [INFO] default - /api/user/jwt
+[2025-05-03T22:44:02.498] [INFO] default - /api/user/jwt
+[2025-05-03T22:44:17.087] [INFO] default - /api/user/jwt
+[2025-05-03T22:45:18.664] [INFO] default - /api/firebase
+[2025-05-03T22:45:18.966] [INFO] default - /api/user/getCategories
+[2025-05-03T22:45:19.070] [INFO] default - /api/user/getWribateByCategory/Technology
+[2025-05-03T22:45:24.207] [INFO] default - /api/user/jwt
+[2025-05-03T22:45:24.236] [INFO] default - /api/user/getCategories
+[2025-05-03T22:45:24.510] [INFO] default - /api/user/getWribateByCategory/Technology
+[2025-05-03T22:50:40.757] [INFO] default - server is running  on the port 8000...
+[2025-05-03T22:50:47.063] [INFO] default - server is running  on the port 8000...
+[2025-05-03T22:50:57.245] [INFO] default - /api/user/jwt
+[2025-05-03T22:51:09.157] [INFO] default - /api/firebase
+[2025-05-03T22:51:10.053] [INFO] default - /api/user/getCategories
+[2025-05-03T22:51:10.192] [INFO] default - /api/user/getWribateByCategory/Technology
+[2025-05-03T22:51:13.565] [INFO] default - /api/user/jwt
+[2025-05-03T22:51:13.592] [INFO] default - /api/user/getCategories
+[2025-05-03T22:51:13.748] [INFO] default - /api/user/getWribateByCategory/Technology
+[2025-05-03T22:51:28.131] [INFO] default - /api/user/jwt
+[2025-05-03T22:51:28.177] [INFO] default - /api/user/getCategories
+[2025-05-03T22:51:28.287] [INFO] default - /api/user/getWribateByCategory/Technology
+[2025-05-03T22:56:13.673] [INFO] default - /api/user/jwt
+[2025-05-03T22:56:13.676] [INFO] default - /api/decode-jwt
+[2025-05-03T22:56:36.034] [INFO] default - /api/user/jwt
+[2025-05-03T22:56:36.037] [INFO] default - /api/decode-jwt
+[2025-05-03T22:56:36.075] [INFO] default - /api/user/getCategories
+[2025-05-03T22:56:36.256] [INFO] default - /api/user/getWribateByCategory/Technology
+[2025-05-03T22:56:43.994] [INFO] default - /api/user/getWribateByCategory/Movies
+[2025-05-03T22:56:45.173] [INFO] default - /api/user/getWribateByCategory/All
+[2025-05-03T22:56:46.213] [INFO] default - /api/user/getWribateByCategory/Sports
+[2025-05-03T22:56:46.972] [INFO] default - /api/user/getWribateByCategory/Politics
+[2025-05-03T22:56:47.610] [INFO] default - /api/user/getWribateByCategory/Artificial%20Intelligence
+[2025-05-03T22:56:48.970] [INFO] default - /api/user/getWribateByCategory/Agriculture
+[2025-05-03T22:56:49.853] [INFO] default - /api/user/getWribateByCategory/Business
+[2025-05-03T22:56:50.509] [INFO] default - /api/user/getWribateByCategory/Climate%20Change
+[2025-05-03T22:56:52.024] [INFO] default - /api/user/getWribateByCategory/Crime
+[2025-05-03T22:56:52.948] [INFO] default - /api/user/getWribateByCategory/Defense
+[2025-05-03T22:56:53.929] [INFO] default - /api/user/getWribateByCategory/Diplomacy
+[2025-05-03T22:56:57.380] [INFO] default - /api/user/getWribateByCategory/Economics
+[2025-05-03T22:56:59.384] [INFO] default - /api/user/getWribateByCategory/Education
+[2025-05-03T22:57:07.191] [INFO] default - /api/user/getWribateByCategory/Technology
+[2025-05-03T22:57:09.919] [INFO] default - /api/user/logout
+[2025-05-03T22:57:59.012] [INFO] default - /api/user/jwt
+[2025-05-03T22:57:59.014] [INFO] default - /api/decode-jwt
+[2025-05-03T22:57:59.051] [INFO] default - /api/user/getCategories
+[2025-05-03T22:57:59.233] [INFO] default - /api/user/getWribateByCategory/Technology
+[2025-05-03T22:59:37.252] [INFO] default - /api%22/user/logout
+[2025-05-03T22:59:46.792] [INFO] default - /api%22/user/logout
+[2025-05-03T23:00:14.515] [INFO] default - /api%22/user/logout
+[2025-05-03T23:00:17.356] [INFO] default - /api%22/user/logout
+[2025-05-03T23:00:34.283] [INFO] default - /api%22/user/logout
+[2025-05-03T23:07:42.122] [INFO] default - /api/user/logout
+[2025-05-03T23:07:42.270] [INFO] default - /api/user/jwt
+[2025-05-03T23:07:42.277] [INFO] default - /api/decode-jwt
+[2025-05-03T23:07:57.937] [INFO] default - /api/user/jwt
+[2025-05-03T23:07:57.942] [INFO] default - /api/decode-jwt
+[2025-05-03T23:07:57.997] [INFO] default - /api/user/getCategories
+[2025-05-03T23:07:58.186] [INFO] default - /api/user/getWribateByCategory/Technology
+[2025-05-03T23:08:05.589] [INFO] default - /api/user/logout
+[2025-05-03T23:08:05.691] [INFO] default - /api/user/jwt
+[2025-05-03T23:08:05.695] [INFO] default - /api/decode-jwt
+[2025-05-03T23:08:26.704] [INFO] default - /api/user/jwt
+[2025-05-03T23:08:26.707] [INFO] default - /api/decode-jwt
+[2025-05-03T23:08:26.759] [INFO] default - /api/user/getCategories
+[2025-05-03T23:08:26.946] [INFO] default - /api/user/getWribateByCategory/Technology
+[2025-05-03T23:08:29.485] [INFO] default - /api/user/logout
+[2025-05-03T23:08:43.991] [INFO] default - /api/user/jwt
+[2025-05-03T23:08:43.994] [INFO] default - /api/decode-jwt
+[2025-05-03T23:08:44.046] [INFO] default - /api/user/getCategories
+[2025-05-03T23:08:44.482] [INFO] default - /api/user/getWribateByCategory/Technology
+[2025-05-03T23:09:26.258] [INFO] default - /api/user/logout
+[2025-05-03T23:09:47.235] [INFO] default - /api/user/jwt
+[2025-05-03T23:09:47.238] [INFO] default - /api/decode-jwt
+[2025-05-03T23:09:47.288] [INFO] default - /api/user/getCategories
+[2025-05-03T23:09:47.476] [INFO] default - /api/user/getWribateByCategory/Technology
+[2025-05-03T23:10:05.201] [INFO] default - /api/user/logout
+[2025-05-03T23:10:27.168] [INFO] default - /api/user/jwt
+[2025-05-03T23:10:27.170] [INFO] default - /api/decode-jwt
+[2025-05-03T23:10:27.219] [INFO] default - /api/user/getCategories
+[2025-05-03T23:10:27.564] [INFO] default - /api/user/getWribateByCategory/Technology
+[2025-05-03T23:11:23.062] [INFO] default - /api/user/logout
+[2025-05-03T23:13:06.412] [INFO] default - server is running  on the port 8000...
+[2025-05-03T23:13:18.960] [INFO] default - /api/firebase
+[2025-05-03T23:13:19.922] [INFO] default - /api/user/getCategories
+[2025-05-03T23:13:20.074] [INFO] default - /api/user/getWribateByCategory/Technology
+[2025-05-03T23:13:26.874] [INFO] default - /api/logout
+[2025-05-03T23:13:45.533] [INFO] default - /api/logout
+[2025-05-03T23:14:12.250] [INFO] default - server is running  on the port 8000...
+[2025-05-03T23:14:30.887] [INFO] default - /api/logout
+[2025-05-03T23:18:46.217] [INFO] default - server is running  on the port 8000...
+[2025-05-03T23:18:47.765] [INFO] default - /api/logout
+[2025-05-03T23:19:01.478] [INFO] default - /api/logout
+[2025-05-03T23:19:11.919] [INFO] default - /api/user/jwt
+[2025-05-03T23:19:11.924] [INFO] default - /api/decode-jwt
+[2025-05-03T23:19:11.961] [INFO] default - /api/user/getCategories
+[2025-05-03T23:19:12.172] [INFO] default - /api/user/getWribateByCategory/Technology
+[2025-05-03T23:19:15.169] [INFO] default - /api/user/logout
+[2025-05-03T23:19:34.416] [INFO] default - /api/user/jwt
+[2025-05-03T23:19:34.419] [INFO] default - /api/decode-jwt
+[2025-05-03T23:19:34.455] [INFO] default - /api/user/getCategories
+[2025-05-03T23:19:34.628] [INFO] default - /api/user/getWribateByCategory/Technology
+[2025-05-03T23:19:39.770] [INFO] default - /api/user/logout
+[2025-05-03T23:20:42.234] [INFO] default - server is running  on the port 8000...
+[2025-05-03T23:20:49.541] [INFO] default - /api/firebase
+[2025-05-03T23:20:50.344] [INFO] default - /api/user/getCategories
+[2025-05-03T23:20:50.527] [INFO] default - /api/user/getWribateByCategory/Technology
+[2025-05-03T23:20:53.490] [INFO] default - /api/logout
+[2025-05-03T23:21:07.090] [INFO] default - /api/logout
+[2025-05-03T23:22:09.356] [INFO] default - server is running  on the port 8000...
+[2025-05-03T23:22:11.607] [INFO] default - /api/user/logout
+[2025-05-03T23:22:25.769] [INFO] default - /api/user/jwt
+[2025-05-03T23:22:25.774] [INFO] default - /api/decode-jwt
+[2025-05-03T23:22:25.819] [INFO] default - /api/user/getCategories
+[2025-05-03T23:22:26.094] [INFO] default - /api/user/getWribateByCategory/Technology
+[2025-05-03T23:22:31.341] [INFO] default - /api/logout
+[2025-05-03T23:22:46.107] [INFO] default - server is running  on the port 8000...
+[2025-05-03T23:22:49.568] [INFO] default - /api/logout
+[2025-05-03T23:23:46.889] [INFO] default - server is running  on the port 8000...
+[2025-05-03T23:23:53.382] [INFO] default - server is running  on the port 8000...
+[2025-05-03T23:23:58.105] [INFO] default - /api/logout
+[2025-05-03T23:24:11.815] [INFO] default - /api/user/jwt
+[2025-05-03T23:24:11.819] [INFO] default - /api/decode-jwt
+[2025-05-03T23:24:11.864] [INFO] default - /api/user/getCategories
+[2025-05-03T23:24:11.996] [INFO] default - /api/user/getWribateByCategory/Technology
+[2025-05-03T23:24:25.578] [INFO] default - /api/user/checkAvailableUserName
+[2025-05-03T23:25:25.963] [INFO] default - /api/user/checkAvailableUserName
+[2025-05-03T23:26:10.433] [INFO] default - /api/user/checkAvailableUserName
+[2025-05-03T23:26:40.175] [INFO] default - /api/user/checkAvailableUserName
+[2025-05-03T23:27:01.478] [INFO] default - /api/user/checkAvailableUserName
+[2025-05-03T23:27:23.933] [INFO] default - /api/firebase
+[2025-05-03T23:28:01.496] [INFO] default - /api/user/jwt
+[2025-05-03T23:28:01.499] [INFO] default - /api/decode-jwt
+[2025-05-03T23:28:02.643] [INFO] default - /api/user/checkAvailableUserName
+[2025-05-03T23:28:13.804] [INFO] default - /api/firebase
+[2025-05-03T23:28:14.028] [INFO] default - /api/user/getCategories
+[2025-05-03T23:28:14.123] [INFO] default - /api/user/getWribateByCategory/Technology
+[2025-05-03T23:28:23.665] [INFO] default - /api/logout

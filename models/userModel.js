@@ -20,19 +20,19 @@ const userSchema = new mongoose.Schema({
   },
   userName: {
     type: String,
-    required: [true, ' A User Must Required A userName!'],
+    required: [false, ' A User Must Required A userName!'],
     trim: true,
     unique: true,
   },
   email: {
     type: String,
-    required: [true, ' A User Must Required A email!'],
+    required: [false, ' A User Must Required A email!'],
     trim: true,
     unique: true,
   },
   password: {
     type: String,
-    required: [true, ' A User Must Required A password!'],
+    required: [false, ' A User Must Required A password!'],
     trim: true,
   },
   profilePhoto: dataTypes.String,
@@ -60,6 +60,10 @@ const userSchema = new mongoose.Schema({
     startDate: { type: Date },
     durationInDays: { type: Number, default: 0 },
     expiryDate: { type: Date }
+  },
+  firebase_token:{
+    type: String,
+    required: [false, 'token missing'],
   }
 
 }, { timestamps: true })

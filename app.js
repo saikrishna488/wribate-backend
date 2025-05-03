@@ -17,6 +17,7 @@ import cors from "cors"
 import proposeRoute from './routes/proposeRoute.js'
 import cookieParser from 'cookie-parser';
 import blogRoute from './routes/staffRoute.js'
+import providerRoute from './routes/providerRoute.js'
 
 
 
@@ -82,6 +83,8 @@ app.use('/api/webhook',webHookRoutes)
 app.use('/api',proposeRoute);
 
 app.use('/api',blogRoute )
+
+app.use('/api',providerRoute)
 // app.use('/',)
 
 /* unhandled routes */

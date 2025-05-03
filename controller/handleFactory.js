@@ -149,6 +149,110 @@ async function sendEmail(recipient, otp) {
 }
 
 
+
+//date format
+function formatToUTCString(localTimeString) {
+  const date = new Date(localTimeString); // Treated as local time
+
+  const day = date.getUTCDate();
+  const month = date.toLocaleString("en-US", { month: "long", timeZone: "UTC" });
+  const year = date.getUTCFullYear();
+  const hours = date.getUTCHours();
+  const minutes = String(date.getUTCMinutes()).padStart(2, '0');
+
+  // Function to add ordinal suffix (st, nd, rd, th)
+  function getOrdinal(n) {
+    const s = ["th", "st", "nd", "rd"],
+      v = n % 100;
+    return n + (s[(v - 20) % 10] || s[v] || s[0]);
+  }
+
+  const period = hours >= 12 ? "PM" : "AM";
+  const hour12 = hours % 12 === 0 ? 12 : hours % 12;
+
+  return `${getOrdinal(day)} ${month} ${year}, ${hour12}:${minutes} ${period} UTC`;
+}
+
+//send mail to contestents
+async function sendEmailToContestents(title, side, date, email, emailAgainst, duration, id) {
+
+  date = formatToUTCString(date)
+  const transporter = nodemailer.createTransport({
+    host: "smtp.hostinger.com",
+    port: 465,
+    secure: true, // true for 465, false for 587
+    auth: {
+      user: "info@wribate.com",
+      pass: process.env.WRIBATE_MAIL_PASS,
+    },
+  });
+
+  const lead = side=="For"? "For" : "Against"
+  const against = side=="For"? "Against" : "For"
+
+  const mailOptions = {
+    from: '"Wribate" <info@wribate.com>',
+    to: email,
+    subject: "You're Invited to Join a Wribate!",
+    html: `
+      <!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Wribate Invitation</title>
+</head>
+<body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
+  <p>Dear <strong>${email}</strong>,</p>
+
+  <p>
+    We are excited to invite you to participate as <strong>Lead Panel</strong> in an engaging online Wribate on the motion: 
+    <strong>"${title}"</strong>. This event is scheduled for <strong>${date}</strong> at (Time Zone). 
+    This is a fantastic opportunity to share your insights, connect with others, and explore diverse perspectives on this important issue.
+  </p>
+
+  <h3 style="margin-top: 24px;">Wribate Details:</h3>
+  <ul>
+    <li><strong>Motion:</strong> ${title}</li>
+    <li><strong>Position:</strong>${lead}</li>
+    <li><strong>Start Date/Time:</strong> ${date}</li>
+    <li><strong>Duration:</strong> ${duration}</li>
+    <li><strong>Platform:</strong> <a href="https://wribate.com/wribate/${id}" target="_blank">Visit Wribate</a></li>
+    <li><strong>Opposition Lead Panel:</strong> ${emailAgainst} (${against})</li>
+  </ul>
+
+  <h3 style="margin-top: 24px;">How to Participate:</h3>
+  <p>
+    Click the link below to accept the invitation and/or to sign up:
+  </p>
+  <p>
+    <a href="https://wribate.com/wribate/${id}" target="_blank" style="background-color: #007BFF; color: #fff; padding: 10px 16px; text-decoration: none; border-radius: 5px;">
+      Accept Invitation & Sign Up
+    </a>
+  </p>
+
+  <p>
+    We believe you will passionately advocate for your position on the topic and play a key role in shaping the outcome of this important discussion. We look forward to your participation!
+  </p>
+
+  <p>All the best!</p>
+
+  <p>Regards,<br />
+  <strong>Wribate.com</strong></p>
+</body>
+</html>
+
+    `
+  };
+
+  try {
+    const info = await transporter.sendMail(mailOptions);
+    console.log("Email sent:", info.messageId);
+  } catch (error) {
+    console.error("Failed to send email:", error);
+  }
+}
+
+
 const contactUs = async (mail, otp) => {
   const transporter = nodemailer.createTransport({
     host: 'smtp.gmail.com',
@@ -447,6 +551,8 @@ const getpaymentdetails = async (paymentId, instance) => {
 /* 
  */
 
-export default { contactUs, appendUrls, sendInvitationMail, generateRounds, 
-  categorizeWribates, appendUserPic, divideIntoParts, countVotesByRound ,
-  razorpayInstance,createorderpayment, getpaymentdetails,sendEmail}
+export default {
+  contactUs, appendUrls, sendInvitationMail, generateRounds,
+  categorizeWribates, appendUserPic, divideIntoParts, countVotesByRound,
+  razorpayInstance, createorderpayment, getpaymentdetails, sendEmail, sendEmailToContestents
+}
