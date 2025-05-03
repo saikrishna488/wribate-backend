@@ -1,28 +1,28 @@
 import express from 'express';
 const router = express.Router();
-import userModel from '../model/userModel.js'
+import models from '../models/userModel.js'
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 import { errorRes } from '../config/generalResponses.js';
-import blogModel from '../model/blogModel.js';
+import blogModel from '../models/blogModel.js';
 import { v2 as cloudinary } from 'cloudinary';
 import dotenv from'dotenv';
-import { asyncHandler } from '../utils/tryCatch.js';
+const userModel = models.User;
 
 //env
 dotenv.config();
 
 //config
 cloudinary.config({ 
-    cloud_name: 'dzzgu7qws', 
-    api_key: '994123695836625', 
-    api_secret: process.env.CLOUDINARY
+    cloud_name: process.env.CLOUDINARY_NAME, 
+    api_key: process.env.CLOUDINARY_API_KEY, 
+    api_secret: process.env.CLOUDINARY_SECRET
 })
 
 router.post('/sregister', async (req, res) => {
     try {
 
-        const { name, email, password, role } = req.body;
+        const { name, email, password, userRole, userName } = req.body;
 
         if (!name || !email || !password || !role) {
             return res.status(401).json({
@@ -31,12 +31,17 @@ router.post('/sregister', async (req, res) => {
             })
         }
 
-        const user = await userModel.findOne({ email, type: "staff" });
+        const user = await userModel.findOne({ email});
 
         if (user) {
-            return res.status(401).json({
-                res: false,
-                msg: "Email already used"
+
+            user.userRole = userRole;
+
+            await user.save();
+
+            return res.status(200).json({
+                res: true,
+                msg: "Email already Found Role Updated to "+userRole
             })
         }
 
@@ -46,8 +51,8 @@ router.post('/sregister', async (req, res) => {
             name,
             email,
             password: hashedPassword,
-            role,
-            type: "staff"
+            userName,
+            userRole
         })
 
         const { password: pwd, ...userObj } = newUser._doc;
@@ -81,7 +86,7 @@ router.post('/slogin', async (req, res) => {
             })
         }
 
-        const user = await userModel.findOne({ email, type: "staff" });
+        const user = await userModel.findOne({ email });
 
         if (!bcrypt.compare(password, user.password)) {
             return res.status(400).json({
@@ -96,7 +101,7 @@ router.post('/slogin', async (req, res) => {
             expiresIn: '30d'
         });
 
-        res.cookie('token', token, {
+        res.cookie('admintoken', token, {
             httpOnly: true,
             secure: process.env.NODE_ENV === 'production', // true in production
             maxAge: 30 * 24 * 60 * 60 * 1000 // 30 days in ms
@@ -125,7 +130,7 @@ router.post('/slogin', async (req, res) => {
 router.get('/sjwt',async (req,res)=>{
     try{
 
-        const token = req.cookies.token;
+        const token = req.cookies.admintoken;
 
         if(!token){
             return res.status(401).json({
@@ -136,7 +141,7 @@ router.get('/sjwt',async (req,res)=>{
 
         const decoded = jwt.verify(token,process.env.JWT_SECRET);
 
-        const user = await userModel.findOne({email:decoded.email,type:"staff"})
+        const user = await userModel.findOne({email:decoded.email})
 
         if(!user){
             return res.status(401).json({
@@ -166,7 +171,7 @@ router.get('/sjwt',async (req,res)=>{
 router.get('/slogout', (req, res) => {
     try {
 
-        res.clearCookie('token', {
+        res.clearCookie('admintoken', {
             httpOnly: true,
             secure: process.env.NODE_ENV,
             path: '/', // must match path used during set
@@ -208,6 +213,7 @@ router.post('/blog',async (req,res)=>{
             oldBlog.content = content || oldBlog.content 
             oldBlog.image = image || oldBlog.image
             oldBlog.title = title || oldBlog.title
+            oldBlog.author_name = author.name;
             
             await oldBlog.save()
 
@@ -275,7 +281,7 @@ router.delete('/blog/:id',async(req,res)=>{
 router.get('/blogs',async (req,res)=>{
     try{
 
-        const blogs = await blogModel.find({})
+        const blogs = await blogModel.find({}).sort({ createdAt: -1 });
 
         return res.status(200).json({
             res:true,
@@ -290,11 +296,18 @@ router.get('/blogs',async (req,res)=>{
     }
 })
 
-//get blog
-router.get('/blogs',async (req,res)=>{
+//get staff blog
+router.post('/blogs',async (req,res)=>{
     try{
 
-        const blogs = await blogModel.find({})
+        const {author_id} = req.body;
+
+        if(!author_id){
+            return errorRes("incomplete req",res)
+        }
+
+
+        const blogs = await blogModel.find({ author_id }).sort({ createdAt: -1 });
 
         return res.status(200).json({
             res:true,
@@ -309,7 +322,7 @@ router.get('/blogs',async (req,res)=>{
     }
 })
 //get staff blogs
-router.get('/blog/:id',asyncHandler(async (req,res)=>{
+router.get('/blog/:id',(async (req,res)=>{
 
     const {id} = req.params
 

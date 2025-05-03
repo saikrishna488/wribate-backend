@@ -1,8 +1,9 @@
 import express from 'express';
 const router = express.Router();
 import { errorRes } from '../config/generalResponses.js';
-import userModel from '../model/userModel.js';
-import { proposeModel, proposeVoteModel } from '../model/wribateModel.js';
+import models from '../models/userModel.js';
+import { proposeModel, proposeVoteModel } from '../models/wribateModel.js';
+const userModel = models.User;
 
 
 router.post('/propose', async (req, res) => {
@@ -14,6 +15,7 @@ router.post('/propose', async (req, res) => {
             return errorRes("incomplete req", res);
         }
 
+        console.log(req.body)
         const user = await userModel.findById(user_id);
 
         if (!user) {
@@ -26,7 +28,7 @@ router.post('/propose', async (req, res) => {
             category,
             tag,
             country,
-            username: user.username
+            userName: user.userName
         })
 
         return res.status(200).json({

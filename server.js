@@ -1,44 +1,71 @@
-import express from 'express';
-const app = express()
-const port = process.env.PORT || 5000;
-import cors from 'cors';
-import dotenv from 'dotenv';
-import errorHandle from './middlewares/errorHandle.js';
-import staffRoute from './routes/staffRoute.js'
-import userRoute from './routes/userRoute.js'
-import proposeRoute from './routes/proposeRoute.js'
-import cookieParser from 'cookie-parser';
 
-//.env
-dotenv.config()
+import mongoose from 'mongoose';
+import cron from 'node-cron';
+import http from "http";
+import dotenv from "dotenv"
+import log from "./logs/logger.js"
+import app from "./app.js"
+import userModel from './models/userModel.js';
+import { initializeSocket } from "./socket/socket.js";
 
-//connect to mongodb
-import './config/db.js'
 
-//handle json
-app.use(express.json({ limit: '50mb' }));
 
-//cookie parser
-app.use(cookieParser())
+dotenv.config();
 
-//handle cors
-app.use(cors({
-    origin: 'http://localhost:3000',
-    credentials: true
-}))
+/* handle unhandleException */
 
-//handle error
-app.use(errorHandle);
+process.on('uncaughtException', (err) => {
+ console.log('unhandled Exception appShutting down...😈');
+ console.log(err.name, err.message, err);
+ process.exit(1);
+});
 
-//handle routes
-app.get('/',(req,res)=>{
-    res.send("Server is Live")
-})
 
-app.use('/',staffRoute) // staffroute
-app.use('/',userRoute) // userroute
-app.use('/',proposeRoute)
+/* cron job for checking subscription */
 
-app.listen(port,()=>{
-    console.log("Server is running on http://localhost:"+port)
-})
+
+cron.schedule('0 0 * * *', async () => {
+  const now = new Date();
+
+  const result = await userModel.User.updateMany(
+    {
+      'subscription.isActive': true,
+      'subscription.expiryDate': { $lte: now }
+    },
+    { 'subscription.isActive': false }
+  );
+
+  console.log(`[CRON] Deactivated ${result.modifiedCount} expired subscriptions`);
+});
+
+const DB = process.env.DATABASE;
+
+mongoose.connect(DB).then(() => {
+ console.log('Connected to MongoDB');
+}).catch(err => {
+ console.error('Error connecting to MongoDB:', err);
+});
+
+/* SERVER */
+
+
+const server = http.createServer(app);
+// Initialize Socket.io
+initializeSocket(server);
+
+const port = 8000;
+server.listen(port, () => {
+ log.info(`server is running  on the port ${port}...`);
+ console.log(`server is running  on the port ${port}...`);
+});
+
+/*  handle unhandled Rejections  */
+
+
+process.on('unhandledRejection', (err) => {
+ console.log('UnhandledRejection sutting down!!😈..');
+ console.log(err.name, err.message, err);
+ server.close(() => {
+  process.exit(1);
+ });
+});
