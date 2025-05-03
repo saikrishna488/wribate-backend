@@ -165,6 +165,7 @@ const logout = catchAsync(async (req, res, next) => {
 
 //jwt
 const jwtFunc = catchAsync(async (req, res, next) => {
+  res.setHeader('Cache-Control', 'no-store');
   const token = req.cookies.token;
 
   if (!token) {
@@ -184,6 +185,8 @@ const jwtFunc = catchAsync(async (req, res, next) => {
       msg: "No user found"
     })
   }
+
+  req.user = user
 
   const { password, ...userObj } = user._doc;
 
@@ -522,7 +525,7 @@ const addVotes = catchAsync(async (req, res, next) => {
 });
 
 const getMyWribates = catchAsync(async (req, res, next) => {
-  const { user: { _id, email } } = req
+  const { _id, email } = req.body
 
   const wribates = await userModel.Wribate.find({
     $or: [
@@ -532,7 +535,7 @@ const getMyWribates = catchAsync(async (req, res, next) => {
   });
   //const wribates = await userModel.Wribate.find({ createdBy: _id })
   if (wribates.length === 0) {
-    return res.status(404).json({ status: "error", message: "No wribates found for this user" });
+    return res.status(404).json({res:false, status: "error", message: "No wribates found for this user" });
   }
 
   // Append baseURL to each coverImage
@@ -543,7 +546,7 @@ const getMyWribates = catchAsync(async (req, res, next) => {
   //  }));
 
   const data1 = await handleFactory.categorizeWribates(wribates)
-  res.status(200).json({ status: "success", data: data1 });
+  res.status(200).json({ res:true,status: "success", data: data1 });
 })
 
 const createBatchWribate = catchAsync(async (req, res) => {

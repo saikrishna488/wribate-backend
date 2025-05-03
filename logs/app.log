@@ -4902,3 +4902,93 @@
 [2025-05-03T23:28:14.028] [INFO] default - /api/user/getCategories
 [2025-05-03T23:28:14.123] [INFO] default - /api/user/getWribateByCategory/Technology
 [2025-05-03T23:28:23.665] [INFO] default - /api/logout
+[2025-05-04T00:22:58.731] [INFO] default - server is running  on the port 8000...
+[2025-05-04T00:23:03.636] [INFO] default - /api/user/jwt
+[2025-05-04T00:23:03.646] [INFO] default - /api/decode-jwt
+[2025-05-04T00:23:03.659] [INFO] default - /api/user/getCategories
+[2025-05-04T00:23:03.978] [INFO] default - /api/user/getWribateByCategory/Technology
+[2025-05-04T00:23:23.793] [INFO] default - /api/firebase
+[2025-05-04T00:23:24.367] [INFO] default - /api/user/getWribateByCategory/Technology
+[2025-05-04T00:23:28.159] [INFO] default - /api/user/myWribates
+[2025-05-04T00:27:53.124] [INFO] default - server is running  on the port 8000...
+[2025-05-04T00:28:00.087] [INFO] default - /api/user/getCategories
+[2025-05-04T00:28:00.226] [INFO] default - /api/user/getWribateByCategory/Technology
+[2025-05-04T00:28:02.764] [INFO] default - /api/user/jwt
+[2025-05-04T00:28:02.768] [INFO] default - /api/decode-jwt
+[2025-05-04T00:28:02.800] [INFO] default - /api/user/getCategories
+[2025-05-04T00:28:03.104] [INFO] default - /api/user/getWribateByCategory/Technology
+[2025-05-04T00:28:44.205] [INFO] default - /api/user/getProfile
+[2025-05-04T00:28:44.217] [INFO] default - /api/user/getWribateById/680e4ec04a66a6861d87ab35
+[2025-05-04T00:28:44.224] [INFO] default - /api/user/getVotes/680e4ec04a66a6861d87ab35
+[2025-05-04T00:28:49.697] [INFO] default - /api/user/myWribates
+[2025-05-04T00:29:51.936] [INFO] default - /api/user/jwt
+[2025-05-04T00:29:51.941] [INFO] default - /api/decode-jwt
+[2025-05-04T00:29:51.975] [INFO] default - /api/user/myWribates
+[2025-05-04T00:29:54.349] [INFO] default - /api/user/getCategories
+[2025-05-04T00:29:54.428] [INFO] default - /api/user/getWribateByCategory/Technology
+[2025-05-04T00:29:56.553] [INFO] default - /api/user/myWribates
+[2025-05-04T00:31:15.678] [INFO] default - server is running  on the port 8000...
+[2025-05-04T00:31:19.152] [INFO] default - server is running  on the port 8000...
+[2025-05-04T00:31:23.982] [INFO] default - /api/user/jwt
+[2025-05-04T00:31:23.991] [INFO] default - /api/decode-jwt
+[2025-05-04T00:31:24.011] [INFO] default - /api/user/myWribates
+[2025-05-04T00:31:29.647] [INFO] default - /api/user/getCategories
+[2025-05-04T00:31:29.716] [INFO] default - /api/user/getWribateByCategory/Technology
+[2025-05-04T00:31:31.947] [INFO] default - /api/user/myWribates
+[2025-05-04T00:35:34.656] [INFO] default - server is running  on the port 8000...
+[2025-05-04T00:35:54.890] [INFO] default - server is running  on the port 8000...
+[2025-05-04T00:36:00.366] [INFO] default - /api/user/getCategories
+[2025-05-04T00:36:00.433] [INFO] default - /api/user/getWribateByCategory/Technology
+[2025-05-04T00:36:03.058] [INFO] default - /api/user/jwt
+[2025-05-04T00:36:03.064] [INFO] default - /api/decode-jwt
+[2025-05-04T00:36:03.085] [INFO] default - /api/user/getCategories
+[2025-05-04T00:36:03.191] [INFO] default - /api/user/getWribateByCategory/Technology
+[2025-05-04T00:36:05.629] [INFO] default - /api/user/myWribates
+[2025-05-04T00:43:52.568] [INFO] default - server is running  on the port 8000...
+[2025-05-04T00:44:16.894] [INFO] default - server is running  on the port 8000...
+[2025-05-04T00:45:40.206] [INFO] default - /api/user/myWribates
+[2025-05-04T00:46:00.806] [INFO] default - /api/user/jwt
+[2025-05-04T00:46:00.811] [INFO] default - /api/decode-jwt
+[2025-05-04T00:46:00.853] [INFO] default - /api/user/myWribates
+[2025-05-04T00:46:55.673] [INFO] default - /api/user/jwt
+[2025-05-04T00:46:55.677] [INFO] default - /api/decode-jwt
+[2025-05-04T00:46:55.721] [INFO] default - /api/user/myWribates
+[2025-05-04T00:47:44.535] [INFO] default - /api/user/jwt
+[2025-05-04T00:47:44.541] [INFO] default - /api/decode-jwt
+[2025-05-04T00:47:44.600] [INFO] default - /api/user/myWribates
+[2025-05-04T00:49:20.572] [INFO] default - server is running  on the port 8000...
+[2025-05-04T00:53:40.094] [INFO] default - /api/user/jwt
+[2025-05-04T00:53:40.113] [INFO] default - /api/decode-jwt
+[2025-05-04T00:53:40.182] [INFO] default - /api/user/myWribates
+[2025-05-04T00:55:09.564] [INFO] default - /api/user/myWribates
+[2025-05-04T00:56:17.468] [INFO] default - /api/user/jwt
+[2025-05-04T00:56:17.472] [INFO] default - /api/decode-jwt
+[2025-05-04T00:56:17.484] [INFO] default - /api/user/myWribates
+[2025-05-04T00:56:20.776] [INFO] default - /api/user/getProfile
+[2025-05-04T00:56:20.783] [INFO] default - /api/user/getWribateById/undefined
+[2025-05-04T00:56:20.795] [INFO] default - /api/user/getVotes/undefined
+[2025-05-04T00:56:23.068] [INFO] default - /api/user/getCategories
+[2025-05-04T00:56:23.138] [INFO] default - /api/user/getWribateByCategory/Technology
+[2025-05-04T00:56:25.413] [INFO] default - /api/user/myWribates
+[2025-05-04T00:56:25.418] [INFO] default - /api/user/myWribates
+[2025-05-04T00:57:02.583] [INFO] default - /api/user/jwt
+[2025-05-04T00:57:02.586] [INFO] default - /api/decode-jwt
+[2025-05-04T00:57:02.598] [INFO] default - /api/user/myWribates
+[2025-05-04T00:57:12.321] [INFO] default - /api/user/getCategories
+[2025-05-04T00:57:12.376] [INFO] default - /api/user/getWribateByCategory/Technology
+[2025-05-04T00:57:14.316] [INFO] default - /api/user/getWribateByCategory/Defense
+[2025-05-04T00:57:18.439] [INFO] default - /api/user/getProfile
+[2025-05-04T00:57:18.444] [INFO] default - /api/user/getWribateById/6814bb83143e73e43b778699
+[2025-05-04T00:57:18.446] [INFO] default - /api/user/getVotes/6814bb83143e73e43b778699
+[2025-05-04T00:57:31.066] [INFO] default - /api/user/myWribates
+[2025-05-04T00:57:31.068] [INFO] default - /api/user/myWribates
+[2025-05-04T00:58:35.338] [INFO] default - /api/user/getCategories
+[2025-05-04T00:58:35.472] [INFO] default - /api/user/getWribateByCategory/Technology
+[2025-05-04T00:58:40.040] [INFO] default - /api/user/myWribates
+[2025-05-04T00:58:40.044] [INFO] default - /api/user/myWribates
+[2025-05-04T00:59:18.630] [INFO] default - /api/user/getWribateByCategory/Technology
+[2025-05-04T00:59:20.776] [INFO] default - /api/user/myWribates
+[2025-05-04T00:59:20.779] [INFO] default - /api/user/myWribates
+[2025-05-04T00:59:26.084] [INFO] default - /api/user/getProfile
+[2025-05-04T00:59:26.098] [INFO] default - /api/user/getVotes/6814bb83143e73e43b778699
+[2025-05-04T00:59:26.100] [INFO] default - /api/user/getWribateById/6814bb83143e73e43b778699

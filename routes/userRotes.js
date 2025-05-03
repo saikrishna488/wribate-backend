@@ -43,7 +43,7 @@ router.post("/comment/:wribateId", user.addComment)
 
 router.post("/vote/:wribateId", user.addVotes)
 
-router.get("/myWribates", user.getMyWribates)
+router.post("/myWribates", user.getMyWribates)
 
 router.delete("/deleteWribate", user.deleteWribate)
 

@@ -72,6 +72,9 @@ router.post('/firebase', async (req, res) => {
 //decode jwt
 router.get('/decode-jwt', async (req, res) => {
   try {
+
+    res.setHeader('Cache-Control', 'no-store');
+
     const token = req.cookies.firebase;
 
     if (!token) {
@@ -93,6 +96,8 @@ router.get('/decode-jwt', async (req, res) => {
         msg: 'User not found',
       });
     }
+
+    req.user = user;
 
     // ✅ Respond with user data
     return res.status(200).json({
