@@ -4,4 +4,5 @@ node_modules
 .eslintrc.json
 .gitignore
 logs
+# .gitignore
 utils/service.json
