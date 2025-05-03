@@ -1,0 +1,24 @@
+name: Deploy to Server
+
+on:
+  push:
+    branches:
+      - main  # Deploys when there's a push to the 'main' branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest  # Uses an Ubuntu runner for the job
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3  # This checks out the latest code from the repository
+
+      - name: Set up SSH for deployment
+        uses: webfactory/ssh-agent@v0.5.3  # Sets up SSH agent
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}  # Uses the private key from GitHub secrets
+
+      - name: Deploy to server
+        run: |
+          # Connect to your server via SSH and run the deployment commands
+          ssh -o StrictHostKeyChecking=no root@your_server_ip 'cd /path/to/your/project && git pull origin main && npm install && pm2 restart all'
