@@ -4992,3 +4992,19 @@
 [2025-05-04T00:59:26.084] [INFO] default - /api/user/getProfile
 [2025-05-04T00:59:26.098] [INFO] default - /api/user/getVotes/6814bb83143e73e43b778699
 [2025-05-04T00:59:26.100] [INFO] default - /api/user/getWribateById/6814bb83143e73e43b778699
+[2025-05-04T01:06:31.464] [INFO] default - server is running  on the port 8000...
+[2025-05-04T01:07:25.085] [INFO] default - /api/user/jwt
+[2025-05-04T01:07:25.112] [INFO] default - /api/decode-jwt
+[2025-05-04T01:07:25.228] [INFO] default - /api/user/getCategories
+[2025-05-04T01:07:25.785] [INFO] default - /api/user/getWribateByCategory/Technology
+[2025-05-04T01:08:13.232] [INFO] default - /api/logout
+[2025-05-04T01:08:36.116] [INFO] default - /api/firebase
+[2025-05-04T01:08:37.847] [INFO] default - /api/user/getWribateByCategory/Technology
+[2025-05-04T01:31:45.131] [INFO] default - /api/logout
+[2025-05-04T01:32:03.725] [INFO] default - /api/firebase
+[2025-05-04T01:32:04.585] [INFO] default - /api/user/getWribateByCategory/Technology
+[2025-05-04T01:38:51.385] [INFO] default - /api/logout
+[2025-05-04T01:38:58.996] [INFO] default - /api/user/checkAvailableUserName
+[2025-05-04T01:39:26.174] [INFO] default - /api/firebase
+[2025-05-04T01:39:26.686] [INFO] default - /api/user/getWribateByCategory/Technology
+[2025-05-04T01:40:29.859] [INFO] default - /api/logout
