@@ -27,15 +27,17 @@ router.get('/getCategories', user.getCategories)
 
 router.post("/checkAvailableUserName", user.checkForUserName)
 
-// router.use(auth.authenticateUser)
-
-router.get('/getProfile', user.getProfile)
+router.get('/getUsers', user.getUser)
 
 router.post('/uploadImage', upload.single('image'), user.fileUpload)
 
-router.patch('/updateProfile/:id', user.updateProfile)
-
 router.post('/createWribate', user.createWribate)
+
+router.use(auth.authMiddleware)
+
+router.get('/getProfile', user.getProfile)
+
+router.patch('/updateProfile/:id', user.updateProfile)
 
 router.post("/arguments/:wribateId", user.addArguments)
 
@@ -51,7 +53,7 @@ router.post("/createBatchWribate", upload.single("file"), user.createBatchWribat
 
 router.get("/getVotes/:id", user.getVotes)
 
-router.get('/getUsers', user.getUser)
+
 
 router.post('/createOrder', user.createOrder)
 

@@ -9,7 +9,7 @@ const userModel = models.User;
 router.post('/propose', async (req, res) => {
     try {
 
-        const { title, user_id, category, tag, country } = req.body;
+        const { title, user_id, category, tag, country, context } = req.body;
 
         if (!title || !user_id, !category || !tag || !country) {
             return errorRes("incomplete req", res);
@@ -28,7 +28,7 @@ router.post('/propose', async (req, res) => {
             category,
             tag,
             country,
-            userName: user.userName
+            context: context || null
         })
 
         return res.status(200).json({

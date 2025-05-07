@@ -40,12 +40,12 @@ router.post('/firebase', async (req, res) => {
     await user.save();
 
     // Create JWT token for the user (whether new or existing)
-    const userToken = jwt.sign({ id: user._id }, process.env.JWT_SECRET, { expiresIn: '30d' });
+    const userToken = jwt.sign({ id: user._id }, process.env.JTW_SECRET, { expiresIn: '30d' });
 
     const { password: pwd, ...userObj } = user._doc;
 
     // Set the JWT token as a cookie
-    res.cookie('firebase', userToken, {
+    res.cookie('token', userToken, {
       httpOnly: true,
       secure: process.env.NODE_ENV === 'production', // true in production
       maxAge: 30 * 24 * 60 * 60 * 1000, // 30 days in ms

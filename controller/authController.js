@@ -2,6 +2,32 @@ import jwt from "jsonwebtoken"
 import catchAsync from "../utils/catchAsync.js"
 import { ErrorResponse } from "../utils/commonResponse.js"
 import userModel from "../models/userModel.js"
+// authMiddleware.js
+
+
+const authMiddleware = async (req, res, next) => {
+        // Read token from cookies (assuming token is stored in 'token' cookie)
+        const token = req.cookies?.token;
+
+        console.log("token :", token, req.cookies)
+
+        if (!token) {
+                return res.status(401).json({ message: "Unauthorized" });
+        }
+
+        try {
+                const decoded = jwt.verify(token, process.env.JTW_SECRET);
+                const user = await userModel.User.findById(decoded.id);
+                if (!user) return res.status(404).json({ message: "User not found" });
+
+                req.user = user; // Attach user to the request
+                next();
+        } catch (err) {
+                return res.status(403).json({ message: "Invalid token" });
+        }
+};
+
+
 
 
 const jwtToken = async (id) => {
@@ -25,17 +51,6 @@ const jwtToken = async (id) => {
 //         req.user = user
 //         next()
 // })
-const authenticateUser = catchAsync(async (req, res, next) => {
-        const token = req.cookies.token;
-        if (!token) ErrorResponse(res, "token is empty")
-        const decode = jwt.verify(token, process.env.JTW_SECRET)
-        if (!decode) return ErrorResponse(res, "Un-Authorised user")
-        console.log('decode', decode)
-        const user = await userModel.User.findById(decode.id)
-        if (!user) return ErrorResponse(res, "Un-Authorised user")
-        req.user = user
-        next()
-});
 
 const authenticateSocket = async (socket, next) => {
         try {
@@ -70,4 +85,4 @@ const authenticateSocket = async (socket, next) => {
 
 }
 
-export default { jwtToken, authenticateUser, authenticateSocket }
+export default { jwtToken, authenticateSocket, authMiddleware }

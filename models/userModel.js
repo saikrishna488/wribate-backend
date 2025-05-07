@@ -22,13 +22,11 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: [false, ' A User Must Required A userName!'],
     trim: true,
-    unique: true,
   },
   email: {
     type: String,
     required: [false, ' A User Must Required A email!'],
     trim: true,
-    unique: true,
   },
   password: {
     type: String,

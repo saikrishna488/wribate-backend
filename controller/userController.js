@@ -14,7 +14,14 @@ import xlsx from "xlsx"
 import handleFactory from "../controller/handleFactory.js";
 import mongoose from "mongoose";
 import { v2 as cloudinary } from 'cloudinary';
-import jwt from 'jsonwebtoken'
+import jwt from 'jsonwebtoken';
+
+
+cloudinary.config({
+  cloud_name: process.env.CLOUDINARY_NAME,
+  api_key: process.env.CLOUDINARY_API_KEY,
+  api_secret: process.env.CLOUDINARY_SECRET
+})
 
 const checkForUserName = catchAsync(async (req, res, next) => {
   const { body: { userName } } = req
@@ -72,8 +79,8 @@ const verifyOTP = catchAsync(async (req, res, next) => {
   if (otpAgeInMinutes > 10) {
     await userModel.TempUser.deleteOne({ email }); // Optional: Clean up expired OTP
     return res.satus(200).json({
-      res:false,
-      msg:"OTP expired"
+      res: false,
+      msg: "OTP expired"
     })
   }
 
@@ -109,9 +116,9 @@ const signUpUser = catchAsync(async (req, res, next) => {
     })
   }
 
-  const userId = await userModel.User.findOne({email:body.email})
+  const userId = await userModel.User.findOne({ email: body.email })
 
-  if(userId){
+  if (userId) {
     return res.status(200).json({
       res: false,
       msg: "Email Already Registered"
@@ -301,6 +308,10 @@ const getCategories = catchAsync(async (req, res, next) => {
   successResponse(res, categories)
 })
 
+
+
+
+// create wribate
 const createWribate = catchAsync(async (req, res, next) => {
   const body = req.body
   const totalDuration = body.durationDays
@@ -312,12 +323,24 @@ const createWribate = catchAsync(async (req, res, next) => {
   const leadFor = body.leadFor
   const leadAgainst = body.leadAgainst;
 
-  let {title,side,email, emailAgainst, duration, id} = req.body
+  let { title, side, email, emailAgainst, duration, id } = req.body;
+  console.log(req.body, startDate)
 
-  
+  if(!body.coverImageBase64){
+    return res.status(200).json({
+      res:false,
+      msg:"Incomplete req"
+    })
+  }
+
+  const result = await cloudinary.uploader.upload(body.coverImageBase64, {
+    folder: "wribates", // Optional
+  });
+
+
   const wribateData = {
     title: body.title,
-    coverImage: body.coverImage,
+    coverImage: result.secure_url,
     startDate: startDate,
     durationDays: body.durationDays,
     leadFor: body.leadFor,
@@ -339,15 +362,16 @@ const createWribate = catchAsync(async (req, res, next) => {
 
 
   //to for
-  await utils.sendEmailToContestents(title,"For",startDate,leadFor,leadAgainst,totalDuration,newWribate._id)
+  await utils.sendEmailToContestents(title, "For", startDate, leadFor, leadAgainst, totalDuration, newWribate._id)
 
   //to against
-  await utils.sendEmailToContestents(title,"Against",startDate,leadAgainst,leadFor,totalDuration,newWribate._id)
+  await utils.sendEmailToContestents(title, "Against", startDate, leadAgainst, leadFor, totalDuration, newWribate._id)
 
-  console.log('newWribate', newWribate)
-  successMessage(res, `New Wribate is created.`)
+  return res.status(200).json({
+    msg:"created wribate",
+    res:true
+  })
 })
-
 
 
 
@@ -364,7 +388,7 @@ const getWribateByCategory = catchAsync(async (req, res) => {
     // Append baseURL to each coverImage
     // const baseURL = process.env.WRIBATE
     // const data = wribates.map(item => ({
-    //  ...item._doc,
+    //  ...item._doc, 
     //  coverImage: baseURL + item.coverImage
     // }));
     const data1 = await handleFactory.categorizeWribates(wribates)
@@ -535,7 +559,7 @@ const getMyWribates = catchAsync(async (req, res, next) => {
   });
   //const wribates = await userModel.Wribate.find({ createdBy: _id })
   if (wribates.length === 0) {
-    return res.status(404).json({res:false, status: "error", message: "No wribates found for this user" });
+    return res.status(404).json({ res: false, status: "error", message: "No wribates found for this user" });
   }
 
   // Append baseURL to each coverImage
@@ -546,7 +570,7 @@ const getMyWribates = catchAsync(async (req, res, next) => {
   //  }));
 
   const data1 = await handleFactory.categorizeWribates(wribates)
-  res.status(200).json({ res:true,status: "success", data: data1 });
+  res.status(200).json({ res: true, status: "success", data: data1 });
 })
 
 const createBatchWribate = catchAsync(async (req, res) => {
@@ -680,8 +704,7 @@ const createOrder = catchAsync(async (req, res) => {
   // Save to DB
   const transaction = await userModel.Razorpay.create({ transactionId, userId, Amount });
 
-  res.status(201).json({ razorpayOrderId: razorpayOrderId, transactionId: transactionId });
-
+  res.status(201).json({ res: true, razorpayOrderId: razorpayOrderId, transactionId: transactionId, msg: "req ok" });
 
 });
 

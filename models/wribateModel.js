@@ -20,14 +20,14 @@ const proposeWribateSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    userName: {
-        type: String,
-        required: true,
-    },
     user_id: {
         type: String,
         required: true,
     },
+    context:{
+        type:String,
+        require:false
+    }
 })
 
 const proposeVoteSchema = new mongoose.Schema({
