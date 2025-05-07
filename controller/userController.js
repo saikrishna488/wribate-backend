@@ -149,7 +149,8 @@ const loginUser = catchAsync(async (req, res, next) => {
     httpOnly: true,
     secure: process.env.NODE_ENV === 'production', // true in production
     maxAge: 30 * 24 * 60 * 60 * 1000, // 30 days in ms
-    path: '/'
+    path: '/',
+    sameSite: process.env.NODE_ENV === 'production' ? 'None' : 'Lax', 
   });
 
   res.status(200).json({ status: 1, token: token, message: "login successfully", res: true, user: userObj })
@@ -161,7 +162,8 @@ const logout = catchAsync(async (req, res, next) => {
   res.clearCookie('token', {
     httpOnly: true,
     secure: process.env.NODE_ENV == "production",
-    path: '/', // must match path used during set
+    path: '/', // must match path used during set,
+    sameSite: process.env.NODE_ENV === 'production' ? 'None' : 'Lax'
   });
 
   return res.status(200).json({
