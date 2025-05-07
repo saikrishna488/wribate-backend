@@ -20,4 +20,4 @@ jobs:
 
       - name: Deploy to server
         run: |
-          ssh -o StrictHostKeyChecking=no root@194.164.149.238 'cd /root/wribate-backend && git pull origin main && npm install && pm2 restart all'
+         ssh -o StrictHostKeyChecking=no root@194.164.149.238 'cd /root/wribate-backend && git checkout -- logs/app.log && git pull origin main && npm install && pm2 restart all'
