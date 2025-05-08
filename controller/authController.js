@@ -7,9 +7,13 @@ import userModel from "../models/userModel.js"
 
 const authMiddleware = async (req, res, next) => {
         // Read token from cookies (assuming token is stored in 'token' cookie)
-        const token = req.cookies?.token;
+        const authHeader = req.headers['authorization'];
 
-        console.log("token :", token, req.cookies)
+        if (!authHeader || !authHeader.startsWith('Bearer ')) {
+                return res.status(401).json({ message: 'No token provided' });
+        }
+
+        const token = authHeader.split(' ')[1];
 
         if (!token) {
                 return res.status(401).json({ message: "Unauthorized" });

@@ -145,13 +145,13 @@ const loginUser = catchAsync(async (req, res, next) => {
 
   const { password: pwd, ...userObj } = user._doc;
 
-  res.cookie('token', token, {
-    httpOnly: true,
-    secure: process.env.NODE_ENV === 'production', // true in production
-    maxAge: 30 * 24 * 60 * 60 * 1000, // 30 days in ms
-    path: '/',
-    sameSite: process.env.NODE_ENV === 'production' ? 'None' : 'Lax', 
-  });
+  // res.cookie('token', token, {
+  //   httpOnly: true,
+  //   secure: process.env.NODE_ENV === 'production', // true in production
+  //   maxAge: 30 * 24 * 60 * 60 * 1000, // 30 days in ms
+  //   path: '/',
+  //   sameSite: process.env.NODE_ENV === 'production' ? 'None' : 'Lax', 
+  // });
 
   res.status(200).json({ status: 1, token: token, message: "login successfully", res: true, user: userObj })
 })
@@ -174,15 +174,13 @@ const logout = catchAsync(async (req, res, next) => {
 
 //jwt
 const jwtFunc = catchAsync(async (req, res, next) => {
-  res.setHeader('Cache-Control', 'no-store');
-  const token = req.cookies.token;
+  const authHeader = req.headers['authorization'];
 
-  if (!token) {
-    return res.status(401).json({
-      res: false,
-      msg: "incomplete req"
-    })
+  if (!authHeader || !authHeader.startsWith('Bearer ')) {
+    return res.status(401).json({ message: 'No token provided' });
   }
+
+  const token = authHeader.split(' ')[1];
 
   const decoded = jwt.verify(token, process.env.JTW_SECRET);
 
